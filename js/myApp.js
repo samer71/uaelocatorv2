@@ -56,7 +56,9 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 		map:map});
 		
 	// Append to the list of results
-	$("#list").append('<li class="onestore"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+	if(distance<=prox) {
+		$("#list").append('<li class="onestore"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+	}
 
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
@@ -95,10 +97,18 @@ function onGetLocationSuccess(position)
   
 function getStores(ml,pm,st)
 {
+		function sortByDistance(a,b){
+			var astorelatlon=new google.maps.LatLng(a.location.latitude, a.location.longitude);
+			var bstorelatlon=new google.maps.LatLng(b.location.latitude, b.location.longitude);
+			var adistance = (google.maps.geometry.spherical.computeDistanceBetween (astorelatlon, latlon)/1000).toFixed(1);
+			var bdistance = (google.maps.geometry.spherical.computeDistanceBetween (bstorelatlon, latlon)/1000).toFixed(1);
+			return adistance > bdistance ? 1 : -1;
+   		};
 		var totalstores = 0;
-		$.getJSON('museums.json', function(json) {
-			$.each(json,function(index,value){ 
-				renderStore(ml,pm, index,value.name, value.location.latitude, value.location.longitude);
+		$.getJSON('museums.json', function(store) {
+			store = $(store).sort(sortByDistance);
+			$.each(store,function(index,value){ 
+				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
 				totalstores++;
 			});
 		});
