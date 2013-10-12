@@ -13,10 +13,9 @@ var museumsArray;
 
 function onDeviceReady() {
 	$.getJSON('museums.json', function(json) {
-		var mcount=0;
 		var museumsArray=[];
-		$.each(json,function(key,value){ 
-			$("#errorholder").text(key+": "+value.name);
+		$.each(json,function(index,value){ 
+			$("#errorholder").append(index+": "+value.name);
 		});
 	});
 }
