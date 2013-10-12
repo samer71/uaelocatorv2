@@ -106,8 +106,8 @@ function getStores(ml,pm,st)
    		};
 		var totalstores = 0;
 		$.getJSON('museums.json', function(store) {
-			store = $(store).sort(sortByDistance);
-			$.each(store,function(index,value){ 
+			sortedstore = $(store).sort(sortByDistance);
+			$.each(sortedstore,function(index,value){ 
 				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
 				totalstores++;
 			});
