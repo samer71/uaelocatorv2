@@ -162,6 +162,7 @@ $(window).on("orientationchange",function(event){
 
 $('#reload').click(function() {
 	$('#list li.onestore').remove();
+	$('#list li.nostore').remove();
 	$("#list").listview('refresh');
 	loadScript(12,10000);
 });
@@ -174,12 +175,14 @@ $('#get20').click(function() {
 
 $('#get50').click(function() {
 	$('#list li.onestore').remove();
+	$('#list li.nostore').remove();
 	$("#list").listview('refresh');
 	loadScript(10,50000);
 });
 
 $('#getall').click(function() {
 	$('#list li.onestore').remove();
+	$('#list li.nostore').remove();
 	$("#list").listview('refresh');
 	loadScript(9,500000);
 });
