@@ -21,6 +21,7 @@ function loadScript(zl,pm) {
   document.head.appendChild(script);
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
+  totalstores=0;
 }
 
 function initialize() {
@@ -45,21 +46,33 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
-	// Extend the map to fit 
-	bounds.extend(storelatlon);
-	map.fitBounds(bounds);
-	// Update map with markers (requires StyledMarker.js) 	
-	storemarker = new StyledMarker({
-		styleIcon:new StyledIcon(StyledIconTypes.MARKER,
-		{color:"FFFF66",text:label.toString()}),
-		position:storelatlon,
-		map:map});
-	// Append to the list of results
+		// Increment total stores
+		totalstores++;
+		// Extend the map to fit 
+		bounds.extend(storelatlon);
+		map.fitBounds(bounds);
+		// Update map with markers (requires StyledMarker.js) 	
+		storemarker = new StyledMarker({
+			styleIcon:new StyledIcon(StyledIconTypes.MARKER,
+			{color:"FFFF66",text:label.toString()}),
+			position:storelatlon,
+			map:map});
+		// Append to the list of results
 		$("#list").append('<li class="onestore"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
-}
+	// Add the number message
+	if(totalstores==0)
+	{
+		$("#list").append('<li class="onestore">Try increasing the search radius</li>');
+		$("#list").listview('refresh');
+	}
+	else
+	{
+		$("#totalstores").html(totalstores);
+	}
+} // End renderStores Function
 
 
 function onGetLocationSuccess(position)
@@ -101,23 +114,13 @@ function getStores(ml,pm,st)
 			var bdistance = (google.maps.geometry.spherical.computeDistanceBetween (bstorelatlon, latlon)/1000).toFixed(1);
 			return parseFloat(adistance,2) > parseFloat(bdistance,2) ? 1 : -1;
    		};
-		var totalstores = 0;
+		// Load the JSON
 		$.getJSON('museums.json', function(store) {
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
 				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
 				totalstores++;
 			});
-			$("#totalstores").html(totalstores);
-			if(totalstores==0)
-			{
-				$("#list").append('<li class="onestore">Try increasing the search radius</li>');
-				$("#list").listview('refresh');
-			}
-			else
-			{
-				$("#totalstores").html(totalstores);
-			}
 		});		
 }
 
