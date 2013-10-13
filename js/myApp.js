@@ -35,11 +35,17 @@ function initialize() {
 }
 
 
-$('#museumspage').click(function() {
-	storetype = $('input[name="museum"]').val();
+$('body').click(function(event) {
+	if($(event.target).is('#museumspage')) {
+		storetype = "museums";	
+    	window.location='#museums';
+    } else if ($(event.target).is('#artspage')) {
+       alert("Art");
+    } else if ($(event.target).is('#theaterspage')) {
+       alert("Theaters");
+    }
 	$("#storetype").text(storetype);
 	loadScript(11,1000);
-    window.location='#museums';
 });
 
 // This updates the map, listing and store page for every result
