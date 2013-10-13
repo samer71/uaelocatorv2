@@ -36,7 +36,7 @@ function initialize() {
 $('#museumspage').click(function() {
 	storetype = $('input[name="museum"]').val();
 	$("#storetype").text(storetype);
-	loadScript(11,10000);
+	loadScript(11,1000);
     window.location='#museums';
 });
 
@@ -119,7 +119,6 @@ function getStores(ml,pm,st)
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
 				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
-				totalstores++;
 			});
 		});		
 }
