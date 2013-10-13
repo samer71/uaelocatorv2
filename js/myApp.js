@@ -125,9 +125,9 @@ function getStores(ml,pm,st)
 			$.each(sortedstore,function(index,value){ 
 				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude);
 			});
-		});
-		// Done with store, update message
-		updateAll();		
+			// Done with store, update message
+			updateAll();
+		});		
 }
 
 function onGetLocationError(error)
