@@ -102,7 +102,7 @@ function getStores(ml,pm,st)
 			var bstorelatlon=new google.maps.LatLng(b.location.latitude, b.location.longitude);
 			var adistance = (google.maps.geometry.spherical.computeDistanceBetween (astorelatlon, latlon)/1000).toFixed(1);
 			var bdistance = (google.maps.geometry.spherical.computeDistanceBetween (bstorelatlon, latlon)/1000).toFixed(1);
-			return parseFloat(adistance).round(2) > parseFloat(bdistance).round(2) ? 1 : -1;
+			return parseFloat(adistance,2) > parseFloat(bdistance,2) ? 1 : -1;
    		};
 		var totalstores = 0;
 		$.getJSON('museums.json', function(store) {
