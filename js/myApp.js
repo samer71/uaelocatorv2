@@ -34,6 +34,9 @@ function initialize() {
 
 
 $('#museumspage').click(function() {
+	if ($("#list li.onestore").length) {
+		$('#list li.onestore').remove();
+	}
 	storetype = $('input[name="museum"]').val();
 	$("#storetype").text(storetype);
 	loadScript(11,1000);
