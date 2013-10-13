@@ -33,7 +33,6 @@ function initialize() {
 
 
 $('#museumspage').click(function() {
-	Usergrid.ApiClient.init('samer71', 'museums');
 	storetype = $('input[name="museum"]').val();
 	$("#storetype").text(storetype);
 	loadScript(11,10000);
@@ -45,6 +44,7 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 	var coords = stlat+","+stlon;
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
+	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 	// Extend the map to fit 
 	bounds.extend(storelatlon);
 	map.fitBounds(bounds);
@@ -54,12 +54,9 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 		{color:"FFFF66",text:label.toString()}),
 		position:storelatlon,
 		map:map});
-		
 	// Append to the list of results
-	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 		$("#list").append('<li class="onestore"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
-	}
-
+	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
 }
@@ -111,18 +108,17 @@ function getStores(ml,pm,st)
 				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
 				totalstores++;
 			});
-		});
-		// Remove the loader
-		$("#totalstores").html(totalstores);
-		if(totalstores==0)
-		{
-			$("#list").append('<li class="onestore">Try increasing the search radius</li>');
-			$("#list").listview('refresh');
-		}
-		else
-		{
 			$("#totalstores").html(totalstores);
-		}
+			if(totalstores==0)
+			{
+				$("#list").append('<li class="onestore">Try increasing the search radius</li>');
+				$("#list").listview('refresh');
+			}
+			else
+			{
+				$("#totalstores").html(totalstores);
+			}
+		});		
 }
 
 function onGetLocationError(error)
