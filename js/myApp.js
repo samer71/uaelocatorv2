@@ -36,12 +36,12 @@ function initialize() {
 
 
 $('body').click(function(event) {
-	if($(event.target.id).is('#museumspage')) {
+	if($(event.target.id)=='museumspage') {
 		storetype = "museums";	
     	window.location='#museums';
-    } else if ($(event.target.id).is('#artspage')) {
+    } else if ($(event.target.id)=='artspage') {
        alert("Art");
-    } else if ($(event.target.id).is('theaterspage')) {
+    } else if ($(event.target.id)=='theaterspage') {
        alert("Theaters");
     }
 	$("#storetype").text(storetype);
