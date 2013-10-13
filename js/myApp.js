@@ -36,6 +36,8 @@ function initialize() {
 $('#museumspage').click(function() {
 	storetype = $('input[name="museum"]').val();
 	$("#storetype").text(storetype);
+	$('#list li.onestore').remove();
+	$("#list").listview('refresh');
 	loadScript(11,1000);
     window.location='#museums';
 });
@@ -155,20 +157,24 @@ $(window).on("orientationchange",function(event){
 
 $('#reload').click(function() {
 	$('#list li.onestore').remove();
+	$("#list").listview('refresh');
 	loadScript(12,10000);
 });
 
 $('#get20').click(function() {
 	$('#list li.onestore').remove();
+	$("#list").listview('refresh');
 	loadScript(11,20000);
 });
 
 $('#get50').click(function() {
 	$('#list li.onestore').remove();
+	$("#list").listview('refresh');
 	loadScript(10,50000);
 });
 
 $('#getall').click(function() {
 	$('#list li.onestore').remove();
+	$("#list").listview('refresh');
 	loadScript(9,500000);
 });
