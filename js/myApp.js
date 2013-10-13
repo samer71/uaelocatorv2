@@ -72,8 +72,12 @@ function updateAll()
 {
 	if(totalstores==0)
 	{
-		$("#list").append('<li class="onestore">Try increasing the search radius</li>');
+		$("#list").append('<li class="nostore">Try increasing the search radius</li>');
 		$("#list").listview('refresh');
+	}
+	else
+	{
+		$('#list li.nostore').remove();
 	}
 }
 
