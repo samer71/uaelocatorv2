@@ -35,7 +35,7 @@ function initialize() {
 }
 
 
-$('body').click(function(event) {
+$('li').click(function(event) {
 	if($(event.target.id)=='museumspage') {
 		storetype = "museums";	
     	window.location='#museums';
