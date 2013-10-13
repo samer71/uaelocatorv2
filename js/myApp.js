@@ -30,13 +30,12 @@ function initialize() {
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
 	proxkm = proxm /1000;
 	$("#prox").text(proxkm);
+	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
+	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 }
 
 
 $('#museumspage').click(function() {
-	if ($("#list li.onestore").length) {
-		$('#list li.onestore').remove();
-	}
 	storetype = $('input[name="museum"]').val();
 	$("#storetype").text(storetype);
 	loadScript(11,1000);
@@ -161,28 +160,17 @@ $(window).on("orientationchange",function(event){
 });
 
 $('#reload').click(function() {
-	$('#list li.onestore').remove();
-	$('#list li.nostore').remove();
-	$("#list").listview('refresh');
 	loadScript(12,10000);
 });
 
 $('#get20').click(function() {
-	$('#list li.onestore').remove();
-	$("#list").listview('refresh');
 	loadScript(11,20000);
 });
 
 $('#get50').click(function() {
-	$('#list li.onestore').remove();
-	$('#list li.nostore').remove();
-	$("#list").listview('refresh');
 	loadScript(10,50000);
 });
 
 $('#getall').click(function() {
-	$('#list li.onestore').remove();
-	$('#list li.nostore').remove();
-	$("#list").listview('refresh');
 	loadScript(9,500000);
 });
