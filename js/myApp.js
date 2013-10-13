@@ -56,7 +56,7 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 		map:map});
 		
 	// Append to the list of results
-	if(distance<=prox) {
+	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 		$("#list").append('<li class="onestore"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 	}
 
