@@ -62,15 +62,19 @@ function renderStore(prox,label,name,stlat,stlon) {
 	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
-	$("#totalstores").html(totalstores);
 } // End renderStores Function
 
 function updateAll()
 {
+	// Add the number message
 	if(totalstores==0)
 	{
 		$("#list").append('<li class="onestore">Try increasing the search radius</li>');
 		$("#list").listview('refresh');
+	}
+	else
+	{
+		$("#totalstores").html(totalstores);
 	}
 }
 
