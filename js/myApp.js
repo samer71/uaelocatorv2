@@ -41,7 +41,7 @@ $('#museumspage').click(function() {
 });
 
 // This updates the map, listing and store page for every result
-function renderStore(myloc, prox,label,name,stlat,stlon) {
+function renderStore(prox,label,name,stlat,stlon) {
 	var coords = stlat+","+stlon;
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
@@ -62,6 +62,10 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
+} // End renderStores Function
+
+function updateAll()
+{
 	// Add the number message
 	if(totalstores==0)
 	{
@@ -72,8 +76,7 @@ function renderStore(myloc, prox,label,name,stlat,stlon) {
 	{
 		$("#totalstores").html(totalstores);
 	}
-} // End renderStores Function
-
+}
 
 function onGetLocationSuccess(position)
   {
@@ -118,9 +121,11 @@ function getStores(ml,pm,st)
 		$.getJSON('museums.json', function(store) {
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
-				renderStore(ml,pm, index+1,value.name, value.location.latitude, value.location.longitude);
+				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude);
 			});
-		});		
+		});
+		// Done with store, update message
+		updateAll();		
 }
 
 function onGetLocationError(error)
