@@ -21,37 +21,37 @@
 			<div class="my-page">
             <ul data-role="listview" data-inset="true" data-dividertheme="b">
                 <li data-role="list-divider">Art, Culture, &amp; Leisure</li>
-                <li id="museumspage" class="mynav"><a href="">
+                <li id="museumspage" class="mynav"><a href="#results">
                 <img src="img/museum.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Museums</h2>
                 <p>Locate Museums Near You</p>
                 <p class="ui-li-aside">Museums</p>
                 </a></li>
-                <li id="artspage" class="mynav"><a href="">
+                <li id="artspage" class="mynav"><a href="#results">
                 <img src="img/gallery.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Art Galleries</h2>
                 <p>Locate Art Galleries Near You</p>
                 <p class="ui-li-aside">Art</p>
                 </a></li>
-                <li id="theaterspage" class="mynav"><a href="">
+                <li id="theaterspage" class="mynav"><a href="#results">
                 <img src="img/theater.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Theaters</h2>
                 <p>Locate Theaters Near You</p>
                 <p class="ui-li-aside">Theater</p>
                 </a></li>
-                <li id="cinemaspage"><a href="">
+                <li id="cinemaspage"><a href="#results">
                 <img src="img/cinema.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Cinemas</h2>
                 <p>Locate Cinemas Near You</p>
                 <p class="ui-li-aside">Cinema</p>
                 </a></li>
-                <li id="parkspage">
+                <li id="parkspage"><a href="#results">
                 <img src="img/park.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Public Parks</h2>
                 <p>Locate Public Parks Near You</p>
                 <p class="ui-li-aside">Parks</p>
-                </li>
-                <li id="beachespage"><a href="">
+                </a></li>
+                <li id="beachespage"><a href="#results">
                 <img src="img/beach.png"/>
                 <h2 style="color:#c0c0c0; text-shadow:none">Public Beaches</h2>
                 <p>Locate Public Beaches Near You</p>
@@ -63,11 +63,11 @@
 	</div>	<!-- End Index -->
 
     <!-- Museums -->
-    <div data-role="page" id="museums">
+    <div data-role="page" id="results">
     <div data-role="header" data-theme="b" >
-        <h1>Museums</h1>
+        <h1 id="storeheader">Museums</h1>
         <a href="index.html" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
-        <a href="#right-panel" data-role="button" data-iconpos="left" data-icon="bars" data-inline="true">Menu</a>
+        <a href="#right-panel" data-role="button" data-iconpos="notext" data-icon="bars" data-inline="true">Menu</a>
     </div><!-- /header -->
     
     <div data-role="content" id="mapholder">
@@ -77,9 +77,17 @@
     </div><!-- /content -->
     
     <div data-role="content" id="controls" style="text-align:center">
+    <div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a id="reload" href="#" data-icon="refresh">Reload</a></li>
+			<li><a id="get20" href="#" data-icon="refresh">20K</a></li>
+			<li><a href="#" data-icon="refresh">50K</a></li>
+		</ul>
+	</div><!-- /navbar -->
         <ul data-role="listview" data-divider-theme="a" data-inset="false">
             <li data-role="list-divider" role="heading">
-            <button id="get20" data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">20K</button>
+            <button  data-role="button" data-iconpos="notext" data-icon="refresh" data-mini="true" data-inline="true">Reload</button>
+            <button  data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">20K</button>
             <button id="get50" data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">50K</button>
             <button id="getall" data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">All</button>
             </li>
