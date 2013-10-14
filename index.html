@@ -27,19 +27,19 @@
                 <p>Locate Museums Near You</p>
                 <p class="ui-li-aside">Museums</p>
                 </a></li>
-                <li id="artspage"><a href="#results">
+                <li class="artspage"><a href="#results">
                 <img src="img/gallery.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Arts</h2>
                 <p>Locate Art Galleries Near You</p>
                 <p class="ui-li-aside">Art</p>
                 </a></li>
-                <li id="theaterspage"><a href="#results">
+                <li class="theaterspage"><a href="#results">
                 <img src="img/theater.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Theaters</h2>
                 <p>Locate Theaters Near You</p>
                 <p class="ui-li-aside">Theater</p>
                 </a></li>
-                <li id="cinemaspage"><a href="#results">
+                <li class="cinemaspage"><a href="#results">
                 <img src="img/cinema.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Cinemas</h2>
                 <p>Locate Cinemas Near You</p>
@@ -51,7 +51,7 @@
                 <p>Locate Public Parks Near You</p>
                 <p class="ui-li-aside">Parks</p>
                 </a></li>
-                <li id="beachespage"><a href="#results">
+                <li class="beachespage"><a href="#results">
                 <img src="img/beach.png"/>
                 <h2 style="color:#c0c0c0; text-shadow:none">Public Beaches</h2>
                 <p>Locate Public Beaches Near You</p>
@@ -96,21 +96,21 @@
     </div><!-- /footer -->
     
         <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
-        <ul data-role="listview" data-theme="d" data-icon="false">
-            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        <ul data-role="listview" data-theme="a" data-icon="false">
+            <li data-icon="delete"><a data-rel="close">Close</a></li>
             <li data-icon="arrow-d"><a href="#">Update</a></li><br/>
         </ul>
           <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
-            <div data-role="collapsible">
+            <div data-role="collapsible" data-collapsed="false">
               <h3>Categories</h3>
               <ul data-role="listview">
-                <li class="museumspage"><a href="#results" data-rel="close">Museums</a></li>
-                <li class="artspage"><a href="#results">Arts</a></li>
-                <li class="theaterspage"><a href="#results">Theaters</a></li>
-                <li class="cinemaspage"><a href="#results">Cinemas</a></li>
-                <li class="beachespage"><a href="#results">Beaches</a></li>
-                <li class="parkspage"><a href="#results">Parks</a></li>
-                <li class="beachespage"><a href="#results">Beaches</a></li>
+                <li class="museumspage"><a data-rel="close" href="#results">Museums</a></li>
+                <li class="artspage"><a data-rel="close" href="#results">Arts</a></li>
+                <li class="theaterspage"><a data-rel="close" href="#results">Theaters</a></li>
+                <li class="cinemaspage"><a data-rel="close" href="#results">Cinemas</a></li>
+                <li class="beachespage"><a data-rel="close" href="#results">Beaches</a></li>
+                <li class="parkspage"><a data-rel="close" href="#results">Parks</a></li>
+                <li class="beachespage"><a data-rel="close" href="#results">Beaches</a></li>
               </ul>
             </div><!-- /collapsible -->
             <div data-role="collapsible">
@@ -119,15 +119,6 @@
               By Samer Aoudi<br/>
               UAE Locator uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
               The app requires data package (or WiFi) to get your location. 
-            </div><!-- /collapsible -->
-            <div data-role="collapsible">
-              <h3>Update</h3>
-              Download the latest list of PoIs,
-              <ul data-role="listview">
-                <li><a href="#">Museums</a></li>
-                <li><a href="#">Theaters</a></li>
-                <li><a href="#">Parks</a></li>
-              </ul>
             </div><!-- /collapsible -->
           </div><!-- /collapsible-set -->
     </div><!-- /panel -->
