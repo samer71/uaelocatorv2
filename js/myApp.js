@@ -35,7 +35,7 @@ function initialize() {
 }
 
 
-$('#museumspage').click(function() {
+$('.museumspage').click(function() {
 	storetype="museums";
 	$("#storeheader").html("Museums");
 	$("#storetype").html(storetype);

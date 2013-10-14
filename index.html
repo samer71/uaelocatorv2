@@ -21,19 +21,19 @@
 			<div class="my-page">
             <ul data-role="listview" data-inset="true" data-dividertheme="b">
                 <li data-role="list-divider">Art, Culture, &amp; Leisure</li>
-                <li id="museumspage" class="mynav"><a href="#results" data-transition="slide">
+                <li class="museumspage"><a href="#results" data-transition="slide">
                 <img src="img/museum.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Museums</h2>
                 <p>Locate Museums Near You</p>
                 <p class="ui-li-aside">Museums</p>
                 </a></li>
-                <li id="artspage" class="mynav"><a href="#results">
+                <li id="artspage"><a href="#results">
                 <img src="img/gallery.png"/>
-                <h2 style="color:#c0c0c0;text-shadow:none">Art Galleries</h2>
+                <h2 style="color:#c0c0c0;text-shadow:none">Arts</h2>
                 <p>Locate Art Galleries Near You</p>
                 <p class="ui-li-aside">Art</p>
                 </a></li>
-                <li id="theaterspage" class="mynav"><a href="#results">
+                <li id="theaterspage"><a href="#results">
                 <img src="img/theater.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Theaters</h2>
                 <p>Locate Theaters Near You</p>
@@ -97,16 +97,20 @@
     
         <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
         <ul data-role="listview" data-theme="d" data-icon="false">
-            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li><br/>
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+            <li data-icon="arrow-d"><a href="#">Update</a></li><br/>
         </ul>
           <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
             <div data-role="collapsible">
               <h3>Categories</h3>
-              Download the latest list of PoIs,
               <ul data-role="listview">
-                <li><a href="#results">Museums</a></li>
-                <li><a href="#results">Theaters</a></li>
+                <li class="museumspage"><a href="#results" data-rel="close">Museums</a></li>
+                <li class="artspage"><a href="#results">Arts</a></li>
+                <li class="theaterspage"><a href="#results">Theaters</a></li>
+                <li class="cinemaspage"><a href="#results">Cinemas</a></li>
+                <li class="beachespage"><a href="#results">Beaches</a></li>
                 <li class="parkspage"><a href="#results">Parks</a></li>
+                <li class="beachespage"><a href="#results">Beaches</a></li>
               </ul>
             </div><!-- /collapsible -->
             <div data-role="collapsible">
