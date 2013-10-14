@@ -9,7 +9,7 @@ var map, lat, lon, latlon, mylocation;
 var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, bounds, distance;
-var museumsArray;
+var storeArray=[];
 
 function onDeviceReady() {
 }
@@ -115,6 +115,7 @@ function getStores(ml,pm,st)
 		// Load the JSON
 		$.getJSON('museums.json', function(store) {
 			sortedstore = $(store).sort(sortByDistance);
+			storeArray=sortedstore;
 			$.each(sortedstore,function(index,value){ 
 				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.hours, value.entryFees, value.contact, value.description);
 			});
@@ -153,11 +154,10 @@ $(window).on("orientationchange",function(event){
 });
 
 // Events Section
-
+/*
 $('#list').delegate('.onestore', 'click', function ()  {
-	// Load the JSON
-	$.getJSON('museums.json', function(store) {
-		$.each(store,function(index,value){ 
+		
+		$.each(storeArray,function(index,value){ 
 			var stll=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var stdist = (google.maps.geometry.spherical.computeDistanceBetween (stll, latlon)/1000).toFixed(1);
 			if(value.museumNumber==parseInt($(this).attr('id')))
@@ -171,9 +171,8 @@ $('#list').delegate('.onestore', 'click', function ()  {
 				$("#storecontanct").html(value.contact);
 			}
 		});
-	});	
 });
-
+*/
 $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
 	{
