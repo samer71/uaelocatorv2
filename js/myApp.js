@@ -202,32 +202,32 @@ $('#list').delegate('.onestore', 'click', function ()  {
 	$("#storefees").html($(this).attr('id'));
 });
 
-$('#categories').delegate('.mainnav', 'click', function ()  {
-	if($(this).attr('id')=="museumspage")
+$('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
+	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
 	{
 		storetype="museums";
 		$("#storeheader").html("Museums");
-	} else if($(this).attr('id')=="artspage") 
+	} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 	{
 		storetype="arts";
 		$("#storeheader").html("The Arts");
 	}
-	else if($(this).attr('id')=="theaterspage") 
+	else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
 	{
 		storetype="theaters";
 		$("#storeheader").html("Theaters");
 	}
-	else if($(this).attr('id')=="cinemaspage") 
+	else if($((this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
 	{
 		storetype="cinemas";
 		$("#storeheader").html("Cinemas");
 	}
-	else if($(this).attr('id')=="parkspage") 
+	else if(($(this).attr('id')=="parkspage") || ($(this).attr('id')=="pparkspage")) 
 	{
 		storetype="parks";
 		$("#storeheader").html("Parks");
 	}
-	else if($(this).attr('id')=="beachespage") 
+	else if(($(this).attr('id')=="beachespage") || ($(this).attr('id')=="pbeachespage")) 
 	{
 		storetype="beaches";
 		$("#storeheader").html("Beaches");

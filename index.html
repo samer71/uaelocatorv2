@@ -33,25 +33,25 @@
                 <p>Locate Art Galleries Near You</p>
                 <p class="ui-li-aside">Art</p>
                 </a></li>
-                <li class="theaterspage"><a href="#results" data-transition="slide">
+                <li id="theaterspage" class="mainnav"><a href="#results" data-transition="slide">
                 <img src="img/theater.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Theaters</h2>
                 <p>Locate Theaters Near You</p>
                 <p class="ui-li-aside">Theater</p>
                 </a></li>
-                <li class="cinemaspage"><a href="#results" data-transition="slide">
+                <li id="cinemaspage" class="mainnav"><a href="#results" data-transition="slide">
                 <img src="img/cinema.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Cinemas</h2>
                 <p>Locate Cinemas Near You</p>
                 <p class="ui-li-aside">Cinema</p>
                 </a></li>
-                <li class="parkspage"><a href="#results" data-transition="slide">
+                <li id="parkspage" class="mainnav"><a href="#results" data-transition="slide">
                 <img src="img/park.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Public Parks</h2>
                 <p>Locate Public Parks Near You</p>
                 <p class="ui-li-aside">Parks</p>
                 </a></li>
-                <li class="beachespage"><a href="#results" data-transition="slide">
+                <li id="beachespage" class="mainnav"><a href="#results" data-transition="slide">
                 <img src="img/beach.png"/>
                 <h2 style="color:#c0c0c0; text-shadow:none">Public Beaches</h2>
                 <p>Locate Public Beaches Near You</p>
@@ -103,14 +103,13 @@
           <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
             <div data-role="collapsible" data-collapsed="false">
               <h3>Categories</h3>
-              <ul data-role="listview">
-                <li class="museumspage"><a href="#results" data-rel="close">Museums</a></li>
-                <li class="artspage"><a href="#results" data-rel="close">Arts</a></li>
-                <li class="theaterspage"><a href="#results" data-rel="close">Theaters</a></li>
-                <li class="cinemaspage"><a href="#results" data-rel="close">Cinemas</a></li>
-                <li class="beachespage"><a href="#results" data-rel="close">Beaches</a></li>
-                <li class="parkspage"><a href="#results" data-rel="close">Parks</a></li>
-                <li class="beachespage"><a href="#results" data-rel="close">Beaches</a></li>
+              <ul data-role="listview" id="panelcategories">
+                <li class="mainnav" id="pmuseumspage"><a href="#results" data-rel="close">Museums</a></li>
+                <li class="mainnav" id="partspage"><a href="#results" data-rel="close">Arts</a></li>
+                <li class="mainnav" id="ptheaterspage"><a href="#results" data-rel="close">Theaters</a></li>
+                <li class="mainnav" id="pcinemaspage"><a href="#results" data-rel="close">Cinemas</a></li>
+                <li class="mainnav" id="pparkspage"><a href="#results" data-rel="close">Parks</a></li>
+                <li class="mainnav" id="pbeachespage"><a href="#results" data-rel="close">Beaches</a></li>
               </ul>
             </div><!-- /collapsible -->
             <div data-role="collapsible">
