@@ -155,9 +155,25 @@ $(window).on("orientationchange",function(event){
 // Events Section
 
 $('#list').delegate('.onestore', 'click', function ()  {
-	//var targetId = e.target.getAttribute('id'); $(this).attr('id').
-	$("#storename").html($(this).index());
-	$("#storefees").html($(this).attr('id'));
+	// Load the JSON
+	$.getJSON('museums.json', function(store) {
+		$.each(store,function(index,value){ 
+			var stll=new google.maps.LatLng(value.location.latitude, value.location.longitude);
+			var stdist = (google.maps.geometry.spherical.computeDistanceBetween (stll, latlon)/1000).toFixed(1);
+			if(value.museumNumber==$(this).attr('id'))
+			{
+				$("#storename").html(value.name);
+				$("#storedistance").html(stdist);
+				$("#storeaddress").html(value.location.displayAddress);
+				$("#storedescription").html(value.description);
+				$("#storefees").html(value.entryFees);
+				$("#storehours").html(value.hours);
+				$("#storecontanct").html(value.contact);
+			}
+		});
+		// Done with store, update message
+		updateAll();
+	});	
 });
 
 $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
@@ -165,7 +181,6 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	{
 		storetype="museums";
 		$("#storeheader").html("Museums");
-		$("#right-panel" ).panel( "close" );
 	} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 	{
 		storetype="arts";
@@ -191,6 +206,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 		storetype="beaches";
 		$("#storeheader").html("Beaches");
 	}
+	$("#right-panel").panel( "close" );
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
 });
