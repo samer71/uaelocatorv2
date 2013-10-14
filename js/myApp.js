@@ -152,19 +152,6 @@ $(window).on("orientationchange",function(event){
   //$("#map").css({"width":window.innerWidth });
 });
 
-$('.museumspage').click(function() {
-	storetype="museums";
-	$("#storeheader").html("Museums");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
-
-$('.artspage').click(function() {
-	storetype="arts";
-	$("#storeheader").html("The Arts");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
 
 
 $('.theaterspage').click(function() {
