@@ -71,12 +71,31 @@
     <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="c">
         <ul data-role="listview" data-theme="d" data-icon="false">
             <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-            <li data-role="list-divider">Share this page</li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Google +</a></li>
-            <li><a href="#">Mail</a></li>
         </ul>
+        <div data-role="collapsible" data-inset="false" data-iconpos="right" data-theme="d" data-content-theme="d">
+          <h3>Categories</h3>
+          <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+            <div data-role="collapsible">
+              <h3>About</h3>
+              UAE Locator v1.0<br/>
+              By Samer Aoudi
+            </div><!-- /collapsible -->
+            <div data-role="collapsible">
+              <h3>Help</h3>
+              UAE Locator uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
+              The app requires data package (or WiFi) to get your location. 
+            </div><!-- /collapsible -->
+            <div data-role="collapsible">
+              <h3>Download</h3>
+              Download the latest list of PoIs
+              <ul data-role="listview">
+                <li><a href="#">Museums</a></li>
+                <li><a href="#">Theaters</a></li>
+                <li><a href="#">Parks</a></li>
+              </ul>
+            </div><!-- /collapsible -->
+          </div><!-- /collapsible-set -->
+        </div><!-- /collapsible -->
     </div><!-- /panel -->	
 	</div>	<!-- End Index -->
 
