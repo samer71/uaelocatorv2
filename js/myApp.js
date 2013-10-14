@@ -194,18 +194,20 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	loadScript(11,10000);
 });
 
-$('#reload').click(function() {
-	loadScript(12,10000);
-});
-
-$('#get20').click(function() {
-	loadScript(11,20000);
-});
-
-$('#get50').click(function() {
-	loadScript(10,50000);
-});
-
-$('#getall').click(function() {
-	loadScript(9,500000);
+$('#options').delegate('.option', 'click', function ()  {
+	if($(this).attr('id')=="reload")
+	{
+		loadScript(12,10000);
+	} else if($(this).attr('id')=="get20") 
+	{
+		loadScript(11,20000);
+	}
+	else if($(this).attr('id')=="get50") 
+	{
+		loadScript(10,50000);
+	}
+	else if($(this).attr('id')=="getall") 
+	{
+		loadScript(9,500000);
+	}
 });
