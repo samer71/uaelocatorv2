@@ -160,7 +160,7 @@ $('#list').delegate('.onestore', 'click', function ()  {
 		$.each(store,function(index,value){ 
 			var stll=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var stdist = (google.maps.geometry.spherical.computeDistanceBetween (stll, latlon)/1000).toFixed(1);
-			if(value.museumNumber==$(this).attr('id'))
+			if(value.museumNumber==parseInt($(this).attr('id')))
 			{
 				$("#storename").html(value.name);
 				$("#storedistance").html(stdist);
@@ -171,8 +171,6 @@ $('#list').delegate('.onestore', 'click', function ()  {
 				$("#storecontanct").html(value.contact);
 			}
 		});
-		// Done with store, update message
-		updateAll();
 	});	
 });
 
