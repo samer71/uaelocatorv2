@@ -68,7 +68,7 @@
         <h1 id="storeheader"></h1>
         <a href="index.html" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
         <a href="#right-panel" data-role="button" data-iconpos="notext" data-icon="bars" data-inline="true">Menu</a>
-        <div data-role="navbar" data-iconpos="left" data-theme="a">
+        <div data-role="navbar" data-iconpos="left">
 		<ul>
 			<li><a id="reload" href="#" data-icon="refresh">Reload</a></li>
 			<li><a id="get20" href="#" data-icon="refresh">20K</a></li>
@@ -123,7 +123,34 @@
           </div><!-- /collapsible-set -->
     </div><!-- /panel -->
     
-	</div><!-- End Museums Results -->
+	</div><!-- End Results -->
+    
+    <!-- details -->
+    <div data-role="page" id="details">
+    <div data-role="header" data-theme="b" >
+        <h4 id="storename"></h4>
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left">Back</a>
+    </div><!-- /header -->
+    <img id="map" height="200"/>
+    <div data-role="content" id="storedetails">
+    	<h3>Address (<span id="storedistance"></span>KM from you)</h3>
+        <span id="storeaddress"></span>
+        <h3>Description</h3>
+        <span id="storedescription"></span>
+        <h3>Entry Fees</h3>
+        <span id="storefees"></span>
+        <h3>Opening Hours</h3>
+        <span id="storehours"></span>
+        <h3>Contacts</h3>
+        <span id="storecontanct"></span>
+    </div><!-- /content -->
+    
+            
+    <div data-role="footer" data-theme="b" >
+    <h4>&copy; Samer Aoudi 2013</h4>
+    </div><!-- /footer -->
+    
+	</div><!-- End Details -->   
      
 	<script src="js/myApp.js"></script>
 </body>
