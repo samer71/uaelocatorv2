@@ -151,7 +151,20 @@ $(window).on("orientationchange",function(event){
   //location.reload();
   //$("#map").css({"width":window.innerWidth });
 });
+/*
+$('.museumspage').click(function() {
+	storetype="museums";
+	$("#storeheader").html("Museums");
+	$("#storetype").html(storetype);
+	loadScript(11,10000);
+});
 
+$('.artspage').click(function() {
+	storetype="arts";
+	$("#storeheader").html("The Arts");
+	$("#storetype").html(storetype);
+	loadScript(11,10000);
+});
 
 
 $('.theaterspage').click(function() {
@@ -182,7 +195,7 @@ $('.beachespage').click(function() {
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
 });
-
+*/
 $('#list').delegate('.onestore', 'click', function ()  {
 	//var targetId = e.target.getAttribute('id'); $(this).attr('id').
 	$("#storename").html($(this).index());
@@ -198,6 +211,26 @@ $('#categories').delegate('.mainnav', 'click', function ()  {
 	{
 		storetype="arts";
 		$("#storeheader").html("The Arts");
+	}
+	else if($(this).attr('id')=="theaterspage") 
+	{
+		storetype="theaters";
+		$("#storeheader").html("Theaters");
+	}
+	else if($(this).attr('id')=="cinemaspage") 
+	{
+		storetype="cinemas";
+		$("#storeheader").html("Cinemas");
+	}
+	else if($(this).attr('id')=="parkspage") 
+	{
+		storetype="parks";
+		$("#storeheader").html("Parks");
+	}
+	else if($(this).attr('id')=="beachespage") 
+	{
+		storetype="beaches";
+		$("#storeheader").html("Beaches");
 	}
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
