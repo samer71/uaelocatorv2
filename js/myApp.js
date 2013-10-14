@@ -196,8 +196,7 @@ $('.beachespage').click(function() {
 	loadScript(11,10000);
 });
 
-$('.onestore').click(function(event) {
-	storetype="beaches";
+$('.onestore').vclick(function(event) {
 	$("#storename").html(event.target.id);
 });
 
