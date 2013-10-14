@@ -197,8 +197,9 @@ $('.beachespage').click(function() {
 });
 
 $('#list').delegate('.onestore', 'click', function ()  {
-	//var targetId = e.target.getAttribute('id');
+	//var targetId = e.target.getAttribute('id'); $(this).attr('id').
 	$("#storename").html($(this).index());
+	$("#storefees").html($(this).attr('id'));
 });
 
 $('#reload').click(function() {
