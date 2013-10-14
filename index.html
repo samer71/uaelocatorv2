@@ -21,7 +21,7 @@
 			<div class="my-page">
             <ul data-role="listview" data-inset="true" data-dividertheme="b">
                 <li data-role="list-divider">Art, Culture, &amp; Leisure</li>
-                <li id="museumspage" class="mynav"><a href="#results">
+                <li id="museumspage" class="mynav"><a href="#results" data-transition="slide">
                 <img src="img/museum.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Museums</h2>
                 <p>Locate Museums Near You</p>
@@ -45,7 +45,7 @@
                 <p>Locate Cinemas Near You</p>
                 <p class="ui-li-aside">Cinema</p>
                 </a></li>
-                <li id="parkspage"><a href="#results">
+                <li class="parkspage"><a href="#results">
                 <img src="img/park.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Public Parks</h2>
                 <p>Locate Public Parks Near You</p>
@@ -68,7 +68,7 @@
         <h1 id="storeheader"></h1>
         <a href="index.html" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
         <a href="#right-panel" data-role="button" data-iconpos="notext" data-icon="bars" data-inline="true">Menu</a>
-        <div data-role="navbar" data-iconpos="left">
+        <div data-role="navbar" data-iconpos="left" data-theme="a">
 		<ul>
 			<li><a id="reload" href="#" data-icon="refresh">Reload</a></li>
 			<li><a id="get20" href="#" data-icon="refresh">20K</a></li>
@@ -100,6 +100,15 @@
             <li data-icon="delete"><a href="#" data-rel="close">Close</a></li><br/>
         </ul>
           <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+            <div data-role="collapsible">
+              <h3>Categories</h3>
+              Download the latest list of PoIs,
+              <ul data-role="listview">
+                <li><a href="#results">Museums</a></li>
+                <li><a href="#results">Theaters</a></li>
+                <li class="parkspage"><a href="#results">Parks</a></li>
+              </ul>
+            </div><!-- /collapsible -->
             <div data-role="collapsible">
               <h3>About</h3>
               UAE Locator v1.0<br/>

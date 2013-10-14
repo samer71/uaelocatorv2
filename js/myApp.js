@@ -42,7 +42,7 @@ $('#museumspage').click(function() {
 	loadScript(11,10000);
 });
 
-$('#parkspage').click(function() {
+$('.parkspage').click(function() {
 	storetype="parks";
 	$("#storeheader").html("Parks");
 	$("#storetype").html(storetype);
