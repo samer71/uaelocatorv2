@@ -196,7 +196,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-$('#gohome').delegate('.option', 'tap', function ()  {
+$('#gohome').on('tap', function ()  {
 	$.mobile.changePage("#index");
 });
 
