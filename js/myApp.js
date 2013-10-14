@@ -202,6 +202,20 @@ $('#list').delegate('.onestore', 'click', function ()  {
 	$("#storefees").html($(this).attr('id'));
 });
 
+$('#categories').delegate('.mainnav', 'click', function ()  {
+	if($(this).attr('id')=="museumspage")
+	{
+		storetype="museums";
+		$("#storeheader").html("Museums");
+	} else if($(this).attr('id')=="artspage") 
+	{
+		storetype="arts";
+		$("#storeheader").html("The Arts");
+	}
+	$("#storetype").html(storetype);
+	loadScript(11,10000);
+});
+
 $('#reload').click(function() {
 	loadScript(12,10000);
 });
