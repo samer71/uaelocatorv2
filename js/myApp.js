@@ -9,7 +9,7 @@ var map, lat, lon, latlon, mylocation;
 var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, bounds, distance;
-var storeArray=[];
+var jsonFile;
 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none'
@@ -119,9 +119,8 @@ function getStores(ml,pm,st)
 			return parseFloat(adistance,2) > parseFloat(bdistance,2) ? 1 : -1;
    		};
 		// Load the JSON
-		$.getJSON('museums.json', function(store) {
+		$.getJSON(jsonFile, function(store) {
 			sortedstore = $(store).sort(sortByDistance);
-			storeArray=sortedstore;
 			$.each(sortedstore,function(index,value){ 
 				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.hours, value.entryFees, value.contact, value.description);
 			});
@@ -164,6 +163,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
 	{
 		storetype="museums";
+		jsonFile="museums.json";
 		$("#storeheader").html("Museums");
 	} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 	{
@@ -173,21 +173,25 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
 	{
 		storetype="theaters";
+		jsonFile="museums.json";
 		$("#storeheader").html("Theaters");
 	}
 	else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
 	{
 		storetype="cinemas";
+		jsonFile="museums.json";
 		$("#storeheader").html("Cinemas");
 	}
 	else if(($(this).attr('id')=="parkspage") || ($(this).attr('id')=="pparkspage")) 
 	{
 		storetype="parks";
+		jsonFile="parks.json";
 		$("#storeheader").html("Parks");
 	}
 	else if(($(this).attr('id')=="beachespage") || ($(this).attr('id')=="pbeachespage")) 
 	{
 		storetype="beaches";
+		jsonFile="museums.json";
 		$("#storeheader").html("Beaches");
 	}
 	$("#right-panel").panel( "close" );
