@@ -45,12 +45,12 @@
                 <p>Locate Cinemas Near You</p>
                 <p class="ui-li-aside">Cinema</p>
                 </a></li>
-                <li id="parkspage"><a href="">
+                <li id="parkspage">
                 <img src="img/park.png"/>
                 <h2 style="color:#c0c0c0;text-shadow:none">Public Parks</h2>
                 <p>Locate Public Parks Near You</p>
                 <p class="ui-li-aside">Parks</p>
-                </a></li>
+                </li>
                 <li id="beachespage"><a href="">
                 <img src="img/beach.png"/>
                 <h2 style="color:#c0c0c0; text-shadow:none">Public Beaches</h2>
@@ -59,41 +59,7 @@
                 </a></li>
             </ul>
             </div><!-- my-page div -->    
-	</div> <!-- End Content -->
-    
-	<div data-role="footer" class="footer-docs" data-theme="b">
-    <h3>&copy; 2013 Samer Aoudi</h3>
-    <a href="#right-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-inline="true">Menu</a>
-	</div>
-    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
-        <ul data-role="listview" data-theme="d" data-icon="false">
-            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li><br/>
-        </ul>
-        <div data-role="collapsible" data-inset="false" data-iconpos="right" data-theme="d" data-content-theme="d">
-          <h3>Categories</h3>
-          <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
-            <div data-role="collapsible">
-              <h3>About</h3>
-              UAE Locator v1.0<br/>
-              By Samer Aoudi
-            </div><!-- /collapsible -->
-            <div data-role="collapsible">
-              <h3>Help</h3>
-              UAE Locator uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
-              The app requires data package (or WiFi) to get your location. 
-            </div><!-- /collapsible -->
-            <div data-role="collapsible">
-              <h3>Download</h3>
-              Download the latest list of PoIs
-              <ul data-role="listview">
-                <li><a href="#">Museums</a></li>
-                <li><a href="#">Theaters</a></li>
-                <li><a href="#">Parks</a></li>
-              </ul>
-            </div><!-- /collapsible -->
-          </div><!-- /collapsible-set -->
-        </div><!-- /collapsible -->
-    </div><!-- /panel -->	
+	</div> <!-- End Content -->	
 	</div>	<!-- End Index -->
 
     <!-- Museums -->
@@ -101,7 +67,7 @@
     <div data-role="header" data-theme="b" >
         <h1>Museums</h1>
         <a href="index.html" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
-        <button id="reload" data-role="button" data-iconpos="right" data-icon="refresh" data-inline="true">Reload</button>
+        <a href="#right-panel" data-role="button" data-iconpos="left" data-icon="bars" data-inline="true">Menu</a>
     </div><!-- /header -->
     
     <div data-role="content" id="mapholder">
@@ -130,6 +96,30 @@
     <div data-role="footer" data-theme="b" >
     <h4>&copy; Samer Aoudi 2013</h4>
     </div><!-- /footer -->
+    
+        <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
+        <ul data-role="listview" data-theme="d" data-icon="false">
+            <li data-icon="delete"><a href="#" data-rel="close">Close</a></li><br/>
+        </ul>
+          <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+            <div data-role="collapsible">
+              <h3>About</h3>
+              UAE Locator v1.0<br/>
+              By Samer Aoudi<br/>
+              UAE Locator uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
+              The app requires data package (or WiFi) to get your location. 
+            </div><!-- /collapsible -->
+            <div data-role="collapsible">
+              <h3>Update</h3>
+              Download the latest list of PoIs,
+              <ul data-role="listview">
+                <li><a href="#">Museums</a></li>
+                <li><a href="#">Theaters</a></li>
+                <li><a href="#">Parks</a></li>
+              </ul>
+            </div><!-- /collapsible -->
+          </div><!-- /collapsible-set -->
+    </div><!-- /panel -->
     
 	</div><!-- End Museums Results -->
      
