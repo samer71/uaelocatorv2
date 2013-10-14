@@ -52,7 +52,8 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 			position:storelatlon,
 			map:map});
 		// Append to the list of results
-		$("#list").append('<li class="onestore" id="'+label+'"><a href="#details" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+		//$("#list").append('<li class="onestore" id="'+label+'"><a href="#details" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+		$("#list").append('<li class="onestore" id="'+label+'">'+name+' ('+distance+'KM)<span class="ui-li-count ui-btn-corner-all">'+label+'</span><div data-role="collapsible"><ul><h3>'+name+'</h3><li>'+desc+'</li></ul></div></li>');
 	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
