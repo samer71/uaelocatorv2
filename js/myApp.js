@@ -34,7 +34,8 @@ function initialize() {
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 }
 
-$('#index').on('click', '.mynav' , function(event) {
+
+$('.mynav').click(function(event) {
 	if(event.target.id=="museumspage") {
 		storetype = "museums";	
     	window.location='#museums';
