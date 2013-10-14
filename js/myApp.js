@@ -12,6 +12,9 @@ var zoomlevel, bounds, distance;
 var storeArray=[];
 
 function onDeviceReady() {
+	$.mobile.defaultPageTransition   = 'none'
+	$.mobile.defaultDialogTransition = 'none'
+	$.mobile.buttonMarkup.hoverDelay = 0
 }
 
 function loadScript(zl,pm) {
@@ -157,26 +160,7 @@ $(window).on("orientationchange",function(event){
 });
 
 // Events Section
-/*
-$('#list').delegate('.onestore', 'click', function ()  {
-		
-		$.each(storeArray,function(index,value){ 
-			var stll=new google.maps.LatLng(value.location.latitude, value.location.longitude);
-			var stdist = (google.maps.geometry.spherical.computeDistanceBetween (stll, latlon)/1000).toFixed(1);
-			if(value.museumNumber==parseInt($(this).attr('id')))
-			{
-				$("#storename").html(value.name);
-				$("#storedistance").html(stdist);
-				$("#storeaddress").html(value.location.displayAddress);
-				$("#storedescription").html(value.description);
-				$("#storefees").html(value.entryFees);
-				$("#storehours").html(value.hours);
-				$("#storecontanct").html(value.contact);
-			}
-		});
-});
-*/
-$('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
+$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
 	{
 		storetype="museums";
@@ -209,6 +193,11 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	$("#right-panel").panel( "close" );
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
+	$.mobile.changePage("#results");
+});
+
+$('#gohome').delegate('.option', 'tap', function ()  {
+	$.mobile.changePage("#index");
 });
 
 $('#options').delegate('.option', 'click', function ()  {
