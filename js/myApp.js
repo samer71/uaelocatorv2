@@ -36,10 +36,19 @@ function initialize() {
 
 
 $('#museumspage').click(function() {
-	$("#storetype").text(storetype);
+	storetype="museums";
+	$("#storetype").html(storetype);
 	loadScript(11,10000);
     window.location='#museums';
 });
+
+$('#parkspage').click(function() {
+	storetype="parks";
+	$("#storetype").html(storetype);
+	loadScript(11,10000);
+    window.location='#museums';
+});
+
 
 // This updates the map, listing and store page for every result
 function renderStore(prox,label,name,stlat,stlon) {
