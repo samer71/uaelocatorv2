@@ -151,51 +151,9 @@ $(window).on("orientationchange",function(event){
   //location.reload();
   //$("#map").css({"width":window.innerWidth });
 });
-/*
-$('.museumspage').click(function() {
-	storetype="museums";
-	$("#storeheader").html("Museums");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
 
-$('.artspage').click(function() {
-	storetype="arts";
-	$("#storeheader").html("The Arts");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
+// Events Section
 
-
-$('.theaterspage').click(function() {
-	storetype="theaters";
-	$("#storeheader").html("Theaters");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
-
-$('.cinemaspage').click(function() {
-	storetype="cinemas";
-	$("#storeheader").html("Cinemas");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
-
-
-$('.parkspage').click(function() {
-	storetype="parks";
-	$("#storeheader").html("Parks");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
-
-$('.beachespage').click(function() {
-	storetype="beaches";
-	$("#storeheader").html("Beaches");
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-});
-*/
 $('#list').delegate('.onestore', 'click', function ()  {
 	//var targetId = e.target.getAttribute('id'); $(this).attr('id').
 	$("#storename").html($(this).index());
