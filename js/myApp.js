@@ -55,7 +55,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 			position:storelatlon,
 			map:map});
 		// Append to the list of results
-		$("#list").append('<li class="onestore" id="'+label+'"><a href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+		$("#list").append('<li class="onestore" id="'+label+'"><a class="dlink" href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		
 	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+coords+'+&zoom=11&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+desc+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
 		
@@ -200,7 +200,11 @@ $('#gohome').on('tap', function ()  {
 	$.mobile.changePage("#index");
 });
 
-$('#options').delegate('.option', 'click', function ()  {
+$('.onestore').delegate('.dlink', 'tap', function ()  {
+	$.mobile.changePage($(this).attr('href'));
+});
+
+$('#options').delegate('.option', 'tap', function ()  {
 	if($(this).attr('id')=="reload")
 	{
 		loadScript(12,10000);
