@@ -165,6 +165,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	{
 		storetype="museums";
 		$("#storeheader").html("Museums");
+		$("#right-panel" ).panel( "close" );
 	} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 	{
 		storetype="arts";
@@ -175,7 +176,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 		storetype="theaters";
 		$("#storeheader").html("Theaters");
 	}
-	else if($((this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
+	else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
 	{
 		storetype="cinemas";
 		$("#storeheader").html("Cinemas");
