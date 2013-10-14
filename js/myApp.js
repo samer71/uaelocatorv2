@@ -196,8 +196,9 @@ $('.beachespage').click(function() {
 	loadScript(11,10000);
 });
 
-$('.onestore').vclick(function(event) {
-	$("#storename").html(event.target.id);
+$('.onestore').vclick(function(e) {
+	//var targetId = e.target.getAttribute('id');
+	$("#storename").html(e.target.id);
 });
 
 $('#reload').click(function() {
