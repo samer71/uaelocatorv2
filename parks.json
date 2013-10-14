@@ -1,0 +1,228 @@
+[
+    {
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.215231,
+            "longitude": 55.449926,
+            "displayAddress": "Mushrif Park, Deira"
+        },
+        "storeID": 1,
+        "name": "Mushrif Park",
+        "description": "It is 15 kilometres away from the city centre and is the largest park in Dubai. Many facilities are available for families on more than 30 family zones inside the park. It is located in the eastern part of the city, about 16 km from the traditional center of Dubai.",
+		"facilities": "Mushrif park has international village which contains 13 models of Arabic and English houses. The park also contains of amusing and entertaining services such as: pool, BBQ areas, children games,  sport playground (basket ball, volleyball, hand ball), walking tracks and bicycle tracks, horse and camel riding, and theater that fits 500 people.",
+        "entryFees": [
+            "Per Person: 3 AED",
+            "Per Car: 10 AED",
+            "Special Needs: Free",
+            "Membership: Annual (340 AED) or 6 months (260 AED) membership can be obtained to use the swimming pool"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-288 3624",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.318464,
+            "longitude": 55.347784,
+            "displayAddress": "Mamzar Beach Park, Deira"
+        },
+        "storeID": 2,
+        "name": "Mamzar Beach Park",
+        "description": "Al Mamzar Park covers an area of 106 hectares and offers barbecue sites, private chalets for hire, swimming pool, food kiosks, sheltered beach and safe lagoon, a scenic train and many children?s play areas. Piped music is played throughout the day and there are pleasant grassed picnic areas.. It is located approximately 5 km after the turn off to Hamriya Port.",
+		"facilities": "The park encompasses a large swimming pool divided into 3 pools for children and adults. Seats, shades, changing rooms, showers and a snackhouse are available, in addition to the permanent presence of lifeguards. Facilities include pool, BBQ areas, children games,  sport playground (basket ball, volleyball, hand ball), Restaurants and cafeterias, beach cabins, and renting bicycles.",
+        "entryFees": [
+            "Per Person: 5 AED",
+            "Per Car: 30 AED",
+            "Special Needs: Free",
+            "Service of renting the beach cabins: large cabin for AED 200 and small cabin for AED 150"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-296 6201",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.185816,
+            "longitude": 55.246614,
+            "displayAddress": "Safa Park, Sheikh Zayed Road"
+        },
+        "storeID": 3,
+        "name": "Safa Park",
+        "description": "Safa Park is a 64 hectare urban park. The park contains three lakes, over 200 species of birds, and 16,924 different trees and bushes. Within the park, one can find grassy lawns, a little forest, and a hill to offer panoramic views of the park. A waterfall flows out of the hill and into the largest lake which contains a fountain and touring boats.",
+		"facilities": "Facilities There is a small garden allocated for ladies, entertainment games, sports fields for (Basketball, football & volleyball), renting bicycles, boat rent services, .",
+        "entryFees": [
+            "Per Person: 3 AED",
+            "Special Needs: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.235748,
+            "longitude": 55.29792,
+            "displayAddress": "Zabeel Park, Sheikh Rashid Road"
+        },
+        "storeID": 4,
+        "name": "Zabeel Park",
+        "description": "The main features include a 45-metre high Panoramic Tower, Technology Zone, Sports Area, Barcode Garden, Energy Zone, Space Maze, restaurant, and skate park. Entrance Fees/Dhs: 5 per person. Is situated on both sides of the Sheikh Zayed highway heading towards Zabeel.",
+		"facilities": "Facilities include: Ice rink and ice skating, lessons available. Children's party and activity rooms. Internet WiFi access throughout the whole park. 3D entertainment and cinema.",
+        "entryFees": [
+            "Per Person: 5 AED"
+        ],
+        "handicap": true,
+        "hours": [
+            "Daily: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-398 6888",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.197971,
+            "longitude": 55.235456,
+            "displayAddress": "Jumeirah Beach Park, Jumeurah Road"
+        },
+        "storeID": 5,
+        "name": "Jumeirah Beach Park",
+        "description": "Jumeirah Beach Park spans 12 hectares of parkland. It is a marvelous painting of landscaping and environmental coordination. The Park was opened in 1989 on 13 hectares of land, to be the first beach park, overlooking directly the Arabian Gulf in Jumeirah residential area. Different earth levels distinguish the park, constituting a group of green hills encompassing recreational and games areas.",
+		"facilities": "Facilities include: Beach facilities. Beach sport fields services (Basketball, volleyball and handball fields). Playgrounds. Restaurants and cafeterias.",
+        "entryFees": [
+            "Per Person: 5 AED",
+            "Per Car: 20 AED",
+            "Special Needs: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm",
+			"Mondays are allocated for ladies and children only"
+        ],
+        "contact": [
+            "Tel: +971(4)-349 2555",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.239339,
+            "longitude": 55.326008,
+            "displayAddress": "Creek Park, Dubai Creek"
+        },
+        "storeID": 6,
+        "name": "Creek Park",
+        "description": "Dubai Creek Park is in the heart of the old city on the shores of Dubai Creek. It is one of the oldest parks in Dubai and is still as popular today as it was then… families fill the park at the weekends and the evenings. The park has the benefit of being in the cool breeze from the creek and also has loads of plants and greenery along with mazes and a nature trail. There are also barbeque areas and childrens’ play areas dotted throughout the park as well as the Children City Centre and Dubai Dolphinarium.",
+		"facilities": "Facilities include: Teleferic which is manifested by the hanged cabins. Sea excursion services.  ",
+        "entryFees": [
+            "Per Person: 5 AED",
+            "Special Needs: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-336 7633",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.223306,
+            "longitude": 55.25685,
+            "displayAddress": "Dubai Zoo, Jumeirah Beach Road"
+        },
+        "storeID": 7,
+        "name": "Dubai Zoo",
+        "description": "Dubai Zoo a 1.5-hectare zoo originally built in 1967. The Zoo includes a group of animals that fits to UAE environment, and in other environments from all over the world. The group includes local animals under threat of extinction, such as Arabian Oryx, Socotra cormorant and wild cat. In addition, the zoo has put breeding program, which includes gorillas, chimpanzees and the African tiger that covered by protection and breeding program.",
+		"facilities": "Facilities include: Public facilities services (WC for men, women and for people with special needs). Cafe providing beverages, sweets, ice cream and presents are available",
+        "entryFees": [
+            "Per Person: 2 AED",
+            "Children under 2: Free",
+            "Special Needs: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Summer timing: from 10:00 am to 06:00 pm, from 1st  of March to the end of October. ",
+            "Winter timing: from 10:00 am to 5:30 pm from the beginning of November to the end of February.",
+			"The zoo is closed on Tuesday"
+        ],
+        "contact": [
+            "Tel: +971(4)-3496444",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://dm.gov.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.236059,
+            "longitude": 55.326909,
+            "displayAddress": "Children City, Creek Park"
+        },
+        "storeID": 8,
+        "name": "Children City",
+        "description": "The Dubai-based Children's City is the first educational city in the UAE devoted to children between two and fifteen years old where they can investigate, explore, play, discover, and learn about the world in which we live. The City is specially designed for children to interact and discover together in family and school groups.",
+		"facilities": "Facilities include: Planetarium. Cafe. Nursing room. Gift Shop. WiFi. Education Services. Special Events..",
+        "entryFees": [
+            "Adults: 15 AED",
+            "Children: 10 AED",
+			"Family (2 adults + 2 children): 40 AED",
+			"Schools: 5 AED per student",
+			"Groups: 10 AED",
+            "Special Needs: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Thur: 9:00 am- 8:00 pm",
+            "Fri: 3:00 pm- 9:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-334 0808",
+            "Fax: +971(4)-334 1122",
+            "Email: childcity@dm.gov.ae",
+            "Website: http://www.childrencity.dm.gov.ae"
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.215231,
+            "longitude": 55.449926,
+            "displayAddress": "Reel Cinemas, The Dubai Mall"
+        },
+        "storeID": 1,
+        "name": "The Dubai Mall -Reel",
+        "description": "Reel Cinemas offers a truly unparalleled movie experience. As the largest THX-certified Cineplex in the UAE, you can choose from an unmatched variety of blockbuster movies. Experience the next dimension of movie entertainment in awe-inspiring 3D, critically acclaimed art-films at The Picturehouse- the first arthouse cinema in the region or indulge yourself in the most luxurious recliner seats at the Platinum Movie Suites.",
+		"Mobile App": "Apple and Android",
+		"Services": "Catering food to your seat. Gift vouchers. Corporate and group booking",
+        "entryFees": [
+            "Per Person: 3 AED",
+            "Per Car: 10 AED",
+            "Special Needs: Free",
+            "Membership: Annual (340 AED) or 6 months (260 AED) membership can be obtained to use the swimming pool"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Wed: 8:00 am- 10:00 pm",
+            "Thu-Fri-Sat: 8:00 am- 11:00 pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-449 1903 ",
+            "Fax: +971(4)",
+            "Email:enquiries@reelcinemas.ae",
+            "Website: http://www.reelcinemas.ae"
+        ]
+    }
+]
