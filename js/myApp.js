@@ -35,7 +35,7 @@ function initialize() {
 }
 
 // This updates the map, listing and store page for every result
-function renderStore(prox,label,name,stlat,stlon,da,ef,h,c) {
+function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	var coords = stlat+","+stlon;
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
@@ -58,7 +58,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c) {
 	$("#list").listview('refresh');
 	$("#totalstores").html(totalstores);
 	
-	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+coords+'+&zoom=11&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+store.get('description')+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
+	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+coords+'+&zoom=11&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+desc+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
 	
 } // End renderStores Function
 
@@ -118,7 +118,7 @@ function getStores(ml,pm,st)
 		$.getJSON('museums.json', function(store) {
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
-				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.hours, value.entryFees, value.contact);
+				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.hours, value.entryFees, value.contact, value.description);
 			});
 			// Done with store, update message
 			updateAll();
