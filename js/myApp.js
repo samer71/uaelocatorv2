@@ -54,7 +54,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 		// Append to the list of results
 		$("#list").append('<li class="onestore" id="'+label+'"><a href="#details'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		
-		var detailspanel='<div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b"><ul data-role="listview" data-theme="a" data-icon="false"><li data-icon="delete"><a data-rel="close">Close</a></li></ul>';
+		var detailspanel='<div data-role="panel" id="details'+label+'" data-display="overlay" data-position="right" data-theme="b"><ul data-role="listview" data-theme="a" data-icon="false"><li data-icon="delete"><a data-rel="close">Close</a></li></ul>';
 		$('#results').append(detailspanel);
 		
 	} // End if
