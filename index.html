@@ -65,9 +65,17 @@
     <!-- Museums -->
     <div data-role="page" id="results">
     <div data-role="header" data-theme="b" >
-        <h1 id="storeheader">Museums</h1>
+        <h1 id="storeheader"></h1>
         <a href="index.html" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
         <a href="#right-panel" data-role="button" data-iconpos="notext" data-icon="bars" data-inline="true">Menu</a>
+        <div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a id="reload" href="#" data-icon="refresh">Reload</a></li>
+			<li><a id="get20" href="#" data-icon="refresh">20K</a></li>
+			<li><a id="get50" href="#" data-icon="refresh">50K</a></li>
+			<li><a id="getall" href="#" data-icon="refresh">All</a></li>
+		</ul>
+	</div><!-- /navbar -->
     </div><!-- /header -->
     
     <div data-role="content" id="mapholder">
@@ -76,24 +84,6 @@
     <div data-role="content" id="errorholder" style="display:none;">
     </div><!-- /content -->
     
-    <div data-role="content" id="controls" style="text-align:center">
-    <div data-role="navbar" data-iconpos="left">
-		<ul>
-			<li><a id="reload" href="#" data-icon="refresh">Reload</a></li>
-			<li><a id="get20" href="#" data-icon="refresh">20K</a></li>
-			<li><a href="#" data-icon="refresh">50K</a></li>
-		</ul>
-	</div><!-- /navbar -->
-        <ul data-role="listview" data-divider-theme="a" data-inset="false">
-            <li data-role="list-divider" role="heading">
-            <button  data-role="button" data-iconpos="notext" data-icon="refresh" data-mini="true" data-inline="true">Reload</button>
-            <button  data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">20K</button>
-            <button id="get50" data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">50K</button>
-            <button id="getall" data-role="button" data-iconpos="right" data-icon="refresh" data-mini="true" data-inline="true">All</button>
-            </li>
-        </ul>
-    </div><!-- /content -->
-
     <div data-role="content">
         <ul id="list" data-role="listview" data-divider-theme="e" data-inset="false" data-count-theme="e" data-filter="true">
             <li data-role="list-divider" role="heading">Located <span id="totalstores"></span> <span id="storetype"></span> (Within <span id="prox"></span>KM)

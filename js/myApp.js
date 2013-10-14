@@ -37,14 +37,14 @@ function initialize() {
 
 $('#museumspage').click(function() {
 	storetype="museums";
-	$("#storetype").html("Museums");
+	$("#storeheader").html("Museums");
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
 });
 
 $('#parkspage').click(function() {
 	storetype="parks";
-	$("#storetype").html("Parks");
+	$("#storeheader").html("Parks");
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
 });
