@@ -587,5 +587,102 @@
             "Email: info@wowrak.org",
             "Website: http://www.icelandwaterpark.com/"
         ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.102573,
+            "longitude": 55.739424,
+            "displayAddress": "Wadi Adventure, Jabel Hafeet, Al Ain"
+        },
+        "storeID": 23,
+        "name": "Wadi Adventure",
+        "description": "Wadi Adventure is the Middle East’s first man made whitewater rafting, kayaking and surf facility, located at the base of Jebel Hafeet in Al Ain, approximately 1hr 30mins from Dubai and Abu Dhabi, in the UAE.",
+		"facilities": "Three world class whitewater rafting & kayaking runs with a combined length of 1,133m. A surf pool capable of making a 3.3m high waves with a man made beach. Rope course, climbing wall and zip line. Restaurants, retail, VIP chalets, and conference/event facilities. Space and infrastructure for world class events. Training at levels for specialised activities. Adult & toddlers swimming pool",
+        "entryFees": [
+            "All-Day Admissions: 1) Standard 50 AED. 2) Child 25 AED. 3) Guardian 25 AED. Infant: Free",
+			"Family (2 adults + 2 children): 100 AED",
+			"Sunset Admission (5pm-closing): Standard 25 AED. Child: free",
+			"Surf Pool: 100 AED/55min",
+			"Kayaking: 150 AED/All day",
+			"White Water Rafting: 100 AED/1.5hrs",
+			"Climbing Wall: 40 AED/20min",
+			"Airpar and Zip line: 50 AED/A;=ll day",
+			"Giant Swing: 25 AED/swing",
+			"Lessons vary. All prices above are subject to change."
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun-Thu: 11am to 8pm",
+			"Fri-Sat: 10am to 8pm"
+        ],
+        "contact": [
+            "Tel: +971(3)-781 8422",
+            "Fax: +971(3)",
+            "Email: reception@wadiadventure.ae",
+            "Website: http://www.wadiadventure.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.140059,
+            "longitude": 55.188872,
+            "displayAddress": "Wild Wadi, Jumeirah, Dubai"
+        },
+        "storeID": 24,
+        "name": "Wild Wadi",
+        "description": "Located in Dubai and situated in front of the stunning Burj Al Arab, Wild Wadi offers 30 rides and attractions for all the family. Wild Wadi is themed around the tale of Juha, a known character from the Arabian folklore.",
+		"facilities": "But for those thrill seekers amongst you, check out the adrenaline fuelled rides at Wild Wadi Water Park including the incredible Tantrum Alley and Burj Surj! Last but by no means least, our Wipeout and Riptide Flowriders offer the ultimate surfing experience. One of only four such rides in the world, the Wipeout Flowrider is a blast.",
+        "entryFees": [
+            "General Admissions: 1) Standard 275 AED. 2) Child (Under 1.1m 175 AED",
+            "Annual Pass: 1) Adult 2000 AED. 2) Child (Under 1.1m 1000 AED",
+			"All prices above are subject to change."
+        ],
+        "handicap": true,
+        "hours": [
+            "November to February 10:00 to 18:00 ",
+			"March to May 10:00 to 19:00",
+			"June to August 10:00 to 20:00 ",
+			"September to October 10:00 to 19:00",
+			"Wild Wadi is planning its annual maintenance programme and the entire park will be closed from 12 January until 13 February 2014 inclusively and will re-open to public on 14 February 2014."
+        ],
+        "contact": [
+            "Tel: +971(4)-348 4444",
+            "Fax: +971(4)-348 5625",
+            "Email: info@wildwadi.com",
+            "Website: http://www.jumeirah.com/en/hotels-resorts/dubai/wild-wadi"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.482052,
+            "longitude": 54.606317,
+            "displayAddress": "Ferrari World, Yas Island, Abu Dhabi"
+        },
+        "storeID": 25,
+        "name": "Ferrari World",
+        "description": "Ferrari World Abu Dhabi is the world’s first Ferrari theme park and largest attraction of its kind. It is an intense multi-sensory experience and a must-visit for families, fans and enthusiasts. The Park offers more than 20 Ferrari-inspired rides and attractions, including a diverse array of rides for adults and children, a wide variety of Italian delicacies, and unique shopping experiences.",
+		"facilities": "Ferrari World Abu Dhabi features more than 20 rides and attractions designed to tell the Ferrari story in ways which will appeal to a broad audience of different ages and interests. From the world’s fastest roller coaster, to advanced racing simulators, driving and scenic experiences; families, children, thrill seekers and racing fans can all find and enjoy unforgettable experiences at Ferrari World Abu Dhabi.",
+        "entryFees": [
+            "General Admission (valid for 6 months): 240 AED",
+            "Junior Admission (valid for 6 months)(under 1.3m): 195 AED",
+			"Premium Admission (valid for 6 months)(include fasttrack): 440 AED",
+			"Premium Junior Admission (valid for 6 months)(under 1.3m)(include fasttrack): 365 AED",
+            "Annual Pass and Yas Island Pass are available. Check prices.",
+			"All prices above are subject to change."
+        ],
+        "handicap": true,
+        "hours": [
+            "Standard Time: 7 days a week: 11am – 8pm",
+			"Speed Week (Oct 10th-20th): 7 days a week: 11am – 10pm"
+        ],
+        "contact": [
+            "Tel: +971(2)-496 8000",
+            "Fax: +971(2)",
+            "Email:",
+            "Website: https//www.ferrariworldabudhabi.com"
+        ]
     }
 ]
