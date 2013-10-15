@@ -159,19 +159,15 @@ $(window).on("orientationchange",function(event){
 });
 
 // Check network connection 
-	$(document).on('pagebeforeshow', '#results', function () {
-		setInterval(function () {
-			connectionStatus = navigator.onLine ? 'online' : 'offline';
-		}, 100);
-		if(connectionStatus=='offline')
-		{
-			onGetLocationError(3);
-		}
-		else
-		{
-			document.getElementById("errorholder").style.display='none';
-		}
-	});
+$(document).on('pagebeforeshow', '#results', function () {
+	setInterval(function () {
+		connectionStatus = navigator.onLine ? 'online' : 'offline';
+	}, 100);
+	if(connectionStatus=='offline')
+	{
+		navigator.notification.alert("UAE Leisure Locator Requires Network Connection!");
+	}
+});
 
 // Events Section
 $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
