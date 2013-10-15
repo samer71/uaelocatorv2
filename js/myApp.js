@@ -41,8 +41,8 @@ function initialize() {
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	var coords = stlat+","+stlon;
 	var mid = middlePoint(lat,lon,stlat,stlon);
-	var midcoords = mid.latitude+","+mid.longitude;
-	alert("midcoords: "+midcoords);
+	//Convert from radians back to degrees
+	var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
