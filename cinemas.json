@@ -34,7 +34,7 @@
         "storeID": 2,
         "name": "Marina Mall -Reel",
         "description": "Reel Cinemas offers a truly unparalleled movie experience. As the largest THX-certified Cineplex in the UAE, you can choose from an unmatched variety of blockbuster movies. Experience the next dimension of movie entertainment in awe-inspiring 3D, critically acclaimed art-films at The Picturehouse- the first arthouse cinema in the region or indulge yourself in the most luxurious recliner seats at the Platinum Movie Suites.",
-		"Facilities": "Catering food to your seat. Gift vouchers. Corporate and group booking. Buy Online. Mobile app for Apple and Android",
+		"facilities": "Catering food to your seat. Gift vouchers. Corporate and group booking. Buy Online. Mobile app for Apple and Android",
         "entryFees": [
             "Regular Ticket: 35 AED"
         ],
@@ -47,6 +47,630 @@
             "Fax: +971(4)",
             "Email:enquiries@reelcinemas.ae",
             "Website: http://www.reelcinemas.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.217376,
+            "longitude": 55.406991,
+            "displayAddress": "VOX Cinemas, Mirdif City Centre, Dubai"
+        },
+        "storeID": 3,
+        "name": "Mirdif City Centre -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-284 0001",
+            "Fax: +971(4)-284 5759",
+            "Email: mccfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AJM",
+            "latitude": 25.399665,
+            "longitude": 55.479599,
+            "displayAddress": "VOX Cinemas, Ajman City Centre, Ajman"
+        },
+        "storeID": 4,
+        "name": "Ajman City Centre -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(6)-748 2555",
+            "Fax: +971(6)-748 2266",
+            "Email: accfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.118593,
+            "longitude": 55.200502,
+            "displayAddress": "VOX Cinemas, MOE, Dubai"
+        },
+        "storeID": 5,
+        "name": "Mall of the Emirates -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-341 4222",
+            "Fax: +971(4)-347 9900",
+            "Email: feedbackmoe@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.252478,
+            "longitude": 55.332209,
+            "displayAddress": "VOX Cinemas, Deira City Centre, Dubai"
+        },
+        "storeID": 6,
+        "name": "Deira City Centre -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-294 9000",
+            "Fax: +971(4)-294 8138",
+            "Email: dccfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.217191,
+            "longitude": 55.252644,
+            "displayAddress": "VOX Cinemas, Mercato Centre, Jumeirah, Dubai"
+        },
+        "storeID": 7,
+        "name": "Mercato Centre -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-385 4440",
+            "Fax: +971(4)-342 7821",
+            "Email: mmdfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.476525,
+            "longitude": 54.320952,
+            "displayAddress": "VOX Cinemas, Marina Mall, Abu Dhabi"
+        },
+        "storeID": 8,
+        "name": "Marina Mall AD -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(2)-681 8484",
+            "Fax: +971(2)-681 8383",
+            "Email: mmafeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "RAK",
+            "latitude": 25.683825,
+            "longitude": 55.781962,
+            "displayAddress": "VOX Cinemas,Al Hamra Mall , RAK"
+        },
+        "storeID": 9,
+        "name": "Al Hamra Mall -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(7)",
+            "Fax: +971(7)",
+            "Email: ahmfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "FUJ",
+            "latitude": 25.126442,
+            "longitude": 56.302225,
+            "displayAddress": "VOX Cinemas, Fujairah City Centre, Fujairah"
+        },
+        "storeID": 10,
+        "name": "Fujairah City Centre -VOX",
+        "description": "VOX Cinemas is owned and operated by Majid Al Futtaim Cinemas, which is the cinema arm of the wider Majid Al Futtaim Ventures group of businesses. Majid Al Futtaim Ventures is the growth engine and business incubator responsible for developing new enterprises to deliver the most innovative Leisure & Entertainment concepts to the Middle East.",
+		"facilities": "Luxury cinema concept. VOX MAX is a concept of BIG SCREEN experience. Buy Online. Mobile app for Apple, Android, and Nokia",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"3D Standard = AED 47",
+			"VIP = AED 40", 
+			"VIP (Mercato) = AED 50", 
+			"3D VIP = AED 57", 
+			"3D VIP (Mercato) = AED 62", 
+			"MAX = AED 45", 
+			"3D MAX = AED 57", 
+			"PLUS = AED 60", 
+			"3D PLUS = AED 77", 
+			"GOLD =AED 120", 
+			"3D GOLD = AED 147" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(9)-223 4400",
+            "Fax: +971(9)-228 3754",
+            "Email: fccfeedback@voxcinemas.com",
+            "Website: http://uae.voxcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.331003,
+            "longitude": 55.376263,
+            "displayAddress": "Grand Cinemas, Riviera Tower, Buhaira, Sharjah"
+        },
+        "storeID": 11,
+        "name": "Buhaira -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(6)-556 3300",
+            "Fax: +971(6)-556 3558",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.345151,
+            "longitude": 55.398697,
+            "displayAddress": "Grand Cinemas, Mega Mall, Sharjah"
+        },
+        "storeID": 12,
+        "name": "Mega Mall -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(6)- 575 1888",
+            "Fax: +971(6)-556 3558",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.297834,
+            "longitude": 55.37416,
+            "displayAddress": "Grand Cinemas, Sahara Center, Sharjah"
+        },
+        "storeID": 13,
+        "name": "Sahara Center -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(6)-53 16500",
+            "Fax: +971(6)-531 7002",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.496004,
+            "longitude": 54.383224,
+            "displayAddress": "Grand Cinemas, Abu Dhabi Mall"
+        },
+        "storeID": 14,
+        "name": "Abu Dhabi Mall -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(2)-645 8988",
+            "Fax: +971(2)-",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.31245,
+            "longitude": 54.620673,
+            "displayAddress": "Grand Cinemas, Bawabat Al Sharq Mall, Baniyas East, Abu Dhabi"
+        },
+        "storeID": 15,
+        "name": "Bawabat Al Sharq Mall -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.218495,
+            "longitude": 55.748769,
+            "displayAddress": "Grand Cinemas, Rotana Hotel, Al Ain"
+        },
+        "storeID": 16,
+        "name": "Rotana Hotel -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(3)-754 4447",
+            "Fax: +971(3)-755 6602",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "RAK",
+            "latitude": 25.785256,
+            "longitude": 55.965995,
+            "displayAddress": "Grand Cinemas, Manar Mall, RAK"
+        },
+        "storeID": 17,
+        "name": "Manar Mall -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(7)-227 8888",
+            "Fax: +971(7)-277 3888",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.267799,
+            "longitude": 55.317405,
+            "displayAddress": "Grand Cinemas, Al Ghurair City, Deira, Dubai"
+        },
+        "storeID": 18,
+        "name": "Al Ghurair City -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-228 9898",
+            "Fax: +971(4)-228 9030",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.226528,
+            "longitude": 55.32617,
+            "displayAddress": "Grand Cinemas, Dubai Grand Hyatt, Garhoud, Dubai"
+        },
+        "storeID": 19,
+        "name": "Dubai Grand Hyatt -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-324 2000",
+            "Fax: +971(4)-324 0278",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.221927,
+            "longitude": 55.355042,
+            "displayAddress": "Grand Cinemas, Dubai Festival City, Garhoud, Dubai"
+        },
+        "storeID": 20,
+        "name": "Dubai Festival City -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-232 8328",
+            "Fax: +971(4)-232 8329 ",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.279354,
+            "longitude": 55.304187,
+            "displayAddress": "Grand Cinemas, Grand Hyatt Regency, Shandaghah, Dubai"
+        },
+        "storeID": 21,
+        "name": "Dubai Grand Hyatt Regency -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-273 7676",
+            "Fax: +971(4)-209 6471",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.047377,
+            "longitude": 55.123631,
+            "displayAddress": "Grand Cinemas, Megaplex Ibn Battuta Mall, Jebel Ali, Dubai"
+        },
+        "storeID": 22,
+        "name": "Megaplex Ibn Battuta Mall -Grand Cinemas",
+        "description": "Grand Cinemas is the Middle East's largest cinema group. Founded in 2000 with the flagship Grand Cineplex theatre, Grand Cinemas has set the industry standard, introducing to the Middle East such firsts as the E/Kiosk, E/Ticket, GC Mobile Application and RealD 3D technology.",
+		"facilities": "IMAX. REALD 3D. Grand Class. E/KIOSK. Buy Online. Mobile app for Apple, Android, and BlackBerry",
+        "entryFees": [
+            "Regular Ticket: 35 AED",
+			"VIP: 50 AED", 
+			"Digital Regular: 50 AED", 
+			"Digital VIP: 60 AED" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on movie"
+        ],
+        "contact": [
+            "Tel: +971(4)-366 9898",
+            "Fax: +971(4)-366 9899",
+            "Email: customerservice@grandcinemas.com",
+            "Website: http://www.grandcinemas.com"
         ]
     }
 ]
