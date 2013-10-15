@@ -12,9 +12,9 @@ var zoomlevel, bounds, distance;
 var jsonFile;
 
 function onDeviceReady() {
-	$.mobile.defaultPageTransition   = 'none'
-	$.mobile.defaultDialogTransition = 'none'
-	$.mobile.buttonMarkup.hoverDelay = 0
+	$.mobile.defaultPageTransition   = 'none';
+	$.mobile.defaultDialogTransition = 'none';
+	$.mobile.buttonMarkup.hoverDelay = 0;
 }
 
 function loadScript(zl,pm) {
@@ -158,6 +158,21 @@ $(window).on("orientationchange",function(event){
   //$("#map").css({"width":window.innerWidth });
 });
 
+// Check network connection 
+	$(document).on('pagebeforeshow', '#results', function () {
+		setInterval(function () {
+			connectionStatus = navigator.onLine ? 'online' : 'offline';
+		}, 100);
+		if(connectionStatus=='offline')
+		{
+			onGetLocationError(3);
+		}
+		else
+		{
+			document.getElementById("errorholder").style.display='none';
+		}
+	});
+
 // Events Section
 $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
@@ -179,7 +194,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
 	{
 		storetype="cinemas";
-		jsonFile="museums.json";
+		jsonFile="cinemas.json";
 		$("#storeheader").html("Cinemas");
 	}
 	else if(($(this).attr('id')=="parkspage") || ($(this).attr('id')=="pparkspage")) 
