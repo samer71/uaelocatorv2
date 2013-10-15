@@ -40,8 +40,10 @@ function initialize() {
 // This updates the map, listing and store page for every result
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	var coords = stlat+","+stlon;
+	alert("My Lat: "+lat+" My latlon: "+latlon);
 	var mid = middlePoint(lat,lon,stlat,stlon);
 	var midcoords = mid.latitude+","+mid.longitude;
+	alert("midcoords: "+midcoords+" Mid lat: "+mid.latitude);
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
