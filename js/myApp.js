@@ -68,17 +68,18 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 } // End renderStores Function
 
 function middlePoint(lat1,lon1,lat2,lon2){
+	
+   var dLon = (lon2 - lon1).toRad();
 
-   var dLon = (lon2 - lon1)* Math.PI / 180;;
+   lat1 = lat1.toRad();
+   lat2 = lat2.toRad();
+   lon1 = lon1.toRad();
 
-   lat1 = lat1 * Math.PI / 180;
-   lat2 = lat2 * Math.PI / 180;
-   lon1 = lon1 * Math.PI / 180;
-
-   var Bx = Math.cos(lat2) * Math.cos(dLon);
-   var By = Math.cos(lat2) * Math.sin(dLon);
-   var lat3 = Math.atan2(Math.sin(lat1) + Math.sin(lat2), Math.sqrt((Math.cos(lat1) + Bx) * (Math.cos(lat1) + Bx) + By * By));
-   var lon3 = lon1 + Math.atan2(By, Math.cos(lat1) + Bx);
+	var Bx = Math.cos(lat2) * Math.cos(dLon);
+	var By = Math.cos(lat2) * Math.sin(dLon);
+	var lat3 = Math.atan2(Math.sin(lat1)+Math.sin(lat2),
+                      Math.sqrt( (Math.cos(lat1)+Bx)*(Math.cos(lat1)+Bx) + By*By ) ); 
+	var lon3 = lon1 + Math.atan2(By, Math.cos(lat1) + Bx);
 
    var middlePoint = lat3+","+lon3;
    return middlePoint;
