@@ -40,6 +40,7 @@ function initialize() {
 // This updates the map, listing and store page for every result
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	var coords = stlat+","+stlon;
+	var midcoords = middlePoint(lat,lon,stlat,stlon)
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
@@ -57,7 +58,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 		// Append to the list of results
 		$("#list").append('<li class="onestore" id="'+label+'"><a class="dlink" href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		
-	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+coords+'+&zoom=11&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+desc+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
+	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom=11&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+desc+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
 		
 	} // End if
 	// Necessary for the listview to render correctly
@@ -65,6 +66,25 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	$("#totalstores").html(totalstores);
 		
 } // End renderStores Function
+
+function middlePoint(lat1,lon1,lat2,lon2){
+
+   var dLon = (lon2 - lon1)* Math.PI / 180;;
+
+   lat1 = lat1 * Math.PI / 180;
+   lat2 = lat2 * Math.PI / 180;
+   lon1 = lon1 * Math.PI / 180;
+
+   var Bx = Math.cos(lat2) * Math.cos(dLon);
+   var By = Math.cos(lat2) * Math.sin(dLon);
+   var lat3 = Math.atan2(Math.sin(lat1) + Math.sin(lat2), Math.sqrt((Math.cos(lat1) + Bx) * (Math.cos(lat1) + Bx) + By * By));
+   var lon3 = lon1 + Math.atan2(By, Math.cos(lat1) + Bx);
+
+   var middlePoint = new Object();
+   middlePoint.latitude=lat3;
+   middlePoint.longitude=lon3;
+   return middlePoint;
+}
 
 function updateAll()
 {
@@ -89,6 +109,9 @@ function onGetLocationSuccess(position)
 	  mapholder.style.height='200px';
 	  mapholder.style.width=window.innerWidth;
 	  bounds = new google.maps.LatLngBounds(); // Required for zoom level and center
+	  // Extend the map to fit my location
+	  bounds.extend(latlon);
+	  map.fitBounds(bounds);
 	  
 	  var myOptions={
 	  zoom:zoomlevel,
@@ -122,7 +145,7 @@ function getStores(ml,pm,st)
 		$.getJSON(jsonFile, function(store) {
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
-				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.hours, value.entryFees, value.contact, value.description);
+				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.entryFees, value.hours, value.contact, value.description);
 			});
 			// Done with store, update message
 			updateAll();
@@ -228,19 +251,27 @@ $('.onestore').delegate('.dlink', 'tap', function ()  {
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
-	if($(this).attr('id')=="reload")
+	connectionStatus = navigator.onLine ? 'online' : 'offline';
+	if(connectionStatus=='offline')
 	{
-		loadScript(12,10000);
-	} else if($(this).attr('id')=="get20") 
-	{
-		loadScript(11,20000);
+		onGetLocationError(4);
 	}
-	else if($(this).attr('id')=="get50") 
+	else
 	{
-		loadScript(10,50000);
-	}
-	else if($(this).attr('id')=="getall") 
-	{
-		loadScript(9,500000);
-	}
+		if($(this).attr('id')=="reload")
+		{
+			loadScript(12,10000);
+		} else if($(this).attr('id')=="get20") 
+		{
+			loadScript(11,20000);
+		}
+		else if($(this).attr('id')=="get50") 
+		{
+			loadScript(10,50000);
+		}
+		else if($(this).attr('id')=="getall") 
+		{
+			loadScript(9,500000);
+		}
+	} // End else network
 });
