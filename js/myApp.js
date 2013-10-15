@@ -40,10 +40,9 @@ function initialize() {
 // This updates the map, listing and store page for every result
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 	var coords = stlat+","+stlon;
-	alert("My Lat: "+lat+" My latlon: "+latlon);
 	var mid = middlePoint(lat,lon,stlat,stlon);
 	var midcoords = mid.latitude+","+mid.longitude;
-	alert("midcoords: "+midcoords+" Mid lat: "+mid.latitude);
+	alert("midcoords: "+midcoords);
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
@@ -79,9 +78,10 @@ function middlePoint(lat1,lon1,lat2,lon2){
    lon1 = toRad(lon1);
 
    var Bx = Math.cos(lat2) * Math.cos(dLon);
-   var By = Math.cos(lat2) * Math.sin(dLon);
-   var lat3 = Math.atan2(Math.sin(lat1) + Math.sin(lat2), Math.sqrt((Math.cos(lat1) + Bx) * (Math.cos(lat1) + Bx) + By * By));
-   var lon3 = lon1 + Math.atan2(By, Math.cos(lat1) + Bx);
+	var By = Math.cos(lat2) * Math.sin(dLon);
+	var lat3 = Math.atan2(Math.sin(lat1)+Math.sin(lat2),
+                      Math.sqrt( (Math.cos(lat1)+Bx)*(Math.cos(lat1)+Bx) + By*By ) ); 
+	var lon3 = lon1 + Math.atan2(By, Math.cos(lat1) + Bx);
 
    var middlePoint = new Object();
    middlePoint.latitude=lat3;
