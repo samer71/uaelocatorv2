@@ -160,6 +160,12 @@ $(window).on("orientationchange",function(event){
 
 // Check network connection 
 $(document).on('pagebeforeshow', '#results', function () {
+	
+});
+
+// Events Section
+$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
+	
 	setInterval(function () {
 		connectionStatus = navigator.onLine ? 'online' : 'offline';
 	}, 100);
@@ -167,10 +173,8 @@ $(document).on('pagebeforeshow', '#results', function () {
 	{
 		navigator.notification.alert("UAE Leisure Locator Requires Network Connection!");
 	}
-});
-
-// Events Section
-$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
+	else
+	{
 	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
 	{
 		storetype="museums";
@@ -209,6 +213,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	$("#storetype").html(storetype);
 	loadScript(11,10000);
 	$.mobile.changePage("#results");
+	} // End else
 });
 
 $('#gohome').on('tap', function ()  {
