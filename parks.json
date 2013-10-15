@@ -331,7 +331,7 @@
             "emirateCode": "SHJ",
             "latitude": 25.284147,
             "longitude": 55.695359,
-            "displayAddress": "Sharjah Desert Park, "
+            "displayAddress": "Sharjah Desert Park, Al Dhaid Rd, Sharjah"
         },
         "storeID": 13,
         "name": "Sharjah Desert Park",
@@ -355,6 +355,237 @@
             "Fax: +971(6)-531 1419",
             "Email: epaa@epaashj.ae",
             "Website: http://www.epaashj.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.453322,
+            "longitude": 54.380177,
+            "displayAddress": "Al Mushrif Children Garden, Al Mushrif district, Abu Dhabi"
+        },
+        "storeID": 14,
+        "name": "Al Mushrif Children Garden",
+        "description": "Al Mushrif Children Garden is a wonderful place to take the kids and have a bit of fun. It has amusement park rides (with varying fees), swings, fountains and ample car parking. It's a popular ladies only facility so photography is not allowed.",
+		"facilities": "Amusement park. Swings.",
+        "entryFees": [
+            "Vary per attraction"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat-Thu: 3pm to 10pm",
+			"Fri: 3pm to 9:30pm"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.47881,
+            "longitude": 54.347259,
+            "displayAddress": "Al Nahyan Garden, 1st St, Corniche Abu Dhabi"
+        },
+        "storeID": 15,
+        "name": "Al Nahyan Garden",
+        "description": "Al Nahyan Garden is a well maintained and compact park near the Sheraton Khalidiya Hotel.",
+		"facilities": "None",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.492104,
+            "longitude": 54.362609,
+            "displayAddress": "Capital Gardens, Al Markaziyah district, Corniche Abu Dhabi"
+        },
+        "storeID": 16,
+        "name": "Capital Gardens",
+        "description": "Capital Gardens is a welcome patch of green in the middle of the city (op opposite NBAD, Al Markaziyah district, Abu Dhabi) Each little garden cove has a small selection of climbing frames, swings and slides.",
+		"facilities": "Cafeteria. Vending Machines. Pond",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.468899,
+            "longitude": 54.344954,
+            "displayAddress": "Khalidiyah Garden, Sheikh Zayed the 1st St, Abu Dhabi"
+        },
+        "storeID": 17,
+        "name": "Khalidiyah Garden",
+        "description": "Capital Gardens is a welcome patch of green in the middle of the city (op opposite NBAD, Al Markaziyah district, Abu Dhabi) Each little garden cove has a small selection of climbing frames, swings and slides.",
+		"facilities": "Cafeteria. Vending Machines. Pond",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.426071,
+            "longitude": 54.468988,
+            "displayAddress": "Khalifa Park, Opposite Al Qarm Corniche, Abu Dhabi"
+        },
+        "storeID": 18,
+        "name": "Khalifa Park",
+        "description": "Khalifa Park is one of the city's larger parks and a major landmark. Inspiration for the gardens has been drawn from Arabic and Islamic architecture and from the world's great gardens. The landscape boasts canals, fountains, lakes and waterfalls.",
+		"facilities": "Miniature railway. Picnic facilities . Auditorium. Murjan Splash Park",
+        "entryFees": [
+            "NA"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.220589,
+            "longitude": 55.721491,
+            "displayAddress": "Al Ain Ladies Park, Zayed Al Awwal St, Al Muwaiji, Al Ain"
+        },
+        "storeID": 19,
+        "name": "Al Ain Ladies (Basra) Park",
+        "description": "Al Ain Ladies Park, also commonly known as Basra Park is a quiet and attractive garden is for women and children only (boys under the age of 10). If you are looking for somewhere to sit and enjoy the peace, there are plenty of benches under the shady trees. Play areas with swings, slides and climbing frames are sure to keep the kids busy.",
+		"facilities": "Snack bar.",
+        "entryFees": [
+            "NA"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.166381,
+            "longitude": 55.70978,
+            "displayAddress": "Al Ain Paradise Garden, Nahyan Al Awal Street at the Zakher roundabout, Al Ain"
+        },
+        "storeID": 20,
+        "name": "Al Ain Paradise Garden",
+        "description": "An expansive park – the size of four football pitches – Al Ain Paradise Garden  is home to approximately 10 million flowers, a 12 metre tall replica of the Eiffel Tower and it holds the Guinness World Record for the most hanging baskets, having 2,968 in total.",
+		"facilities": "NA",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Please make sure the park is open before you visit. It was closed early 2013."
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.218456,
+            "longitude": 55.752973,
+            "displayAddress": "Al Ain Public Garden, Zayed Bin Sultan St, Al Ain"
+        },
+        "storeID": 21,
+        "name": "Al Ain Public Garden (Al Jaheli Park)",
+        "description": "The main park in Al Ain (on Zayed Bin Sultan Street), Al Ain Public Garden is a tranquil spot amid the hustle and bustle. Walkways meander under shady trees, fountains are attractively lit at night and areas for younger children have a variety of play equipment.",
+		"facilities": "Amusement arcade ",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Please make sure the park is open before you visit. It was closed early 2013."
+        ],
+        "contact": [
+            "Tel: +971(2)-",
+            "Fax: +971(2)-",
+            "Email:",
+            "Website: http://visitabudhabi.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "RAK",
+            "latitude": 25.716811,
+            "longitude": 55.820435,
+            "displayAddress": "Ice Land Water Park, Al Riffa, RAK"
+        },
+        "storeID": 22,
+        "name": "Ice Land Water Park",
+        "description": "The Ice Land Water Park is the first offering of the WOW RAK destination, a unique water park with extensive theming in snow and ice offering a mix of traditional water park attractions as well as non conventional and novel water park attractions.",
+		"facilities": "The park features many attractions and rides for all ages.",
+        "entryFees": [
+            "Person height above 1.20 meters: 150 AED",
+			"Person height below 1.20 meters: 100 AED"
+        ],
+        "handicap": true,
+        "hours": [
+            "14th to 17th of October 2013: 9:30 am to 8pm",
+			 "18th of October 2013 Friday: 9:30 am to 6pm, Ladies Night (Every Friday): 8pm to 12midnight",
+			"19th to 31st of October 2013: 10am to 7pm",
+			"25th of October 2013 (Friday):	10am to 6pm. Ladies Night(Every Friday): 8pm to 12midnight"
+        ],
+        "contact": [
+            "Tel: +971(7)-2067 888",
+			"Toll Free:800 WOWRAK (969 725)",
+            "Fax: +971(7)-244 7699",
+            "Email: info@wowrak.org",
+            "Website: http://www.icelandwaterpark.com/"
         ]
     }
 ]
