@@ -224,5 +224,137 @@
             "Email: childcity@dm.gov.ae",
             "Website: http://www.childrencity.dm.gov.ae"
         ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.326319,
+            "longitude": 55.388428,
+            "displayAddress": "Al Majaz Park, Sharjah"
+        },
+        "storeID": 9,
+        "name": "Al Majaz Park and Waterfront",
+        "description": "Al Majaz Park is one of the modern public gardens in the city and is close to the Khaled Lagoon. It has a central area for holding ceremonies and is a very popular place with plenty of child friendly facilities. The Waterfront is an expansion and beautification of the existing park, going above and beyond merely extending greenery in order to enhance this family-friendly leisure area, a waterfront landmark of Sharjah. The final 231,000 sqm park is being completely re-developed to include leisure and recreational areas.",
+		"facilities": "Kids area. Sharjah Fountain. Restaurants and cafes.",
+        "entryFees": [
+            "All: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Some areas are accessible 24x7"
+        ],
+        "contact": [
+            "Tel: +971(6)-552 1552",
+            "Fax: +971(6)",
+            "Email: info@shjmun.gov.ae",
+            "Website: http://www.almajaz.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.360954,
+            "longitude": 55.432202,
+            "displayAddress": "Green Belt Park, Al Riqa Suburb, Sharjah"
+        },
+        "storeID": 10,
+        "name": "Green Belt Park",
+        "description": "Green Belt Park (for ladies only) lies in the northeast part of the city of Sharjah, close to the Al Thaqafa (Cultural) Roundabout. The park also includes water fountains and an open theatre with four main gates.",
+		"facilities": "Gardens. Fountains. Small Lake",
+        "entryFees": [
+            "All: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Some areas are accessible 24x7"
+        ],
+        "contact": [
+            "Tel: +971(6)-516 2322",
+            "Fax: +971(6)",
+            "Email: info@shjmun.gov.ae",
+            "Website: http://www.sharjahtourism.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.313091,
+            "longitude": 55.537774,
+            "displayAddress": "Sharjah National Park, Al Gharayen, Al Dhaid Rd"
+        },
+        "storeID": 11,
+        "name": "Sharjah National Park",
+        "description": "This is Sharjah's biggest park covering 630,000 square metres and is located at Intersection No. 5, Sharjah/Al Dhaid Road.",
+		"facilities": "The park contains models of Sharjah malls and Sharjah tourist places. Walking track. Children area.",
+        "entryFees": [
+            "All: Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun-Thu: 2pm to 6pm",
+			"Fri-Sat: 10am to 7pm"
+        ],
+        "contact": [
+            "Tel: +971(6)-558 6170",
+            "Fax: +971(6)",
+            "Email: info@shjmun.gov.ae",
+            "Website: http://www.sharjahtourism.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.343037,
+            "longitude": 55.380018,
+            "displayAddress": "Al Jazeera Fun Park, Al Arouba St, Sharjah"
+        },
+        "storeID": 12,
+        "name": "Al Jazeera Fun Park",
+        "description": "Built on a 100,000 square metre island in the lagoon nestles Al Jazeera Fun Park, one of Sharjah’s best loved treasures and a tranquil oasis away from the bustle of the city. For almost three decades this Park has entranced generations of youngsters who now bring their own children to experience its magic.",
+		"facilities": "Swimming Pool. Mini Zoo. Different Rides",
+        "entryFees": [
+            "All: 2 to 5 AED"
+        ],
+        "handicap": true,
+        "hours": [
+            "The park is currently undergoing major renovations."
+        ],
+        "contact": [
+            "Tel: +971(6)-569 1202",
+            "Fax: +971(6)",
+            "Email: info@shjmun.gov.ae",
+            "Website: http://www.sharjahtourism.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.284147,
+            "longitude": 55.695359,
+            "displayAddress": "Sharjah Desert Park, "
+        },
+        "storeID": 13,
+        "name": "Sharjah Desert Park",
+        "description": "The park covers an area of one square kilometre and offers three venues in one with the Sharjah Natural History Museum and Botanical Museum, Arabia’s Wildlife Centre and the Children’s Farm. The Breeding Centre for Endangered Arabian Wildlife is also located at the park and is an impressive research and breeding facility, but one that is not open to the public.",
+		"facilities": "Natural History Museum. Botanical Museum. Wildlife Centre. Children Farm",
+        "entryFees": [
+            "Adult: 15 AED",
+			"Children under 12: Free",
+			"School Visits: AED 2 per student ( 3 supervisors free per 60 students)",
+			"College Students : 5 AED"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun-Mon-Wed-Thu: 9am to 5:30pm",
+			"Fri: 2pm to 5:30pm",
+			"Sat: 11am to 5:30pm",
+			"Tuesday: Closed"
+        ],
+        "contact": [
+            "Tel: +971(6)-531 1999",
+            "Fax: +971(6)-531 1419",
+            "Email: epaa@epaashj.ae",
+            "Website: http://www.epaashj.com"
+        ]
     }
 ]
