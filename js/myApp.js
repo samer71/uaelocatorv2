@@ -164,6 +164,7 @@ $(window).on("orientationchange",function(event){
 // Events Section
 $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	// Check network connection 
+	// navigator.network.connection.type == Connection.NONE
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
 	if(connectionStatus=='offline')
 	{
@@ -205,6 +206,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 			jsonFile="museums.json";
 			$("#storeheader").html("Beaches");
 		}
+		document.getElementById("errorholder").style.display='none';
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
