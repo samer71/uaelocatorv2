@@ -145,6 +145,9 @@ function onGetLocationError(error)
 			case 3:
 			  x.innerHTML="The request to get user location timed out."
 			  break;
+			case 4:
+			  x.innerHTML="Problem: No network connection."
+			  break;
 			default:
 			  x.innerHTML="An unknown error occurred."
 			  break;
@@ -158,61 +161,54 @@ $(window).on("orientationchange",function(event){
   //$("#map").css({"width":window.innerWidth });
 });
 
-// Check network connection 
-$(document).on('pagebeforeshow', '#results', function () {
-	
-});
-
 // Events Section
 $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
-	
-	setInterval(function () {
-		connectionStatus = navigator.onLine ? 'online' : 'offline';
-	}, 100);
+	// Check network connection 
+	connectionStatus = navigator.onLine ? 'online' : 'offline';
 	if(connectionStatus=='offline')
 	{
-		navigator.notification.alert("UAE Leisure Locator Requires Network Connection!");
+		onGetLocationError(4);
 	}
 	else
 	{
-	if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
-	{
-		storetype="museums";
-		jsonFile="museums.json";
-		$("#storeheader").html("Museums");
-	} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
-	{
-		storetype="arts";
-		$("#storeheader").html("The Arts");
-	}
-	else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
-	{
-		storetype="theaters";
-		jsonFile="museums.json";
-		$("#storeheader").html("Theaters");
-	}
-	else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
-	{
-		storetype="cinemas";
-		jsonFile="cinemas.json";
-		$("#storeheader").html("Cinemas");
-	}
-	else if(($(this).attr('id')=="parkspage") || ($(this).attr('id')=="pparkspage")) 
-	{
-		storetype="parks";
-		jsonFile="parks.json";
-		$("#storeheader").html("Parks");
-	}
-	else if(($(this).attr('id')=="beachespage") || ($(this).attr('id')=="pbeachespage")) 
-	{
-		storetype="beaches";
-		jsonFile="museums.json";
-		$("#storeheader").html("Beaches");
-	}
-	$("#right-panel").panel( "close" );
-	$("#storetype").html(storetype);
-	loadScript(11,10000);
-	$.mobile.changePage("#results");
+		if(($(this).attr('id')=="museumspage") || ($(this).attr('id')=="pmuseumspage"))
+		{
+			storetype="museums";
+			jsonFile="museums.json";
+			$("#storeheader").html("Museums");
+		} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
+		{
+			storetype="arts";
+			$("#storeheader").html("The Arts");
+		}
+		else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
+		{
+			storetype="theaters";
+			jsonFile="museums.json";
+			$("#storeheader").html("Theaters");
+		}
+		else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 
+		{
+			storetype="cinemas";
+			jsonFile="cinemas.json";
+			$("#storeheader").html("Cinemas");
+		}
+		else if(($(this).attr('id')=="parkspage") || ($(this).attr('id')=="pparkspage")) 
+		{
+			storetype="parks";
+			jsonFile="parks.json";
+			$("#storeheader").html("Parks");
+		}
+		else if(($(this).attr('id')=="beachespage") || ($(this).attr('id')=="pbeachespage")) 
+		{
+			storetype="beaches";
+			jsonFile="museums.json";
+			$("#storeheader").html("Beaches");
+		}
+		$("#right-panel").panel( "close" );
+		$("#storetype").html(storetype);
+		loadScript(11,10000);
+		$.mobile.changePage("#results");
 	} // End else
 });
 
