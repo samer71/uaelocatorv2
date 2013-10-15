@@ -109,9 +109,6 @@ function onGetLocationSuccess(position)
 	  mapholder.style.height='200px';
 	  mapholder.style.width=window.innerWidth;
 	  bounds = new google.maps.LatLngBounds(); // Required for zoom level and center
-	  // Extend the map to fit my location
-	  bounds.extend(latlon);
-	  map.fitBounds(bounds);
 	  
 	  var myOptions={
 	  zoom:zoomlevel,
@@ -129,6 +126,9 @@ function onGetLocationSuccess(position)
 		  title:"My Location!"
 		  });
 	  mylocation = lat+","+lon;
+	  // Extend the map to fit my location
+	  bounds.extend(latlon);
+	  map.fitBounds(bounds);
 	  getStores(mylocation,proxm,storetype);
   } // End onGetLocationSuccess
   
