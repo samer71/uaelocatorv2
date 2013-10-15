@@ -38,18 +38,21 @@ function initialize() {
 }
 
 // This updates the map, listing and store page for every result
-function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
+function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	var coords = stlat+","+stlon;
 	var mid = middlePoint(lat,lon,stlat,stlon);
 	//Convert from radians back to degrees
 	var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
+	// Calculate zoomlevel based on distance
 	if(parseInt(distance)<10){dzoom=12;}
 	else if (parseInt(distance)<15){dzoom=11;}
 	else if (parseInt(distance)<20){dzoom=10;}
 	else if (parseInt(distance)<50){dzoom=9;}
-	else  {dzoom=8;}
+	else if (parseInt(distance)<100){dzoom=8;}
+	else  {dzoom=7;}
+	// Process only if within requested distance
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 		// Increment total stores
 		totalstores++;
@@ -65,7 +68,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc) {
 		// Append to the list of results
 		$("#list").append('<li class="onestore" id="'+label+'"><a class="dlink" href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		
-	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p>'+desc+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
+	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><p><b>Address('+distance+'KM from you)</b><br/>'+da+'</p><h3>Information</h3>'+desc+'<br/>'+fac+'<p><b>Entry Fees</b><br/>'+ef.join('<br/>')+'</p>'+'<p><b>Opening Hours</b><br/>'+h.join('<br/>')+'</p>'+'<p><b>Contacts</b><br/>'+c.join('<br/>')+'</p></div></div>');
 		
 	} // End if
 	// Necessary for the listview to render correctly
@@ -157,7 +160,7 @@ function getStores(ml,pm,st)
 		$.getJSON(jsonFile, function(store) {
 			sortedstore = $(store).sort(sortByDistance);
 			$.each(sortedstore,function(index,value){ 
-				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.entryFees, value.hours, value.contact, value.description);
+				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.entryFees, value.hours, value.contact, value.description, value.facilities);
 			});
 			// Done with store, update message
 			updateAll();
