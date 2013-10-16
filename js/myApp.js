@@ -288,7 +288,9 @@ $('.onestore').delegate('.dlink', 'tap', function ()  {
 					$("#storecontact").html(value.contact);
 				}
 			});
-	});		
+	});	
+	alert($(this).attr('href'));	
+	alert($(this).attr('id'));
 	$.mobile.changePage($(this).attr('href'));
 });
 
