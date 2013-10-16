@@ -29,7 +29,7 @@ function loadScript(zl,pm) {
 }
 
 function initialize() {
-	$.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: 'e',html: ""});
+	//$.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: 'e',html: ""});
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
@@ -119,6 +119,7 @@ function updateAll()
 
 function onGetLocationSuccess(position)
   {
+	  $.mobile.hidePageLoadingMsg();
 	  lat=position.coords.latitude;
 	  lon=position.coords.longitude;
 	  //acc=position.coords.accuracy;
@@ -147,7 +148,7 @@ function onGetLocationSuccess(position)
 	  // Extend the map to fit my location
 	  bounds.extend(latlon);
 	  map.fitBounds(bounds);
-	  $.mobile.loading('hide');
+	  //$.mobile.loading('hide');
 	  getStores(mylocation,proxm,storetype);
   } // End onGetLocationSuccess
   
@@ -252,6 +253,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
+		$.mobile.showPageLoadingMsg("e", "Locating...");
 		$.mobile.changePage("#results");
 	} // End else
 });
@@ -295,5 +297,6 @@ $('#options').delegate('.option', 'tap', function ()  {
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
 		$(".pbtn").removeClass("ui-disabled");
+		$.mobile.showPageLoadingMsg("e", "Locating...");
 	} // End else network
 });
