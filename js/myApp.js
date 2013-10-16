@@ -278,6 +278,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	// Load the json
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
+			alert(parseInt(value.storeID));
 				if(parseInt($(this).attr('id'))==parseInt(value.storeID))
 				{
 					$("#storeaddress").html(value.location.displayAddress);
