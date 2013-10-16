@@ -17,14 +17,14 @@ function onDeviceReady() {
 	$.mobile.defaultDialogTransition = 'none';
 	$.mobile.buttonMarkup.hoverDelay = 0;
 }
-
+/*
 $('#results').on('pagebeforechange', function ()  {
 	$.mobile.showPageLoadingMsg("e", "Locating...");
 });
 $('#results').on('pagechange', function ()  {
 	$.mobile.hidePageLoadingMsg();
 });
-
+*/
 function loadScript(zl,pm) {
   var script = document.createElement("script");
   script.type = "text/javascript";
@@ -76,10 +76,10 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 			position:storelatlon,
 			map:map});
 		// Append to the list of results
-		$("#list").append('<li class="onestore" id="'+label+'"><a class="dlink" href="#page'+label+'" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
-		
+		$("#list").append('<li class="onestore" id="'+label+'"><a class="dlink" href="#details" data-role="button" data-transition="slide">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+		/*
 	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><h3>Address('+distance+'KM from you)</h3>'+da+'</p><h3>'+name+'</h3>'+desc+'<h3>Facilities</h3>'+fac+'<h3>Entry Fees</h3>'+ef.join('<br/>')+'<h3>Opening Hours</h3>'+h.join('<br/>')+'<h3>Contacts</h3>'+c.join('<br/>')+'</div></div>');
-		
+		*/
 	} // End if
 	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
@@ -275,6 +275,20 @@ $('#goback').on('tap', function ()  {
 
 
 $('.onestore').delegate('.dlink', 'tap', function ()  {
+	// Load the json
+	$.getJSON(jsonFile, function(store) {
+			$.each(store,function(index,value){ 
+				if(parseInt($(this).attr('id'))==parseInt(value.storeID))
+				{
+					$("#storeaddress").html(value.location.displayAddress);
+					$("#storedescription").html(value.description);
+					$("#storefacilities").html(value.facilities);
+					$("#storefees").html(value.entryFees);
+					$("#storehours").html(value.hours);
+					$("#storecontact").html(value.contact);
+				}
+			});
+	});		
 	$.mobile.changePage($(this).attr('href'));
 });
 

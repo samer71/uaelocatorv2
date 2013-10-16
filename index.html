@@ -62,7 +62,7 @@
 	</div> <!-- End Content -->	
 	</div>	<!-- End Index -->
 
-    <!-- Museums -->
+    <!-- Results Page -->
     <div data-role="page" id="results">
     <div data-role="header" data-theme="b" >
         <h1 id="storeheader"></h1>
@@ -127,6 +127,33 @@
     </div><!-- /panel -->
     
 	</div><!-- End Results -->
+    
+    <!-- Details Page -->
+    <div data-role="page" id="details">
+    <div data-role="header" data-theme="b" >
+        <h1 id="storeheader"></h1>
+        <a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left">Back</a>
+    </div><!-- /header -->
+    
+    <div data-role="content" id="imageholder">
+    </div><!-- /content -->
+        
+    <div data-role="content" id="storedetails">
+    	<h3>Address (<span id="storedistance"></span>KM from you)</h3>
+        <span id="storeaddress"></span>
+        <h3>About</h3>
+        <span id="storedescription"></span>
+        <h3>Features and Facilities</h3>
+        <span id="storefacilities"></span>
+        <h3>Entry Fees</h3>
+        <span id="storefees"></span>
+        <h3>Hours</h3>
+        <span id="storehours"></span>
+        <h3>Contacts</h3>
+        <span id="storecontact"></span>
+    </div><!-- /content -->
+          
+	</div><!-- End Details -->
          
 	<script src="js/myApp.js"></script>
 </body>

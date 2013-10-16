@@ -6,7 +6,7 @@
             "longitude": 55.35809,
             "displayAddress": "Sharjah Aquarium"
         },
-        "museumNumber": 1,
+        "storeID": 1,
         "name": "Sharjah Aquarium",
         "description": "The Sharjah Aquarium opened in Al Khan Old area in 2008. Covering an area of 6500m², and consisting of two floors equipped with 20 water aquariums, each of which is filled with 1.8 million liters of water, it is the largest government learning center in the UAE.",
 		"facilities": "",
@@ -38,7 +38,7 @@
             "longitude": 55.423965,
             "displayAddress": "Sharjah Archaeology Museum"
         },
-        "museumNumber": 2,
+        "storeID": 2,
         "name": "Sharjah Archaeology Museum",
         "description": "The Sharjah Archaeology Museum first opened in 1993. It was moved to its current location in 1997 and serves as a permanent archive for all archaeological findings recovered in the Emirate of Sharjah since the start of archaeological excavations in 1972.",
 		"facilities": "",
@@ -67,7 +67,7 @@
             "longitude": 55.384658,
             "displayAddress": "Sharjah Calligraphy Museum"
         },
-        "museumNumber": 3,
+        "storeID": 3,
         "name": "Sharjah Calligraphy Museum",
         "description": "The Sharjah Calligraphy Museum was opened in 2002 in the building of the house of Hamad Al Midfaa in the Sharjah Heritage Area (Heart of Sharjah). Enter this museum and you embark on a fascinating journey of discovery across centuries of Arabian heritage in the form of beautifully written script.",
 		"facilities": "",
@@ -96,7 +96,7 @@
             "longitude": 55.386977,
             "displayAddress": "Sharjah Art Museum"
         },
-        "museumNumber": 4,
+        "storeID": 4,
         "name": "Sharjah Art Museum",
         "description": "Walk into a world of artistic excellence and expression. Opened in April 1997 this is the largest art museum in the Gulf with both temporary exhibitions and permanent collections by renowned artists.Explore the history of the region through the Orientalist painters of the 18th and 19th centuries, as well as gallery after gallery of stunning landscapes, cityscapes and portraits painted in oil, watercolours and acrylics, created by both local and internationally renowned artists.",
 		"facilities": "",
@@ -123,7 +123,7 @@
             "longitude": 55.528218,
             "displayAddress": "Sharjah Discovery Centre "
         },
-        "museumNumber": 5,
+        "storeID": 5,
         "name": "Sharjah Discovery Centre ",
         "description": "This children's centre is a great day's outing for the whole family with seven themed areas, packed full of ‘hands on activities' and plenty of fun. Filled with action and entertainment, enter a colourful arena exploring the dynamics of water, the five senses, the art of travel and the mechanisms of building, become a star on TV, climb the wall and ‘shop till you drop' in the children's supermarket.",
 		"facilities": "",
@@ -151,7 +151,7 @@
             "longitude": 55.384363,
             "displayAddress": "Sharjah Heritage Museum"
         },
-        "museumNumber": 6,
+        "storeID": 6,
         "name": "Sharjah Heritage Museum",
         "description": "The Sharjah Heritage Museum was re-opened in the Heritage Area (Heart of Sharjah) in 2012 as part of an expansion plan, the original museum first opened in early 2003. The museum is dedicated to highlighting Sharjah’s rich traditions, customs and culture as a source of pride and inspiration to the people of the UAE and its visitors.",
 		"facilities": "",
@@ -180,7 +180,7 @@
             "longitude":  55.389293 ,
             "displayAddress": "Sharjah Museum of Islamic Civilization"
         },
-        "museumNumber": 7,
+        "storeID": 7,
         "name": "Sharjah Museum of Islamic Civilization",
         "description": "The Sharjah Museum of Islamic Civilization was renovated and re-opened in 2008 as a significant tourist landmark in the region, and the first of its kind in the UAE. Situated right at the historical heart of Sharjah on the Majarrah Waterfront, this fascinating Museum started its life as a traditional Middle Eastern souq or indoor market.",
 		"facilities": "",
@@ -209,7 +209,7 @@
             "longitude":  55.395962,
             "displayAddress": "Al Mahatta Museum"
         },
-        "museumNumber": 8,
+        "storeID": 8,
         "name": "Al Mahatta Museum",
         "description": "Al Mahatta was the first airport in the United Arab Emirates. From man's first attempts to fly to landing on the moon, explore the history of flight and the development of aviation in this region at the museum which is located in Sharjah's first airport building.",
 		"facilities": "",
@@ -238,7 +238,7 @@
             "longitude": 55.383351,
             "displayAddress": "Majlis Al Midfa"
         },
-        "museumNumber": 9,
+        "storeID": 9,
         "name": "Majlis Al Midfa",
         "description": "The most peaceful meeting place is renowned for its remarkable round windtower, the only one of its kind in the UAE. Step back in time and enter a world where the men of the family and their male guests would gather to discuss affairs of the day. Amongst the many interesting items donated by the family, you will see a carved pearl chest, old books and manuscripts and a silver dagger with gold leave decoration.",
 		"facilities": "",
@@ -265,7 +265,7 @@
             "longitude": 55.358962,
             "displayAddress": "Sharjah Maritime Museum"
         },
-        "museumNumber": 10,
+        "storeID": 10,
         "name": "Sharjah Maritime Museum",
         "description": "The Sharjah Maritime Museum was first opened in the Heritage Area in early 2003 to highlight the maritime life of the UAE. However, due to the importance of the sea and its significance in the region’s heritage, the museum was expanded and relocated in Al Khan in 2009. The sea has played a key role in Sharjah's development and was the primary reason for the first settlers choosing this site over 6,000 years ago.",
 		"facilities": "",
@@ -294,7 +294,7 @@
             "longitude":  55.424647,
             "displayAddress": "Sharjah Science Museum"
         },
-        "museumNumber": 11,
+        "storeID": 11,
         "name": "Sharjah Science Museum",
         "description": "The Sharjah Science Museum, which first opened in 1996, now has more than 50 interactive displays suitable for all ages. Bringing science to life, this museum has so many exhibits and interactive displays designed to stimulate and inspire the visitor.",
 		"facilities": "",
@@ -321,7 +321,7 @@
             "longitude":  55.383786,
             "displayAddress": "Al Eslah School Museum"
         },
-        "museumNumber": 12,
+        "storeID": 12,
         "name": "Al Eslah School Museum",
         "description": "Established in 1935 as the first formal educational institute to be opened in Sharjah, this school welcomed pupils from all over the Gulf region. Experience school life as it was some 70 years ago while sitting at the wooden desks in the shaded classrooms and imagine attending an Islamic school.",
 		"facilities": "",
@@ -348,7 +348,7 @@
             "longitude":  56.359013,
             "displayAddress": "Bait Sheikh Saeed Bin Hamed Al Qasimi at Kalba"
         },
-        "museumNumber": 13,
+        "storeID": 13,
         "name": "Bait Sheikh Saeed Bin Hamed Al Qasimi",
         "description": "No trip to Sharjah is complete without exploring the Emirate's East Coast. Sandy beaches, scenic mountains, lush mangroves and heritage sites await you. In the traditional fishing village of Kalba, you will find a charismatic old fort and the prominent beachside residence of H.E. Sheikh Saeed bin Hamad Al Qasimi, both fully restored to display items of Islamic heritage and lifestyle, archaeological finds, weapons, agricultural equipment, in addition to a collection of musical instruments. Inland, in a beautiful setting overlooking the mangroves is Al Ghail Fort.",
 		"facilities": "",
@@ -377,7 +377,7 @@
             "longitude":  55.386989,
             "displayAddress": "Sharjah Hisn Museum"
         },
-        "museumNumber": 14,
+        "storeID": 14,
         "name": "Sharjah Hisn Museum",
         "description": "Visit this stunning fort, the former residence of the Al Qasimi Ruling family and appreciate traditional architecture and artifacts. Built in 1820, this large, majestic, double storey fort houses priceless objects, fascinating old photographs, classic weapons and trading tools tracing 200 years of Sharjah's history. Al Muhalwasa Jail, the Sheikh's bedroom and the date collecting store offer you insights into a unique Arabian heritage, set within the solid walls of this imposing stronghold.",
 		"facilities": "",
@@ -404,7 +404,7 @@
             "longitude":  55.384081,
             "displayAddress": "Bait Al Naboodah"
         },
-        "museumNumber": 15,
+        "storeID": 15,
         "name": "Bait Al Naboodah",
         "description": "Bait Al Naboodah opened its doors as a museum in 1995. The house originally belonged to the late Obaid bin Eissa Bin Ali Al Shamsi, nicknamed Al Naboodah, who was a prominent pearl trader that held commercial ties with India, Africa and France.Al Naboodah lived in this house, which was built in 1845, with his wife and seven children.",
 		"facilities": "",
@@ -433,7 +433,7 @@
             "longitude":  55.526496,
             "displayAddress": "Sharjah Classic Car Museum"
         },
-        "museumNumber": 16,
+        "storeID": 16,
         "name": "Sharjah Classic Car Museum",
         "description": "Opened in 2008, the Sharjah Classic Car Museum displays more than 100 classic cars of different brands that were manufactured between 1917 and the 1960s. The aim of the establishment of this museum is to maintain the historical value of classic cars and highlight theLearn about the history of these cars and become better acquainted with parts of an engine and how they function.",
 		"facilities": "",
@@ -462,7 +462,7 @@
     "longitude": "55.297258",
     "displayAddress": "Al Fahidi Fort, Bur Dubai"
   },
-        "museumNumber": 17,
+        "storeID": 17,
         "name": "Dubai Museum",
   "description": "The museum was opened by the ruler of Dubai in 1971, with the aim of presenting the traditional way of life in the Emirate of Dubai. It includes local antiquities as well as artifacts from African and Asian countries that traded with Dubai. It also includes several dioramas showing life in the emirate before the advent of oil. In addition to artifacts from recent discoveries as old as 3000 B.C.",
   "facilities": "",
@@ -490,7 +490,7 @@
     "longitude": "55.352147",
     "displayAddress": "Dubai Police General Headquarters"
   },
-        "museumNumber": 18,
+        "storeID": 18,
         "name": "Dubai Police Museum",
   "description": "At the entrance of this Hall, on the walls; right and left, are photographs documenting the phases of the glorious history of the Dubai Police. It also encompasses the events of the yesteryear occasions, including coverage of events and royal decrees and resolutions.",
   "facilities": "",
@@ -516,7 +516,7 @@
     "longitude": "54.221384",
     "displayAddress": "Cultural District - Abu Dhabi United Arab Emirates"
   },
-        "museumNumber": 19,
+        "storeID": 19,
         "name": "Louvre Abu Dhabi",
   "description": "The Louvre Abu Dhabi is a planned museum, to be completed by 2015. The future Louvre Abu Dhabi will be a universal museum in the Arab world.",
   "facilities": "",
@@ -541,7 +541,7 @@
     "longitude": "54.398958",
     "displayAddress": "Cultural District - Abu Dhabi United Arab Emirates"
   },
-        "museumNumber": 20,
+        "storeID": 20,
         "name": "Guggenheim Abu Dhabi",
   "description": "The Guggenheim Abu Dhabi is a planned museum, to be completed by 2017. Through its permanent collection, exhibitions, scholarly publications and educational programmes, Guggenheim Abu Dhabi will promote a truly transnational perspective on art history. Guggenheim Abu Dhabi's permanent collection will celebrate art produced around the world from the 1960's to the present day.",
   "facilities": "",
@@ -566,7 +566,7 @@
     "longitude": "54.405817",
     "displayAddress": "Cultural District - Abu Dhabi United Arab Emirates"
   },
-        "museumNumber": 21,
+        "storeID": 21,
         "name": "Zayed National Museum",
   "description": "The Zayed National Museum is a planned museum. The Zayed National Museum tells the story of Sheikh Zayed bin Sultan Al Nahyan (1918–2004), his unification of the United Arab Emirates, the long history of the region and its cultural connections across the world.",
   "facilities": "",
@@ -591,7 +591,7 @@
     "longitude": "54.396136",
     "displayAddress": "Cultural District - Abu Dhabi United Arab Emirates"
   },
-        "museumNumber": 22,
+        "storeID": 22,
         "name": "The Maritime Museum",
   "description": "The Maritime Museum is a planned museum. The Maritime Museum will celebrate Abu Dhabi’s maritime heritage and explore the Emirati’s long relationship with the sea. The building with its simple appearance, will combine space, light, and water both inside and out, seamlessly blending the building’s interior and exterior to ensure that the Arabian Gulf is, fittingly, the museum’s most stunning exhibit.",
   "facilities": "",
@@ -616,7 +616,7 @@
     "longitude": "54.418606",
     "displayAddress": "Cultural District - Abu Dhabi United Arab Emirates"
   },
-        "museumNumber": 23,
+        "storeID": 23,
         "name": "Saadiyat Cultural District",
   "description": "Saadiyat Cultural District is not really a museum but rather, as the name suggests an area on Saadiyat island dedicated for culture and arts. The district features the Louvre, Guggenheim, Zayed Museum, Performing Arts Centre, and hosts many events and activities related to art and culture.",
   "facilities": "",
@@ -641,7 +641,7 @@
     "longitude": "55.297469",
     "displayAddress": "Bastakiya District, Dubai"
   },
-        "museumNumber": 24,
+        "storeID": 24,
         "name": "Bastakiya District",
   "description": "This is not a classical closed museum but rather a historic district that includes Dubai Museum and Al Fahifi Fort. Bastakiya District was one of the original trading districts in old Dubai. Now famous for its delightful old houses with windtowers – rectangular structures that catch the wind and circulate it around the houses.",
   "facilities": "",
@@ -666,7 +666,7 @@
     "longitude": "55.289272",
     "displayAddress": "Sheikh Saeed Al Maktoum House, Dubai"
   },
-        "museumNumber": 25,
+        "storeID": 25,
         "name": "Sheikh Saeed Al Maktoum House",
   "description": "Sheikh Saeed Al Maktoum House is a historic building and former residential quarters of Saeed bin Maktoum Al Maktoum, former ruler of Dubai in the United Arab Emirates. The building is located along the Dubai Creek in the locality of Al Shindagha.",
   "facilities": "",
@@ -694,7 +694,7 @@
     "longitude": "55.291225",
     "displayAddress": "Heritage & Diving Villages, Dubai"
   },
-        "museumNumber": 26,
+        "storeID": 26,
         "name": "Heritage & Diving Villages",
   "description": "Exhibitions in the Diving Village illuminate Dubai’s historical significance as a pearling nation while potters and weavers practice their traditional crafts at barasti stalls set up in the Heritage Village.",
   "facilities": "",
@@ -722,7 +722,7 @@
     "longitude": "55.231701",
     "displayAddress": "Majlis Ghorfat Um-Al, Dubai"
   },
-        "museumNumber": 27,
+        "storeID": 27,
         "name": "Majlis Ghorfat Um-Al ",
   "description": "Situated in Jumairah, Majlis Ghorfat Umm Al Sheif is one of the important historical buildings in Dubai. Built in 1955, Majlis Ghorfat Umm Al Sheif was the summer residence of the late Sheikh Rashid Bin Saeed Al Maktoum. Simple and cooled by the sea breezes, the building provided its occupants with gentle climate even in the scorching summer days without any air conditioning in place.",
   "facilities": "",
@@ -750,7 +750,7 @@
     "longitude": "56.118719",
     "displayAddress": "Hatta Heritage Village"
   },
-        "museumNumber": 28,
+        "storeID": 28,
         "name": "Hatta Heritage Village",
   "description": "The Hatta Heritage Village was opened to the public in February 2001 after careful and extensive renovation. The village represents another fine example of the Heritage of Dubai and the UAE. Situated 115km southeast of Dubai city in the heart of the rocky Hatta Mountains, it provides the visitor with a fascinating glimpse into Dubai's historical past.",
   "facilities": "",
@@ -778,7 +778,7 @@
     "longitude": "55.4459783",
     "displayAddress": "Ajman Fort"
   },
-        "museumNumber": 29,
+        "storeID": 29,
         "name": "Ajman Fort and Museum",
   "description": "Ajman Fort is one of the biggest and most imposing forts of the UAE. The exact date of construction of Ajman Fort is not known, however it is believed that it was probably built towards the end of the 18th century, around 1775.",
   "facilities": "",
@@ -804,7 +804,7 @@
     "longitude": "55.945060",
     "displayAddress": "National Museum of Ras al-Khaimah"
   },
-        "museumNumber": 30,
+        "storeID": 30,
         "name": "National Museum of Ras al-Khaimah",
   "description": "Situated behind the Police Headquarters in the old town this is a truly fascinating fort. It was originally built in 1749 and was the residence of the ruling Al Qasimi family until the early 1960s. The museum houses an intriguing collection of archaeological artefacts from the numerous sites in the emirate, including Julfar, an ancient port.",
   "facilities": "",
@@ -831,7 +831,7 @@
     "longitude": "56.035849",
     "displayAddress": "Dhayah Fort"
   },
-        "museumNumber": 31,
+        "storeID": 31,
         "name": "Dhayah Fort",
   "description": "Dhayah Fort about 15 kilometres from the town of RAK is in a very scenic location with wonderful views of the mountains and sea. Dhayah Fort is a 19th century fortress that was built on much older foundations from the 16th century and served for military purposes.",
   "facilities": "",
