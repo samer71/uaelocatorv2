@@ -10,6 +10,7 @@ var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
+var offline=false;
 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -184,9 +185,6 @@ function onGetLocationError(error)
 			  break;
 			case 3:
 			  x.innerHTML="The request to get user location timed out."
-			  break;
-			case 4:
-			  x.innerHTML="Problem: No network connection."
 			  break;
 			default:
 			  x.innerHTML="An unknown error occurred."
