@@ -277,10 +277,9 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'tap', function ()  {
 	var linkid = parseInt($(this).attr('id'));
 	// Load the json
-	$.ajaxSetup({async: false});
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
-				if(linkid==parseInt(value.storeID))
+				if(linkid==value.storeID)
 				{
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
@@ -291,7 +290,6 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 				}
 			});
 	});	
-	$.ajaxSetup({async: true});
 	$.mobile.changePage("#details");
 });
 
