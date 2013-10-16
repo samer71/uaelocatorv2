@@ -119,7 +119,7 @@ function updateAll()
 
 function onGetLocationSuccess(position)
   {
-	  $.mobile.hidePageLoadingMsg();
+	  //$.mobile.hidePageLoadingMsg();
 	  lat=position.coords.latitude;
 	  lon=position.coords.longitude;
 	  //acc=position.coords.accuracy;
@@ -253,7 +253,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
-		$.mobile.showPageLoadingMsg("e", "Locating...");
+		//$.mobile.showPageLoadingMsg("e", "Locating...");
 		$.mobile.changePage("#results");
 	} // End else
 });
@@ -297,6 +297,6 @@ $('#options').delegate('.option', 'tap', function ()  {
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
 		$(".pbtn").removeClass("ui-disabled");
-		$.mobile.showPageLoadingMsg("e", "Locating...");
+		//$.mobile.showPageLoadingMsg("e", "Locating...");
 	} // End else network
 });
