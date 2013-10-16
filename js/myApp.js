@@ -288,7 +288,8 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
-					
+					alert("Link ID: "+linkid);
+					alert("Store ID: "+value.storeID);
 				}
 			});
 	});	
