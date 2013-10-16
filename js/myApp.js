@@ -18,6 +18,13 @@ function onDeviceReady() {
 	$.mobile.buttonMarkup.hoverDelay = 0;
 }
 
+$('#results').on('pagebeforechange', function ()  {
+	$.mobile.showPageLoadingMsg("e", "Locating...");
+});
+$('#results').on('pagechange', function ()  {
+	$.mobile.hidePageLoadingMsg();
+});
+
 function loadScript(zl,pm) {
   var script = document.createElement("script");
   script.type = "text/javascript";
