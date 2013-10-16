@@ -276,9 +276,10 @@ $('#goback').on('tap', function ()  {
 
 $('#list').delegate('.onestore', 'tap', function ()  {
 	// Load the json
+	//$.ajaxSetup({async: false});
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
-			alert(parseInt(value.storeID));
+			alert(parseInt($(this).attr('id')));
 				if(parseInt($(this).attr('id'))==parseInt(value.storeID))
 				{
 					$("#storeaddress").html(value.location.displayAddress);
@@ -287,11 +288,12 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
-					$.mobile.changePage("#details");
+					
 				}
 			});
 	});	
-	
+	//$.ajaxSetup({async: true});
+	$.mobile.changePage("#details");
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
