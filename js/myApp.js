@@ -147,8 +147,8 @@ function onGetLocationSuccess(position)
 	  // Extend the map to fit my location
 	  bounds.extend(latlon);
 	  map.fitBounds(bounds);
-	  getStores(mylocation,proxm,storetype);
 	  $.mobile.loading('hide');
+	  getStores(mylocation,proxm,storetype);
   } // End onGetLocationSuccess
   
 function getStores(ml,pm,st)
@@ -175,7 +175,7 @@ function onGetLocationError(error)
   {
 	  document.getElementById("mapholder").style.display='none';
 	  document.getElementById("errorholder").style.display='block';
-	  //$(".option").addClass("ui-disabled");
+	  $(".pbtn").addClass("ui-disabled");
 	  var x=document.getElementById("errormsg");
 	  switch(error.code) 
 		{
@@ -248,7 +248,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		}
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
-		//$(".option").removeClass("ui-disabled");
+		$(".pbtn").removeClass("ui-disabled");
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
@@ -294,5 +294,6 @@ $('#options').delegate('.option', 'tap', function ()  {
 		}
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
+		$(".pbtn").removeClass("ui-disabled");
 	} // End else network
 });
