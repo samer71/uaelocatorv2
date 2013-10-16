@@ -17,17 +17,12 @@ function onDeviceReady() {
 	$.mobile.buttonMarkup.hoverDelay = 0;
 }
 
-$(document).on('pagebeforeshow', '[data-role="page"]', function(){     
+$("#results").on('pagebeforeshow', function(){     
     setTimeout(function(){
         $.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: '2',html: ""});
     },1);    
 });
 
-$(document).on('pageshow', '[data-role="page"]', function(){  
-    setTimeout(function(){
-        $.mobile.loading('hide');
-    },300);      
-});
 
 
 function loadScript(zl,pm) {
@@ -158,6 +153,7 @@ function onGetLocationSuccess(position)
 	  bounds.extend(latlon);
 	  map.fitBounds(bounds);
 	  getStores(mylocation,proxm,storetype);
+	  $.mobile.loading('hide');
   } // End onGetLocationSuccess
   
 function getStores(ml,pm,st)
