@@ -275,9 +275,11 @@ $('#goback').on('tap', function ()  {
 
 
 $('.dlink').on('tap', function ()  {
+	alert($(this).attr('href'));
 	// Load the json
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
+			alert(value.storeID);
 				if(parseInt($(this).attr('id'))==parseInt(value.storeID))
 				{
 					$("#storeaddress").html(value.location.displayAddress);
