@@ -17,6 +17,19 @@ function onDeviceReady() {
 	$.mobile.buttonMarkup.hoverDelay = 0;
 }
 
+$(document).on('pagebeforeshow', '[data-role="page"]', function(){     
+    setTimeout(function(){
+        $.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: '2',html: ""});
+    },1);    
+});
+
+$(document).on('pageshow', '[data-role="page"]', function(){  
+    setTimeout(function(){
+        $.mobile.loading('hide');
+    },300);      
+});
+
+
 function loadScript(zl,pm) {
   var script = document.createElement("script");
   script.type = "text/javascript";
