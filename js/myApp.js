@@ -275,7 +275,6 @@ $('#goback').on('tap', function ()  {
 
 
 $('#list').delegate('.onestore', 'tap', function ()  {
-	alert($(this).attr('id'));
 	// Load the json
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
@@ -287,10 +286,11 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
+					$.mobile.changePage("#details");
 				}
 			});
 	});	
-	$.mobile.changePage("#details");
+	
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
