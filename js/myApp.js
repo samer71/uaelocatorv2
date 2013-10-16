@@ -274,7 +274,7 @@ $('#goback').on('tap', function ()  {
 });
 
 
-$('.onestore').delegate('.dlink', 'tap', function ()  {
+$('.dlink').on('tap', function ()  {
 	// Load the json
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
