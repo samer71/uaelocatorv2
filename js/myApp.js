@@ -275,12 +275,12 @@ $('#goback').on('tap', function ()  {
 
 
 $('#list').delegate('.onestore', 'tap', function ()  {
+	var linkid = parseInt($(this).attr('id'));
 	// Load the json
 	//$.ajaxSetup({async: false});
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
-			alert(parseInt($(this).attr('id')));
-				if(parseInt($(this).attr('id'))==parseInt(value.storeID))
+				if(linkid==parseInt(value.storeID))
 				{
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
