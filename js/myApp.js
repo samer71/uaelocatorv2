@@ -275,6 +275,7 @@ $('#goback').on('tap', function ()  {
 
 
 $('#list').delegate('.onestore', 'tap', function ()  {
+	alert($(this).attr('id'));
 	// Load the json
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
