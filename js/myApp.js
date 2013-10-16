@@ -17,14 +17,6 @@ function onDeviceReady() {
 	$.mobile.buttonMarkup.hoverDelay = 0;
 }
 
-$("#results").on('pagebeforeshow', function(){     
-    setTimeout(function(){
-        $.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: '2',html: ""});
-    },1);    
-});
-
-
-
 function loadScript(zl,pm) {
   var script = document.createElement("script");
   script.type = "text/javascript";
@@ -36,6 +28,7 @@ function loadScript(zl,pm) {
 }
 
 function initialize() {
+	$.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: 'e',html: ""});
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
