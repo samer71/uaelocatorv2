@@ -175,7 +175,7 @@ function onGetLocationError(error)
   {
 	  document.getElementById("mapholder").style.display='none';
 	  document.getElementById("errorholder").style.display='block';
-	  $(".option").addClass("ui-disabled");
+	  $(".option .pbtn").addClass("ui-disabled");
 	  var x=document.getElementById("errormsg");
 	  switch(error.code) 
 		{
@@ -248,7 +248,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		}
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
-		$(".option").removeClass("ui-disabled");
+		$(".option .pbtn").removeClass("ui-disabled");
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
