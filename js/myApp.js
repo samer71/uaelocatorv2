@@ -277,7 +277,7 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'tap', function ()  {
 	var linkid = parseInt($(this).attr('id'));
 	// Load the json
-	//$.ajaxSetup({async: false});
+	$.ajaxSetup({async: false});
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
 				if(linkid==parseInt(value.storeID))
@@ -288,12 +288,10 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
-					alert("Link ID: "+linkid);
-					alert("Store ID: "+value.storeID);
 				}
 			});
 	});	
-	//$.ajaxSetup({async: true});
+	$.ajaxSetup({async: true});
 	$.mobile.changePage("#details");
 });
 
