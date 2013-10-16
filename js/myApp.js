@@ -48,7 +48,8 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	// Calculate zoomlevel based on distance
-	if(parseInt(distance)<10){dzoom=12;}
+	if(parseInt(distance)<5){dzoom=14;}
+	else if (parseInt(distance)<10){dzoom=12;}
 	else if (parseInt(distance)<15){dzoom=11;}
 	else if (parseInt(distance)<20){dzoom=10;}
 	else if (parseInt(distance)<50){dzoom=9;}
@@ -172,9 +173,10 @@ function getStores(ml,pm,st)
 
 function onGetLocationError(error)
   {
-	  var x=document.getElementById("errorholder");
-	  x.style.height='50px';
-	  x.style.display='block';
+	  var y=document.getElementById("errorholder");
+	  var x=document.getElementById("errormsg");
+	  y.style.height='50px';
+	  y.style.display='block';
 	  switch(error.code) 
 		{
 			case 1:
