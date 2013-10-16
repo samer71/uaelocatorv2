@@ -173,10 +173,10 @@ function getStores(ml,pm,st)
 
 function onGetLocationError(error)
   {
-	  var y=document.getElementById("errorholder");
+	  document.getElementById("mapholder").style.display='none';
+	  document.getElementById("errorholder").style.display='block';
+	  $(".options").addClass("ui-disabled");
 	  var x=document.getElementById("errormsg");
-	  y.style.height='50px';
-	  y.style.display='block';
 	  switch(error.code) 
 		{
 			case 1:
@@ -247,6 +247,8 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 			$("#storeheader").html("Beaches");
 		}
 		document.getElementById("errorholder").style.display='none';
+		document.getElementById("mapholder").style.display='block';
+		$(".options").removeClass("ui-disabled");
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
 		loadScript(11,10000);
