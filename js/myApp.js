@@ -287,7 +287,7 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
-		if(linkid==value.storeID)
+		if(linkid==(index+1))
 		{
 			alert("Name: "+value.name);
 			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
