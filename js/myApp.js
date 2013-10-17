@@ -286,37 +286,25 @@ $('#goback').on('tap', function ()  {
 
 $('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
+	$.each(sortedstore,function(index,value){ 
+		if(linkid==value.storeID)
+		{
+			alert("Index: "+index);
+			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
+			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
+			$("#storeheader").html(value.name);
+			$("#storeaddress").html(value.location.displayAddress);
+			$("#storedescription").html(value.description);
+			$("#storefacilities").html(value.facilities);
+			$("#storefees").html(value.entryFees);
+			$("#storehours").html(value.hours);
+			$("#storecontact").html(value.contact);
+			alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
+		}
+	});
 	$.mobile.changePage("#details");
 });
 
-$(document).delegate("#details", "pagebeforechange", function() {
-  alert('Details page pagebeforechange');
-});
-$(document).delegate("#details", "pagechange", function() {
-  alert('Details page pagechange');
-});
-$(document).delegate("#details", "pageshow", function() {
-  alert('Details page pageshow ');
-});
-$(document).delegate("#details", "pagebeforeshow ", function() {
-  alert('Details page pagebeforeshow');
-  $.each(sortedstore,function(index,value){ 
-				if(linkid==value.storeID)
-				{
-					alert("Index: "+index);
-					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
-					$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
-					$("#storeheader").html(value.name);
-					$("#storeaddress").html(value.location.displayAddress);
-					$("#storedescription").html(value.description);
-					$("#storefacilities").html(value.facilities);
-					$("#storefees").html(value.entryFees);
-					$("#storehours").html(value.hours);
-					$("#storecontact").html(value.contact);
-					alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
-				}
-			});
-});
 
 $('#options').delegate('.option', 'tap', function ()  {
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
