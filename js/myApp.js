@@ -283,12 +283,12 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-/*
+
 $('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.mobile.changePage("#details");
 });
-*/
+
 $(document).delegate("#details", "pagebeforechange", function() {
   alert('Details page pagebeforechange');
 });
