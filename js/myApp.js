@@ -227,7 +227,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
 		{
 			storetype="theaters";
-			jsonFile="museums.json";
+			jsonFile="theaters.json";
 			$("#storeheader").html("Theaters");
 		}
 		else if(($(this).attr('id')=="cinemaspage") || ($(this).attr('id')=="pcinemaspage")) 

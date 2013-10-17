@@ -1,0 +1,153 @@
+[
+    {
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.133882,
+            "longitude": 55.186705,
+            "displayAddress": "Madinat Theatre, Madinat Jumeirah, Dubai"
+        },
+        "storeID": 1,
+        "name": "Madinat Theatre ",
+        "description": "The Madinat Theatre is the first purpose built theatre in Dubai and is a highly prestigious entertainment venue, perfect for staging a wide variety of shows. The Madinat Theatre can be found in the Souk Madinat Jumeirah where meandering paths lead visitors through a bazaar-like atmosphere in which open fronted shops and intimate galleries spill onto the paved walkways.",
+		"facilities": "The seating capacity is 442 in total comprising 358 in the stalls and 84 in the gallery, including 6 wheelchair spaces. There are two foyers both lobby level and gallery, housing bars for guests to enjoy pre-show and interval drinks. There is also a private Majilis on the gallery level with a private entrance via elevator and waiter service for VIP parties.",
+        "entryFees": [
+            "Vary based on show."
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary based on show"
+        ],
+        "contact": [
+            "Tel: +971(4)-366 6546",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://www.madinattheatre.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.118593,
+            "longitude": 55.200502,
+            "displayAddress": "DUCTAC, Mall of the Emirates, Dubai"
+        },
+        "storeID": 2,
+        "name": "Dubai Community Theatre & Arts Centre (DUCTAC)",
+        "description": "The Theatre & Arts Centre is the first modern, non-profit, cross-community creative centre in the Gulf. This flagship project was the brainchild of local theatre-lovers, arts enthusiasts, artists and business people who recognised the need for an entertainment and educational centre for the community and future generations of Dubai.",
+		"facilities": "Centrepoint Theatre is tiered on two levels and featuring a 120m2 (1291 ft2) proscenium stage. Kilachand Studio Theatre is an intimate space ideal for smaller performances. Gallery of Light. Rehearsal and Dance Studios. Courses and training.",
+        "entryFees": [
+            "Vary"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat to Thur: 9am - 1pm",
+			"Fri and holidays: 2pm - 1pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-341 4777",
+            "Fax: +971(4)-341 4445",
+            "Email:box.office@ductac.org",
+            "Website: http://www.ductac.org"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.227062,
+            "longitude": 55.28333,
+            "displayAddress": "Art For All, Fairmont Hotel, Dubai"
+        },
+        "storeID": 3,
+        "name": "Art For All",
+        "description": "Art for All is envisioned as the solution to a lack of avenue for kids in Dubai to experience art in its various forms. Art For All has focused on theatre. With partners ranging from local to international performing companies: edutainment is their niche.",
+		"facilities": "Amazing Plays Brought to UAE. Educational Workshops. Events",
+        "entryFees": [
+            "Vary"
+        ],
+        "handicap": true,
+        "hours": [
+            "Vary"
+        ],
+        "contact": [
+            "Tel: +971(4)-304 2340",
+            "Fax: +971(4)-342 2349",
+            "Email: Info@artforall.ae",
+            "Website: http://www.artforall.ae"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.478439,
+            "longitude": 54.332432,
+            "displayAddress": "Abu Dhabi Theatre, Marina, Abu Dhabi"
+        },
+        "storeID": 4,
+        "name": "Abu Dhabi Theatre",
+        "description": "Part of Abu Dhabi Classics will combine Arab hospitality with an unsurpassed cultural offering. Whether in Abu Dhabi, dynamic capital of the United Arab Emirates, or in the lush oasis of Al Ain.",
+		"facilities": "Free Shuttle Service. The Abu Dhabi Classics Academy: workshops, film presentations, open rehearsals etc",
+        "entryFees": [
+			"Vary" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon-Fri 9am – 5pm"
+        ],
+        "contact": [
+            "Tel: +971(2)-681 8821",
+            "Fax: +971(2)",
+            "Email: info@abudhabiclassics.com",
+            "Website: http://www.abudhabiclassics.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "AIN",
+            "latitude": 24.218456,
+            "longitude": 55.752973,
+            "displayAddress": "Al Jahili Fort, Al Ain"
+        },
+        "storeID": 5,
+        "name": "Al Jahili Fort",
+        "description": "Part of Abu Dhabi Classics will combine Arab hospitality with an unsurpassed cultural offering. Whether in Abu Dhabi, dynamic capital of the United Arab Emirates, or in the lush oasis of Al Ain.",
+		"facilities": "Free Shuttle Service. The Abu Dhabi Classics Academy: workshops, film presentations, open rehearsals etc",
+        "entryFees": [
+			"Vary" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon-Fri 9am – 5pm"
+        ],
+        "contact": [
+            "Tel: +971(2)-681 8821",
+            "Fax: +971(2)",
+            "Email: info@abudhabiclassics.com",
+            "Website: http://www.abudhabiclassics.com"
+        ]
+    },
+{
+        "location": {
+            "emirateCode": "AUH",
+            "latitude": 24.461662,
+            "longitude": 54.317926,
+            "displayAddress": "Emirates Palace, Abu Dhabi"
+        },
+        "storeID": 6,
+        "name": "Emirates Palace Auditorium",
+        "description": "Part of Abu Dhabi Classics will combine Arab hospitality with an unsurpassed cultural offering. Whether in Abu Dhabi, dynamic capital of the United Arab Emirates, or in the lush oasis of Al Ain.",
+		"facilities": "Free Shuttle Service. The Abu Dhabi Classics Academy: workshops, film presentations, open rehearsals etc",
+        "entryFees": [
+			"Vary" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon-Fri 9am – 5pm"
+        ],
+        "contact": [
+            "Tel: +971(2)-681 8821",
+            "Fax: +971(2)",
+            "Email: info@abudhabiclassics.com",
+            "Website: http://www.abudhabiclassics.com"
+        ]
+    }
+]
