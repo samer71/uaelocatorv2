@@ -276,8 +276,9 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 });
 
 $('#gohome').on('tap', function ()  {
+	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
+	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 	$.mobile.changePage("#index");
-	$('#list li.nostore').remove();
 });
 
 $('#goback').on('tap', function ()  {
@@ -294,9 +295,9 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
 			$("#storefacilities").html(value.facilities);
-			$("#storefees").html(value.entryFees);
-			$("#storehours").html(value.hours);
-			$("#storecontact").html(value.contact);
+			$("#storefees").html(value.entryFees).join('<br/>');
+			$("#storehours").html(value.hours).join('<br/>');
+			$("#storecontact").html(value.contact).join('<br/>');
 		}
 	});
 	$.mobile.changePage("#details");
