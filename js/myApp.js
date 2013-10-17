@@ -292,7 +292,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			alert("Index: "+index);
 			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
-			$("#storeheader").html(value.name);
+			$("#nameheader").html(value.name);
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
 			$("#storefacilities").html(value.facilities);
