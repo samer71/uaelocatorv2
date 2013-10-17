@@ -289,7 +289,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==value.storeID)
 		{
-			alert("Index: "+index);
+			alert("Name: "+value.name);
 			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
 			$("#nameheader").html(value.name);
