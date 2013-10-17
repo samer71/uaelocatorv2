@@ -295,9 +295,9 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
 			$("#storefacilities").html(value.facilities);
-			$("#storefees").html(value.entryFees).join('<br/>');
-			$("#storehours").html(value.hours).join('<br/>');
-			$("#storecontact").html(value.contact).join('<br/>');
+			$("#storefees").html(value.entryFees.join('<br/>'));
+			$("#storehours").html(value.hours.join('<br/>'));
+			$("#storecontact").html(value.contact.join('<br/>'));
 		}
 	});
 	$.mobile.changePage("#details");
