@@ -262,7 +262,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 $('#gohome').on('tap', function ()  {
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
-	$.mobile.changePage("#index");
+	//$.mobile.changePage("#index");
 });
 
 $('#goback').on('tap', function ()  {
