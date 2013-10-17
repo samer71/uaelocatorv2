@@ -303,7 +303,9 @@ $(document).delegate("#details", "pagebeforeshow ", function() {
   $.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
+					alert("Index: "+index);
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
+					$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
 					$("#storeheader").html(value.name);
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
@@ -311,8 +313,6 @@ $(document).delegate("#details", "pagebeforeshow ", function() {
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
-					//$.mobile.changePage("#details");
-					//window.location ="#details";
 					alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
 				}
 			});
