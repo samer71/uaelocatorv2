@@ -287,26 +287,14 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.mobile.changePage("#details");
-	// Load the json
-	/*
-	$.getJSON(jsonFile, function(thestore) {
-			$.each(thestore,function(index,value){ 
-				if(linkid==value.storeID)
-				{
-					$("#storeaddress").html(value.location.displayAddress);
-					$("#storedescription").html(value.description);
-					$("#storefacilities").html(value.facilities);
-					$("#storefees").html(value.entryFees);
-					$("#storehours").html(value.hours);
-					$("#storecontact").html(value.contact);
-				}
-			});
-	});	
-	*/
 });
 
-$('#details').on('pagebeforechange', function ()  {
-	$.each(sortedstore,function(index,value){ 
+$(document).delegate("#details", "pagecreate", function() {
+  alert('Details page was just created');
+});
+$(document).delegate("#details", "pagebeforecreate ", function() {
+  alert('Details page was just created');
+  $.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
