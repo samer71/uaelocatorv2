@@ -64,7 +64,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 		// Update map with markers (requires StyledMarker.js) 	
 		storemarker = new StyledMarker({
 			styleIcon:new StyledIcon(StyledIconTypes.MARKER,
-			{color:"FFFF66",text:linkid.toString()}),
+			{color:"FFFF66",text:label.toString()}),
 			position:storelatlon,
 			map:map});
 		// Append to the list of results
