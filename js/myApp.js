@@ -10,7 +10,7 @@ var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
-var offline=false;
+var sortedstore;
 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -285,6 +285,7 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'tap', function ()  {
 	var linkid = parseInt($(this).attr('id'));
 	// Load the json
+	/*
 	$.getJSON(jsonFile, function(thestore) {
 			$.each(thestore,function(index,value){ 
 				if(linkid==value.storeID)
@@ -298,6 +299,18 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 				}
 			});
 	});	
+	*/
+	$.each(sortedstore,function(index,value){ 
+				if(linkid==value.storeID)
+				{
+					$("#storeaddress").html(value.location.displayAddress);
+					$("#storedescription").html(value.description);
+					$("#storefacilities").html(value.facilities);
+					$("#storefees").html(value.entryFees);
+					$("#storehours").html(value.hours);
+					$("#storecontact").html(value.contact);
+				}
+			});
 	$.mobile.changePage("#details");
 });
 
