@@ -236,6 +236,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 		{
 			storetype="arts";
+			jsonFile="museums.json";
 			$("#storeheader").html("The Arts");
 		}
 		else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
@@ -267,7 +268,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		$(".pbtn").removeClass("ui-disabled");
 		$("#right-panel").panel( "close" );
 		$("#storetype").html(storetype);
-		loadScript(11,10000);
+		loadScript(12,10000);
 		//$.mobile.showPageLoadingMsg("e", "Locating...");
 		$.mobile.changePage("#results");
 	} // End else
@@ -305,15 +306,17 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 				if(linkid==value.storeID)
 				{
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
+					$("#storeaddress").html(value.name);
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
 					$("#storefacilities").html(value.facilities);
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
+					$.mobile.changePage("#details");
 				}
 			});
-	$.mobile.changePage("#details");
+	
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
