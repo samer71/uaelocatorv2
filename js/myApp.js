@@ -314,6 +314,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
 					$.mobile.changePage("#details");
+					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 				}
 			});
 	
