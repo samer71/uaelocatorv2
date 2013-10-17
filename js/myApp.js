@@ -11,6 +11,7 @@ var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
+var linkid;
 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -284,8 +285,8 @@ $('#goback').on('tap', function ()  {
 
 
 $('#list').delegate('.onestore', 'tap', function ()  {
-	var linkid = parseInt($(this).attr('id'));
-	alert("Link ID: "+linkid);
+	linkid = parseInt($(this).attr('id'));
+	$.mobile.changePage("#details");
 	// Load the json
 	/*
 	$.getJSON(jsonFile, function(thestore) {
@@ -302,7 +303,9 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			});
 	});	
 	*/
-	$('#details').on('pagebeforechange', function ()  {
+});
+
+$('#details').on('pagebeforechange', function ()  {
 	$.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
@@ -315,12 +318,10 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
 					//$.mobile.changePage("#details");
-					window.location ="#details";
-					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
+					//window.location ="#details";
+					alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
 				}
 			});
-	});
-	
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
