@@ -284,6 +284,7 @@ $('#goback').on('tap', function ()  {
 
 $('#list').delegate('.onestore', 'tap', function ()  {
 	var linkid = parseInt($(this).attr('id'));
+	alert("Link ID: "+linkid);
 	// Load the json
 	/*
 	$.getJSON(jsonFile, function(thestore) {
@@ -303,6 +304,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	$.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
+					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
 					$("#storefacilities").html(value.facilities);
