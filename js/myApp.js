@@ -282,7 +282,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			var mid = middlePoint(lat,lon,value.location.latitude,value.location.longitude);
 			//Convert from radians back to degrees
 			var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
-			var stlatlon=new google.maps.LatLng(stlat, stlon);
+			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
 			// Calculate zoomlevel based on distance
 			if(parseInt(dist)<3){dzoom=14;}
