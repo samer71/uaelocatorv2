@@ -52,34 +52,13 @@ function initialize() {
 	Args: store info
 */
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
-	var coords = stlat+","+stlon;
-	var mid = middlePoint(lat,lon,stlat,stlon);
-	//Convert from radians back to degrees
-	var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
-	// Calculate zoomlevel based on distance
-	if(parseInt(distance)<3){dzoom=14;}
-	else if (parseInt(distance)<5){dzoom=13;}
-	else if (parseInt(distance)<10){dzoom=12;}
-	else if (parseInt(distance)<15){dzoom=11;}
-	else if (parseInt(distance)<20){dzoom=10;}
-	else if (parseInt(distance)<50){dzoom=9;}
-	else if (parseInt(distance)<100){dzoom=8;}
-	else  {dzoom=7;}
 	// Process only if within requested distance
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 		// Increment total stores
 		totalstores++;
-		// Extend the map to fit 
-		bounds.extend(storelatlon);
-		map.fitBounds(bounds);
-		// Update map with markers (requires StyledMarker.js) 	
-		storemarker = new StyledMarker({
-			styleIcon:new StyledIcon(StyledIconTypes.MARKER,
-			{color:"FFFF66",text:label.toString()}),
-			position:storelatlon,
-			map:map});
+		
 		// Append to the list of results
 		$("#list").append('<li id="'+label+'" class="onestore"><a class="dlink" href="#details">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		/*
@@ -291,6 +270,33 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
 		{
+			var coords = value.location.latitude+","+value.location.longitude;
+			var mid = middlePoint(lat,lon,value.location.latitude,value.location.longitude);
+			//Convert from radians back to degrees
+			var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
+			var stlatlon=new google.maps.LatLng(stlat, stlon);
+			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
+			// Calculate zoomlevel based on distance
+			if(parseInt(dist)<3){dzoom=14;}
+			else if (parseInt(dist)<5){dzoom=13;}
+			else if (parseInt(dist)<10){dzoom=12;}
+			else if (parseInt(dist)<15){dzoom=11;}
+			else if (parseInt(dist)<20){dzoom=10;}
+			else if (parseInt(dist)<50){dzoom=9;}
+			else if (parseInt(dist)<100){dzoom=8;}
+			else  {dzoom=7;}
+			// Extend the map to fit 
+			bounds.extend(storelatlon);
+			map.fitBounds(bounds);
+			// Update map with markers (requires StyledMarker.js) 	
+			storemarker = new StyledMarker({
+				styleIcon:new StyledIcon(StyledIconTypes.MARKER,
+				{color:"FFFF66",text:linkid.toString()}),
+				position:storelatlon,
+				map:map});
+			// The map image
+			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
+			$("#imageholder").append(mapimg);
 			$("#nameheader").html(value.name);
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
