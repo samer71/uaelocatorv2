@@ -295,8 +295,10 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			else  {dzoom=7;}
 			// The map image
 			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
+			if ($("#map").length) {$('#map').remove();}
 			$("#imageholder").append(mapimg);
 			$("#nameheader").html(value.name);
+			$("#storedistance").html(dist);
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
 			$("#storefacilities").html(value.facilities);
