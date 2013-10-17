@@ -277,6 +277,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 
 $('#gohome').on('tap', function ()  {
 	$.mobile.changePage("#index");
+	$('#list li.nostore').remove();
 });
 
 $('#goback').on('tap', function ()  {
@@ -289,9 +290,6 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
 		{
-			alert("Name: "+value.name);
-			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
-			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
 			$("#nameheader").html(value.name);
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
@@ -299,8 +297,6 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefees").html(value.entryFees);
 			$("#storehours").html(value.hours);
 			$("#storecontact").html(value.contact);
-			alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
-			$("#details").trigger("create");
 		}
 	});
 	$.mobile.changePage("#details");
