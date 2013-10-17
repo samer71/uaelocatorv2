@@ -306,14 +306,15 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 				if(linkid==value.storeID)
 				{
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
-					$("#storeaddress").html(value.name);
+					$("#storeheader").html(value.name);
 					$("#storeaddress").html(value.location.displayAddress);
 					$("#storedescription").html(value.description);
 					$("#storefacilities").html(value.facilities);
 					$("#storefees").html(value.entryFees);
 					$("#storehours").html(value.hours);
 					$("#storecontact").html(value.contact);
-					$.mobile.changePage("#details");
+					//$.mobile.changePage("#details");
+					window.location ="#details";
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 				}
 			});
@@ -331,6 +332,7 @@ $('#options').delegate('.option', 'tap', function ()  {
 		if($(this).attr('id')=="reload")
 		{
 			loadScript(12,10000);
+			//location.reload();
 		} else if($(this).attr('id')=="get20") 
 		{
 			loadScript(11,20000);
