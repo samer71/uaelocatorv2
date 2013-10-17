@@ -302,6 +302,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			});
 	});	
 	*/
+	$('#details').on('pagebeforechange', function ()  {
 	$.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
@@ -318,6 +319,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 					alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
 				}
 			});
+	});
 	
 });
 
