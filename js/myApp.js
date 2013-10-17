@@ -58,7 +58,15 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	if(parseFloat(distance,2)<=parseFloat(prox/1000,2)) {
 		// Increment total stores
 		totalstores++;
-		
+		// Extend the map to fit 
+		bounds.extend(storelatlon);
+		map.fitBounds(bounds);
+		// Update map with markers (requires StyledMarker.js) 	
+		storemarker = new StyledMarker({
+			styleIcon:new StyledIcon(StyledIconTypes.MARKER,
+			{color:"FFFF66",text:linkid.toString()}),
+			position:storelatlon,
+			map:map});
 		// Append to the list of results
 		$("#list").append('<li id="'+label+'" class="onestore"><a class="dlink" href="#details">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		/*
@@ -285,15 +293,6 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			else if (parseInt(dist)<50){dzoom=9;}
 			else if (parseInt(dist)<100){dzoom=8;}
 			else  {dzoom=7;}
-			// Extend the map to fit 
-			bounds.extend(storelatlon);
-			map.fitBounds(bounds);
-			// Update map with markers (requires StyledMarker.js) 	
-			storemarker = new StyledMarker({
-				styleIcon:new StyledIcon(StyledIconTypes.MARKER,
-				{color:"FFFF66",text:linkid.toString()}),
-				position:storelatlon,
-				map:map});
 			// The map image
 			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
 			$("#imageholder").append(mapimg);
