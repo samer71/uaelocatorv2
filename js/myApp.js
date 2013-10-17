@@ -81,7 +81,7 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 			position:storelatlon,
 			map:map});
 		// Append to the list of results
-		$("#list").append('<li id="'+label+'" class="onestore"><a class="dlink" href="#">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
+		$("#list").append('<li id="'+label+'" class="onestore"><a class="dlink" href="#details">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 		/*
 	$('body').append('<div data-role="page" id="page'+label+'"><div data-theme="b" data-role="header" data-position="fixed"><h3>'+name+'</h3><a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left"class="ui-btn-left">Results</a></div><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+label+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/><div data-role="content"><h3>Address('+distance+'KM from you)</h3>'+da+'</p><h3>'+name+'</h3>'+desc+'<h3>Facilities</h3>'+fac+'<h3>Entry Fees</h3>'+ef.join('<br/>')+'<h3>Opening Hours</h3>'+h.join('<br/>')+'<h3>Contacts</h3>'+c.join('<br/>')+'</div></div>');
 		*/
@@ -283,17 +283,23 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-
+/*
 $('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.mobile.changePage("#details");
 });
-
-$(document).delegate("#details", "pagecreate", function() {
-  alert('Details page was just created');
+*/
+$(document).delegate("#details", "pagebeforechange", function() {
+  alert('Details page pagebeforechange');
 });
-$(document).delegate("#details", "pagebeforecreate ", function() {
-  alert('Details page was just created');
+$(document).delegate("#details", "pagechange", function() {
+  alert('Details page pagechange');
+});
+$(document).delegate("#details", "pageshow", function() {
+  alert('Details page pageshow ');
+});
+$(document).delegate("#details", "pagebeforeshow ", function() {
+  alert('Details page pagebeforeshow');
   $.each(sortedstore,function(index,value){ 
 				if(linkid==value.storeID)
 				{
