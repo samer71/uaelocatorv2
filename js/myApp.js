@@ -291,7 +291,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 		{
 			alert("Index: "+index);
 			alert("Found. Link ID: "+linkid+" Store ID: "+value.storeID);
-			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>').trigger('create');
+			$("#storedetails").append('<span id="tstoreaddress">'+value.name+'</span>');
 			$("#storeheader").html(value.name);
 			$("#storeaddress").html(value.location.displayAddress);
 			$("#storedescription").html(value.description);
@@ -300,6 +300,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storehours").html(value.hours);
 			$("#storecontact").html(value.contact);
 			alert("Done. Link ID: "+linkid+" Store ID: "+value.storeID);
+			$("#details").trigger("create");
 		}
 	});
 	$.mobile.changePage("#details");
