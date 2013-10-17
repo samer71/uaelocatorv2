@@ -10,6 +10,7 @@ var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
+var sortedstore;
 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
