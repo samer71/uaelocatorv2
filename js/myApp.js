@@ -46,7 +46,10 @@ function initialize() {
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 }
 
-// This updates the map, listing and store page for every result
+/* 	Function: renderStore
+	updates the map and list for every result within range
+	Args: store info
+*/
 function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	var coords = stlat+","+stlon;
 	var mid = middlePoint(lat,lon,stlat,stlon);
@@ -55,7 +58,8 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	var storelatlon=new google.maps.LatLng(stlat, stlon);
 	distance = (google.maps.geometry.spherical.computeDistanceBetween (storelatlon, latlon)/1000).toFixed(1);
 	// Calculate zoomlevel based on distance
-	if(parseInt(distance)<5){dzoom=14;}
+	if(parseInt(distance)<3){dzoom=14;}
+	else if (parseInt(distance)<5){dzoom=13;}
 	else if (parseInt(distance)<10){dzoom=12;}
 	else if (parseInt(distance)<15){dzoom=11;}
 	else if (parseInt(distance)<20){dzoom=10;}
@@ -87,6 +91,10 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 		
 } // End renderStores Function
 
+/* 	Function: middlePoint
+	returns the mid point (in degrees) between 2 locations 
+	Args: lat+lon for the 2 locations
+*/
 function middlePoint(lat1,lon1,lat2,lon2){
 
    var dLon = toRad(lon2 - lon1);
