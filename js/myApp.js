@@ -245,7 +245,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		else if(($(this).attr('id')=="beachespage") || ($(this).attr('id')=="pbeachespage")) 
 		{
 			storetype="beaches";
-			jsonFile="museums.json";
+			jsonFile="beaches.json";
 			$("#storeheader").html("Beaches");
 		}
 		document.getElementById("errorholder").style.display='none';

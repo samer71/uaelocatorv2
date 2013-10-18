@@ -1,0 +1,134 @@
+[
+    {
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.342455,
+            "longitude": 55.364567,
+            "displayAddress": "Sharjah Beach, Al Khan Area, Sharjah"
+        },
+        "storeID": 1,
+        "name": "Sharjah Beach",
+        "description": "Nice open sandy beach but with no facilities at all. The water is often calm since the construction of the Deira palm started (it sheilds the beach). The beach is used by the many hotels in the area that have no private beach. Parking is available either on the road or a little inward on the sand. Close to Lou Loua Resort. If you drove past Grand Hotel from the beach side, you went too far.",
+		"facilities": "None. No showers. No restrooms. Nothing.",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": false,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.33431,
+            "longitude": 55.358593,
+            "displayAddress": "Al Khan Beach, Al Khan hitorical area, Sharjah"
+        },
+        "storeID": 2,
+        "name": "Al Khan Beach",
+        "description": "Another open sandy beach with no facilities at all. The beach is accessible by 4x4 cars but regular cars can get in to a certain distance. It is located behind Al Khan hitorical area. Take right on the first roundabout (Al Burj Square) after Sharjah Carlton. You can also access the beach by foot from the Sharjah Aquarium (where you can get parking spots).",
+		"facilities": "None. No showers. No restrooms. Nothing.",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": false,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.329137,
+            "longitude": 55.354195,
+            "displayAddress": "Al Khan U Beach, Al Khan, Sharjah"
+        },
+        "storeID": 3,
+        "name": "Al Khan U Beach",
+        "description": "That is not the name of the beach by the way; I named it because it is a hidden U-shaped beach that very few peopl know. Although it is mostly a sandy beach, there are some rocks so be careful when the tide is low. Also, snorkling and fishing is possible on the outskirts of the small beach. The beach is some 100 meters away from the road but small cars can get int (just be careful and dont go too far). Some people camp on the beach.",
+		"facilities": "None. No showers. No restrooms. Nothing.",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": false,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "SHJ",
+            "latitude": 25.318794,
+            "longitude": 55.373538,
+            "displayAddress": "Al Khan Corniche Beach, Al Khan Corniche, Sharjah"
+        },
+        "storeID": 4,
+        "name": "Al Khan Corniche Beach",
+        "description": "A 2KM stretch of not so white sand beach. Due to the fact that this is not an open water beach, the water gets a bit brownish with occasional garbage floating around. The sand is muddy for my liking. I dont see many people swim there (I think I am the only one). Many people walk, sit and BBQ on the very nice corniche though. If you are a distance swimmer, you might get to like it.",
+		"facilities": "None. No showers. No restrooms. Nothing.",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": false,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.313227,
+            "longitude": 55.353904,
+            "displayAddress": "Jet Ski Beach, Al Taawun area, Sharjah"
+        },
+        "storeID": 5,
+        "name": "Jet Ski Beach",
+        "description": "Another beach with no name (so yes, I named it!). It is not really a swimming beach (or any other activity for that matter). It features many jetski rental providers. Make sure you check the jetski you are about to rent for damage. Some might trick you into paying for damage you didnt cause.",
+		"facilities": "None. No showers. No restrooms. Nothing.",
+        "entryFees": [
+            "Rental charges are negotiable so dont take the first rate you get."
+        ],
+        "handicap": false,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.303528,
+            "longitude": 55.349543,
+            "displayAddress": "Mamzar Beach, Mamzar, Dubai"
+        },
+        "storeID": 6,
+        "name": "Mamzar Beach",
+        "description": "A long stretch of sandy beach. Due to the fact that this is not an open water beach, the water gets a bit brownish and the sand can be muddy when you enter the water. Having said that, there are many wide areas of white sand and is generally a nice beach for sunbathing and for distance swimming.",
+		"facilities": "Showers. Restroom. Walking and running track. Cycling track. Exercise areas.",
+        "entryFees": [
+            "Free"
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "NA"
+        ]
+    }
+]
