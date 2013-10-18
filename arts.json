@@ -1,0 +1,564 @@
+[
+    {
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.142565,
+            "longitude": 55.22312,
+            "displayAddress": "The Third Line, Al Quoz, Dubai"
+        },
+        "storeID": 1,
+        "name": "The Third Line",
+        "description": "A gallery which focuses specifically on contemporary Middle Eastern Art, The Third Line has played a significant role in regenerating the local art scene in Dubai and developing the profile of Middle Eastern art overseas.",
+		"facilities": "Art Exhibitions. The Third Line also publishes books by associated artists from the region.",
+        "entryFees": [
+            "NA"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat-Thu: 10 am To 7 pm",
+			"Fridays closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-341 1367",
+            "Fax: +971(4)-341 1369",
+            "Email: art@thethirdline.com",
+            "Website: http://www.thethirdline.com",
+			"Facebook: http://www.facebook.com/thethirdline",
+			"Twitter: @TheThirdLine"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.155365,
+            "longitude": 55.32339,
+            "displayAddress": "Tashkeel, Nadd Al Sheba Rd, Near Meydan, Dubai"
+        },
+        "storeID": 2,
+        "name": "Tashkeel",
+        "description": "Established in January 2008, Tashkeel is an independent resource for artists and designers living and working in the UAE. Tashkeel is committed to facilitating art and design practice, cross-cultural dialogue and creative exchange.",
+		"facilities": "Facilities include: fine art, photography studio and darkroom, printmaking, textile printing, MAC suite, jewellery and 3D studios. Multi-disciplinary Workshops Available",
+        "entryFees": [
+            "Membership Application Necessary"
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat to Thur: 8am - 10pm",
+			"Friday: Closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-336 3313",
+            "Fax: +971(4)-",
+            "Email: tashkeel@tashkeel.org",
+            "Website: http://tashkeel.org",
+			"Facebook: https://www.facebook.com/tashkeelhub",
+			"Twitter: @tashkeel",
+			"YouTube: http://www.youtube.com/user/TashkeelStudio"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.140812,
+            "longitude": 55.226125,
+            "displayAddress": "Lawrie Shabibi, Al-Quoz, Dubai"
+        },
+        "storeID": 3,
+        "name": "Lawrie Shabibi",
+        "description": "Founded in March 2011, Lawrie Shabibi is a contemporary art gallery housed in a 3000 square foot warehouse inAlserkal Avenue in Al Quoz industrial district. Their mission is to promote the works of relevant and innovative contemporary artists from the Middle East, North Africa and South Asia. .",
+		"facilities": "Exhibitions. Art Fairs. Publications",
+        "entryFees": [
+            "Vary"
+        ],
+        "handicap": true,
+        "hours": [
+            "Saturday - Thursday 10am - 6pm",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-346 9906",
+            "Fax: +971(4)-346 9902",
+            "Email: info@lawrieshabibi.com",
+            "Website: http://www.lawrieshabibi.com",
+			"Twitter: @LawrieShabibi"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.213974,
+            "longitude": 55.283025,
+            "displayAddress": "Hunar Gallery, DIFC, Dubai "
+        },
+        "storeID": 4,
+        "name": "Hunar Gallery",
+        "description": "Since opening in 1998, Hunar Gallery has dedicated itself to the preservation and promotion of contemporary Middle Eastern Art. The gallery, which takes its name from the Persian word for ‘art’, has been host to some extremely innovative exhibitions over the last decade and has proved its credentials as one of the centres of Emirati and Middle Eastern art in Dubai.",
+		"facilities": "NA",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(4)-286 2224",
+            "Fax: +971(2)",
+            "Email: ",
+            "Website:"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141288,
+            "longitude": 55.226441,
+            "displayAddress": "Etemad Gallery, Al-Quoz, Dubai"
+        },
+        "storeID": 5,
+        "name": "Etemad Gallery",
+        "description": "Mina Etemad, a pioneer of contemporary art in Iran, was amongst the first to join the Tehran Museum of Contemporary Art. She was instrumental in helping to position Iran as one of the biggest collectors of western art during the 1970's in the middle east. Etemad Gallery Dubai is established with the aim of placing Iranian and Middle Eastern contemporary art within a global context. The gallery is one of the largest in the Emirates and is significant as it is positioned as the first Tehran-based gallery to have another branch outside the country.",
+		"facilities": "Art galleries and exhibitions.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sunday - Thursday 10-6pm",
+			"Saturday 12-5pm",
+			"Fridays and Public Holidays: Closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-346 8649",
+            "Fax: +971(4)-346 8462",
+            "Email: info@galleryetemad.com",
+            "Website: http://www.galleryetemad.com",
+			"Facebook: http://www.facebook.com/Etemad.Art.Gallery",
+			"Twitter: @Etemadgallery"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141677,
+            "longitude": 55.22561,
+            "displayAddress": "Carbon 12, Alserkal Avenue, Street 8, Al Quoz 1, Dubai"
+        },
+        "storeID": 6,
+        "name": "Carbon 12",
+        "description": "Located in the contemporary art hub of Al Ouoz, Carbon 12 is another recent addition to the thriving Dubai art scene. Its exciting program of exhibitions has highlighted the work of some existing emerging artists and in doing so has attracted international attention.",
+		"facilities": "Exhibitions. Publications.",
+        "entryFees": [
+			"Vary" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat-Thur: 11:30am – 7pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-340 6016",
+            "Fax: +971(4)",
+            "Email: info@carbon12dubai.com",
+            "Website: http://carbon12dubai.com",
+			"Facebook: https://www.facebook.com/Carbon12Dubai"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141482,
+            "longitude": 55.226978,
+            "displayAddress": "Ayyam Gallery, Alserkal Avenue, Street 8, Al Quoz 1, Dubai"
+        },
+        "storeID": 7,
+        "name": "Ayyam Gallery",
+        "description": "Founded by collectors and cousins Khaled and Hisham Samawi in Damascus in 2006, Ayyam Gallery successfully revived interest in Syria art history whilst at the same time nurturing the country’s burgeoning and dynamic contemporary art scene. Expansion into Beirut and Dubai enabled Ayyam Gallery to broaden its scope from the promotion of work by Syrian artists to those from the wider Middle East region.",
+		"facilities": "Another gallery in DIFC. Exhibitions. Publications.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat-Thur: 10am – 6pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-323 6242",
+            "Fax: +971(4)-323 6243",
+            "Email: dubai@ayyamgallery.com",
+            "Website: http://www.ayyamgallery.com",
+			"Facebook: https://www.facebook.com/AyyamGallery",
+			"Twitter: @AyyamGallery"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141579,
+            "longitude": 55.22598,
+            "displayAddress": "Grey Noise, Alserkal Avenue, Street 8, Al Quoz 1, Dubai"
+        },
+        "storeID": 8,
+        "name": "Grey Noise",
+        "description": "A contemporary art gallery which represents artists from South Asia and Europe, Grey Noise has developed as an international entity since its launch in 2008, first establishing itself in Lahore, Pakistan, before relocating to Dubai.",
+		"facilities": "Exhibitions. Publications.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon - Thur, Sat: 11am - 7pm",
+			"Friday closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-379 0764",
+            "Fax: +971(4)-379 0769",
+            "Email: info@greynoise.org",
+            "Website: http://www.greynoise.org",
+			"Facebook: http://www.facebook.com/greynoise",
+			"Twitter: @GreyNoiseDXB"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141941,
+            "longitude": 55.225962,
+            "displayAddress": "Green Art Gallery, Alserkal Avenue, Al Quoz 1, Dubai"
+        },
+        "storeID": 9,
+        "name": "Green Art Gallery",
+        "description": "Green Art Gallery represents a diverse stable of artists, who range from established local practitioners to young up and coming international artists. These artists hail from the Middle East, North Africa, South Asia, Turkey and beyond and embody the diverse exhibitions which Green Art Gallery has become known for.",
+		"facilities": "Exhibitions. Publications. Art Fair",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon - Thur, Sat: NA",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-346 9305",
+            "Fax: +971(4)",
+            "Email:",
+            "Website: http://www.gagallery.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.141616,
+            "longitude": 55.226431,
+            "displayAddress": "Gallery Isabelle van den Eynde, Alserkal Avenue, Al Quoz 1, Dubai"
+        },
+        "storeID": 10,
+        "name": "Gallery Isabelle van den Eynde",
+        "description": "Gallery Isabelle van den Eynde was founded in Dubai in 2006 with a dynamic program of emerging and mid career artists. Today the gallery remains committed to nurturing its artists and providing them with pivotal exhibition platforms throughout their career. By maintaining this creative dialogue, the gallery presents challenging and innovative contemporary artwork that promotes the extraordinary visual expressions of its artists from the Middle East, North Africa, South Asia and Iran.",
+		"facilities": "Exhibitions. Publications. Art Fair",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon - Thur, Sat: 10am-7pm",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-323 5052",
+            "Fax: +971(4)- 323 6761",
+            "Email: info@ivde.net",
+            "Website: http://ivde.net"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.069244,
+            "longitude": 55.13835,
+            "displayAddress": "4 Walls Art Gallery , 404 Fortune Tower Cluster C1, JLT, Dubai"
+        },
+        "storeID": 11,
+        "name": "4 Walls Art Gallery ",
+        "description": "4 Walls Art Gallery focuses on Middle Eastern and international modern art. Through the arrangement of personal and collective Artworts, we hope to share our passion for Middle Eastern art and its development, with the various communities in Dubai, as well as its visitors.",
+		"facilities": "Art Collection.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon - Thur, Sat: 10am-7pm",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-420 2497",
+            "Fax: +971(4)-421 1607",
+            "Email: info@4walls-dubai.com",
+            "Website: http://www.4walls-dubai.com",
+			"Facebook: https://www.facebook.com/4WallsDubai"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.213396,
+            "longitude": 55.2831,
+            "displayAddress": "Art Sawa, DIFC, Dubai"
+        },
+        "storeID": 12,
+        "name": "Art Sawa",
+        "description": "In 2008, the Art Sawa project began to find its roots in Dubai multi-cultural dynamism. Amidst the skyline of this incredible city it was still difficult to find Art, and yet she felt that there was a longing for art and culture that remained unmet.",
+		"facilities": "Another  location in Al Qoz. Art Exhibitions.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sat - Thur: 10am-7pm",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-340 8660",
+            "Fax: +971(4)-340 8661",
+            "Email: contact@artsawa.com ",
+            "Website: http://www.artsawa.com/",
+			"Twitter: @artsawa"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.144192,
+            "longitude": 55.223572,
+            "displayAddress": "The Cartoon Art Gallery, Al Quoz, Dubai"
+        },
+        "storeID": 13,
+        "name": "The Cartoon Art Gallery",
+        "description": "The Cartoon Art Gallery is one of a kind based in the city of Dubai. Based in Dubai, UAE, it represents a multi-generational mix of regional and international artists. The Gallery program is focused on cartoon artists from the Middle East and abroad working across different media, traditional and new, who employ a creative based approach.",
+		"facilities": "Workshops. Art Exhibitions. Theatre, and private exhibitions. Animation festivals",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Mon - Sun: 9am - 6pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-326 6467",
+            "Fax: +971(4)",
+            "Email: info@cartoonartgallery.org",
+            "Website: http://www.cartoonartgallery.org",
+			"Facebook: http://www.facebook.com/CartoonArtGallery",
+			"Twitter: @CartoonArtDxb"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.171932,
+            "longitude": 55.217615,
+            "displayAddress": "Miraj Islamic Art Centre, Jumeirah Rd, Jumeirah 3, Dubai"
+        },
+        "storeID": 14,
+        "name": "Miraj Islamic Art Centre",
+        "description": "Miraj Islamic Art Centre, MND General Trading LLC is under the management of CIE Group, a group dedicated to heritage, history and glory of Islam. The rare and pristine works of art on display at MIRAJ Islamic Art Centre are unique creations of this unique organization, held in high esteem in the art world.",
+		"facilities": "Art Collections.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(4)-394 1084/94",
+            "Fax: +971(4)-394 1074",
+            "Email: mail@mirajislamicartcentre.com",
+            "Website: http://www.mirajislamicartcentre.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.21292,
+            "longitude": 55.282816,
+            "displayAddress": "Opera Gallery, Gate Village Building 3, DIFC, Dubai"
+        },
+        "storeID": 15,
+        "name": "Opera Gallery",
+        "description": "Founded by Gilles Dyan in Paris in 1994  and now internationally established with offices in Paris, London, Geneva, Monaco, New York, Miami, Singapore, Hong Kong, Seoul and Dubai, Opera Gallery is one of the leading dealers in modern and contemporary American, European and Asian art with museum as well as private clients worldwide.",
+		"facilities": "Additional gallery in Dubai Mall.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "NA"
+        ],
+        "contact": [
+            "Tel: +971(4)-323 0909",
+            "Fax: +971(4)- 323 0908",
+            "Email:",
+            "Website: http://www.operagallery.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.234419,
+            "longitude": 55.265081,
+            "displayAddress": "Pro Art Gallery , Palm Strip Mall, First Floor, Opposite Jumeirah Mosque, Dubai"
+        },
+        "storeID": 16,
+        "name": "Pro Art Gallery ",
+        "description": "Pro Art Gallery offers a selection of styles and mediums from over 50 artists from 20 countries permanently on display. From one-of-a-kind paintings to affordable limited edition prints, sculptures to photography, we offer an impressive collection of fine art. Their variety of portfolio gives collectors access to a range of artists with the highest level of quality, integrity and taste within their chosen field.",
+		"facilities": "Exhibitions. Framing Services.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Saturday - Thursday: 1am - 9pm"
+        ],
+        "contact": [
+            "Tel: +971(4)-345 0900",
+            "Fax: +971(4)-345 0912",
+            "Email: info@proartuae.com",
+            "Website: http://www.proartuae.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.14123,
+            "longitude": 55.226495,
+            "displayAddress": "Salsali Private Museum, AlSerkal Avenue, Unit 14, Al Quoz 1, Dubai"
+        },
+        "storeID": 17,
+        "name": "Salsali Private Museum",
+        "description": "Created in 2011, the Salsali Private Museum considers its position as a cultural base and platform for new and established collectors and acts as a catalyst for creating a new generation of collectors. SPM is not only the first private museum for contemporary art in the region, but also the first collector center in the world to provide a free of charge service to the local and international collectors",
+		"facilities": "Permenant collection. Collector lounge. Event and exhibitions.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sunday to Thursday - 11am to 6pm",
+			"Saturday - 1pm to 5pm and by appointment",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-380 9600",
+            "Fax: +971(4)-",
+            "Email: spm@salsalipm.com",
+            "Website: http://www.salsalipm.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.142194,
+            "longitude": 55.225771,
+            "displayAddress": "Showcase Gallery , AlSerkal Avenue, Unit 35, Al Quoz 1, Dubai"
+        },
+        "storeID": 18,
+        "name": "Showcase Gallery",
+        "description": "Showcase was one of the first galleries to be established in the UAE in the 1990s and over the years has established a venerable reputation with art collectors and designers alike.",
+		"facilities": "Framing. Interio Design. Art Consulting",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Saturday to Thursday - 10am to 6pm",
+			"Friday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-379 0940",
+            "Fax: +971(4)-379 0950",
+            "Email: info@showcasedubai.com",
+            "Website: http://showcaseuae.com",
+			"Facebook: http://www.facebook.com/showcasegallery",
+			"Twitter: @showcasedubai"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.143284,
+            "longitude": 55.223526,
+            "displayAddress": "The Courtyard Gallery, Al Quoz, Dubai"
+        },
+        "storeID": 19,
+        "name": "The Courtyard Gallery",
+        "description": "The Courtyard Gallery opened its doors in 2000 and went on to play a pivotal role as Dubai took its first steps towards artistic exposure. It was the first contemporary art gallery to open in the Al Quoz industrial area which today stands transformed as a haven for art connoisseurs.",
+		"facilities": "Art Exhibition",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Sun to Thur - 10am to 6pm",
+			"Fri-Sat: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-347 9090 ",
+            "Fax: +971(4)-347 9666",
+            "Email: info@courtyardgallerydubai.com",
+            "Website: http://www.courtyardgallerydubai.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.127899,
+            "longitude": 55.214076,
+            "displayAddress": "thejamjar, Al Quoz 3, Dubai"
+        },
+        "storeID": 20,
+        "name": "thejamjar",
+        "description": "Founded in 2005, thejamjar is a creative space that works to promote artists and support the development of Dubai’s arts scene through its extensive arts programme, educational initiatives, and community projects. The 4000 sq. ft. studio and project space offers the region’s first Public DIY Painting Studio alongside a year round exhibition and events calendar presenting a diverse range of art forms, including visual art, film, music, theatre and more.",
+		"facilities": "Art Exhibition. Studio. Consulting.",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Monday - Thursday, Saturday 10am - 8pm",
+			"Friday: 2pm - 8pm",
+			"Sunday: closed"
+        ],
+        "contact": [
+            "Tel: +971(4)-341 7303",
+            "Fax: +971(4)-341 7304",
+            "Email: info@thejamjardubai.com",
+            "Website: http://www.thejamjardubai.com"
+        ]
+    },
+	{
+        "location": {
+            "emirateCode": "DXB",
+            "latitude": 25.194263,
+            "longitude": 55.269574,
+            "displayAddress": "The Pavilion, Mohammed Bin Rashid Boulevard, Downtown Dubai"
+        },
+        "storeID": 21,
+        "name": "The Pavilion",
+        "description": "The Pavilion is a unique non-commercial contemporary art space, currently being remodeled to serve as the showcase for the region’s newest developments.",
+		"facilities": "Art space with restaurant, a cinema, a library, an espresso bar, a shisha cafe and lounge",
+        "entryFees": [
+			"NA" 
+        ],
+        "handicap": true,
+        "hours": [
+            "Everyday, 10am – 12am",
+			"Note: THE PAVILION DOWNTOWN DUBAI is closed for renovations until further notice."
+        ],
+        "contact": [
+            "Tel: +971(4)-447 7025",
+            "Fax: +971(4)",
+            "Email: art@pavilion.ae  ",
+            "Website: http://pavilion.ae",
+			"Twitter: @paviliondubai"
+        ]
+    }
+]

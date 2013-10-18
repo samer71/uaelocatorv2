@@ -221,7 +221,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 		{
 			storetype="arts";
-			jsonFile="museums.json";
+			jsonFile="arts.json";
 			$("#storeheader").html("The Arts");
 		}
 		else if(($(this).attr('id')=="theaterspage") || ($(this).attr('id')=="ptheaterspage")) 
