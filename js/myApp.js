@@ -346,7 +346,8 @@ function downloadFile(){
 			window.rootFS = fileSystem.root;
 			//var filePath = rootFS.fullPath+localFileName;
 			//var localPath = fileEntry.fullPath;
-			var localPath = window.rootFS.fullPath+localFileName;
+			var localPath = rootFS.fullPath+localFileName;
+			alert(localPath);
 			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
 				localPath = localPath.substring(7);                
 			}
