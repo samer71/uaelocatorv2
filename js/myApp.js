@@ -344,17 +344,14 @@ function downloadFile(){
 	window.rootFS = fileSystem.root;
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
         fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
-			
-			//var filePath = rootFS.fullPath+localFileName;
 			var localPath = fileEntry.fullPath;
-			//var localPath = rootFS.fullPath+localFileName;
 			alert(localPath);
 			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
 				localPath = localPath.substring(7);                
 			}
             var fileTransfer = new FileTransfer();
             //fileEntry.remove();
-            fileTransfer.download(remoteFile, window.rootFS.fullPath+localPath,
+            fileTransfer.download(remoteFile, localPath,
                 function(theFile) {
                     alert("download complete: " + theFile.toURI());
                     //showLink(theFile.toURI());
