@@ -352,7 +352,7 @@ function downloadFile(){
                 sPath + "theFile.pdf",
                 function(theFile) {
                     alert("download complete: " + theFile.toURI());
-                    showLink(theFile.toURI());
+                    //showLink(theFile.toURI());
                 },
                 function(error) {
                     alert("download error source " + error.source);
