@@ -344,11 +344,11 @@ function downloadFile(){
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
         fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
 			window.rootFS = fileSystem.root;
-			var filePath = rootFS.fullPath+localFileName;
+			//var filePath = rootFS.fullPath+localFileName;
 			//var localPath = fileEntry.fullPath;
 			var localPath = window.rootFS.fullPath+localFileName;
 			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
-				//localPath = localPath.substring(7);                
+				localPath = localPath.substring(7);                
 			}
             var fileTransfer = new FileTransfer();
             //fileEntry.remove();
