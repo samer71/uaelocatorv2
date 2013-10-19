@@ -343,7 +343,7 @@ function downloadFile(){
 	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
 	window.rootFS = fileSystem.root;
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
-        rootFS.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
+        fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
 			
 			//var filePath = rootFS.fullPath+localFileName;
 			var localPath = fileEntry.fullPath;
@@ -354,7 +354,7 @@ function downloadFile(){
 			}
             var fileTransfer = new FileTransfer();
             //fileEntry.remove();
-            fileTransfer.download(remoteFile, localPath,
+            fileTransfer.download(remoteFile, window.rootFS.fullPath+localPath,
                 function(theFile) {
                     alert("download complete: " + theFile.toURI());
                     //showLink(theFile.toURI());
