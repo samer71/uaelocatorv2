@@ -339,27 +339,23 @@ $('#options').delegate('.option', 'tap', function ()  {
 });
 
 function downloadFile(){
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
-    function onFileSystemSuccess(fileSystem) {
-        fileSystem.root.getFile(
-        "dummy.html", {create: true, exclusive: false}, 
-        function gotFileEntry(fileEntry) {
-            var sPath = fileEntry.fullPath.replace("dummy.html","");
+	var remoteFile ="http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf";
+	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
+	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
+        fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
+			var localPath = fileEntry.fullPath;
+			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
+				localPath = localPath.substring(7);                
+			}
             var fileTransfer = new FileTransfer();
-            fileEntry.remove();
-            fileTransfer.download(
-                "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
-                sPath + "theFile.pdf",
+            //fileEntry.remove();
+            fileTransfer.download(remoteFile, localPath,
                 function(theFile) {
                     alert("download complete: " + theFile.toURI());
                     //showLink(theFile.toURI());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("upload error code: " + error.code);
-                }
-            );
+                }, fail);
         }, fail);
     }, fail);
 }
+
+function fail(error) {alert("upload error code: " + error.code);    }
