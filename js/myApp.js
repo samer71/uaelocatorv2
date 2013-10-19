@@ -341,11 +341,10 @@ $('#options').delegate('.option', 'tap', function ()  {
 function downloadFile(){
 	var remoteFile ="http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf";
 	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
-	window.rootFS = fileSystem.root;
+	//window.rootFS = fileSystem.root;
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
         fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
 			var localPath = fileEntry.fullPath;
-			alert(localPath);
 			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
 				localPath = localPath.substring(7);                
 			}
