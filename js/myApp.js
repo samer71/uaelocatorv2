@@ -343,9 +343,12 @@ function downloadFile(){
 	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
         fileSystem.root.getFile(localFileName, {create: true, exclusive: false},function (fileEntry) {
-			var localPath = fileEntry.fullPath;
+			window.rootFS = fileSystem.root;
+			var filePath = rootFS.fullPath+localFileName;
+			//var localPath = fileEntry.fullPath;
+			var localPath = window.rootFS.fullPath+localFileName;
 			if (device.platform === "Android" && localPath.indexOf("file://") === 0) {                    
-				localPath = localPath.substring(7);                
+				//localPath = localPath.substring(7);                
 			}
             var fileTransfer = new FileTransfer();
             //fileEntry.remove();
