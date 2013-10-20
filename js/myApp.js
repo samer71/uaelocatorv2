@@ -301,22 +301,30 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefees").html(value.entryFees.join('<br/>'));
 			$("#storehours").html(value.hours.join('<br/>'));
 			if(value.contact.Tel!="") {
-			$("#storephone").append('<a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/>'+value.contact.Tel+'</a>');
+				if ($("#storephone").length) {$('#storephone').remove();}
+				$("#storephone").append('<a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/>'+value.contact.Tel+'</a>');
 			}
-			else 
-			$("#storephone").append('<a class="phonelink" href=""><img src="img/phone.png" alt="Phone" class="ui-li-icon ui-corner-none"/>NA</a>');
+			else {
+				if ($("#storephone").length) {$('#storephone').remove();}
+				$("#storephone").append('<a class="phonelink" href=""><img src="img/phone.png" alt="Phone" class="ui-li-icon ui-corner-none"/>NA</a>');
+			}
 			
 			if(value.contact.Email!="") {
-			$("#storeemail").append('<a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>'+value.contact.Email+'</a>');
+				if ($("#storeemail").length) {$('#storeemail').remove();}
+				$("#storeemail").append('<a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>'+value.contact.Email+'</a>');
 			}
-			else 
-			$("#storeemail").append('<a class="emaillink" href=""><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>NA</a>');
-			
+			else {
+				if ($("#storeemail").length) {$('#storeemail').remove();}
+				$("#storeemail").append('<a class="emaillink" href=""><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>NA</a>');
+			}
 			if(value.contact.Website!="") {
-			$("#storeweb").append('<a class="weblink" href="'+value.contact.Website+'"><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
+				if ($("#storeweb").length) {$('#storeweb').remove();}
+				$("#storeweb").append('<a class="weblink" href="'+value.contact.Website+'"><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
 			}
-			else 
-			$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>NA</a>');
+			else {
+				if ($("#storeweb").length) {$('#storeweb').remove();}
+				$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>NA</a>');
+			}
 		}
 	});
 	$.mobile.changePage("#details");
