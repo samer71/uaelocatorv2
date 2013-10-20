@@ -269,6 +269,7 @@ $('#goback').on('tap', function ()  {
 	if ($("#storeaddress").length) {$('#storeaddress').remove();}
 	if ($("#storephone").length) {$('#storephone').remove();}
 	if ($("#storeemail").length) {$('#storeemail').remove();}
+	$("#detailslist").listview('refresh');
 	$.mobile.changePage("#results");
 });
 
