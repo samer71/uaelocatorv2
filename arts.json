@@ -104,7 +104,7 @@
         "contact": {
             "Tel" : "+971(4)-286 2224",
             "Fax" : "+971(2)",
-            "Email" : " ",
+            "Email" : "",
             "Website" : ""
         }
     },
@@ -319,7 +319,7 @@
         "contact": {
             "Tel" : "+971(4)-340 8660",
             "Fax" : "+971(4)-340 8661",
-            "Email" : "contact@artsawa.com ",
+            "Email" : "contact@artsawa.com",
             "Website" : "http://www.artsawa.com/",
 			"Twitter" : "@artsawa"
         }
@@ -448,7 +448,7 @@
         ],
         "contact": {
             "Tel" : "+971(4)-380 9600",
-            "Fax" : "+971(4)-",
+            "Fax" : "",
             "Email" : "spm@salsalipm.com",
             "Website" : "http://www.salsalipm.com"
         }

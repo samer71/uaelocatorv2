@@ -269,6 +269,11 @@ $('#goback').on('tap', function ()  {
 	if ($("#storeaddress").length) {$('#storeaddress').remove();}
 	if ($("#storephone").length) {$('#storephone').remove();}
 	if ($("#storeemail").length) {$('#storeemail').remove();}
+	if ($("#storeweb").length) {$('#storeweb').remove();}
+	if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
+	if ($("#storefacilities").length) {$('#storefacilities').remove(); $('#facdiv').remove();}
+	if ($("#storefees").length) {$('#storefees').remove(); $('#feediv').remove();}
+	if ($("#storehours").length) {$('#storehours').remove(); $('#hrdiv').remove();}
 	$("#detailslist").listview('refresh');
 	$.mobile.changePage("#results");
 });
