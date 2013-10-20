@@ -306,24 +306,24 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			}
 			else {
 				if ($("#storephone").length) {$('#storephone').remove();}
-				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/><h3>NA</h3><p>Phone not found</P></a></li>');
+				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phone" width="56"/><h3>NA</h3><p>Phone not found</P></li>');
 			}
 			
 			if(value.contact.Email!="") {
-				if ($(".emaillink").length) {$('.emaillink').remove();}
-				$("#storeemail").append('<a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>'+value.contact.Email+'</a>');
+				if ($("#storeemail").length) {$('#storeemail').remove();}
+				$("#detailslist").append('<li id="storeemail"><a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" width="56"/><h3>'+value.contact.Email+'</h3><p>Click to send a message</P></a></li>');
 			}
 			else {
-				if ($(".emaillink").length) {$('.emaillink').remove();}
-				$("#storeemail").append('<a class="emaillink" href=""><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>NA</a>');
+				if ($("#storeemail").length) {$('#storeemail').remove();}
+				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email" width="56"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
 			if(value.contact.Website!="") {
-				if ($(".weblink").length) {$('.weblink').remove();}
-				$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
+				if ($("#storeweb").length) {$('#storeweb').remove();}
+				$("#detailslist").append('<li id="storeweb"><a class="weblink" href=""><img src="img/web.png" alt="Website" width="56"/><h3>'+value.contact.Website+'</h3></a></li>');
 			}
 			else {
-				if ($(".weblink").length) {$('.weblink').remove();}
-				$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>NA</a>');
+				if ($("#storeweb").length) {$('#storeweb').remove();}
+				$("#detailslist").append('<li id="storeweb"><img src="img/web.png" alt="Phoner" width="56"/><h3>NA</h3><p>Website not found</P></li>');
 			}
 			$("#detailslist").listview('refresh');
 		} // End if found
