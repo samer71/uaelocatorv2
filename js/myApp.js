@@ -300,7 +300,9 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefacilities").html(value.facilities);
 			$("#storefees").html(value.entryFees.join('<br/>'));
 			$("#storehours").html(value.hours.join('<br/>'));
-			$("#storecontact").html(value.contact.join('<br/>'));
+			$("#storephone").html('<a href="tel:'+value.contact.Tel+'">'+value.contact.Tel+'</a>');
+			$("#storeemail").html('<a href="mailto:'+value.contact.Email+'">'+value.contact.Email+'</a>');
+			$("#storeweb").html('<a href="'+value.contact.Website+'">'+value.contact.Website+'</a>');
 		}
 	});
 	$.mobile.changePage("#details");
@@ -337,7 +339,7 @@ $('#options').delegate('.option', 'tap', function ()  {
 		//$.mobile.showPageLoadingMsg("e", "Locating...");
 	} // End else network
 });
-
+/*
 function downloadFile(){
 	var remoteFile ="http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf";
 	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
@@ -360,3 +362,4 @@ function downloadFile(){
 }
 
 function fail(error) {alert("upload error code: " + error.code);    }
+*/

@@ -17,12 +17,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-449 1903 ",
-            "Fax: +971(4)",
-            "Email:enquiries@reelcinemas.ae",
-            "Website: http://www.reelcinemas.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-449 1903 ",
+            "Fax" : " +971(4)",
+            "Email" : "enquiries@reelcinemas.ae",
+            "Website" : "http://www.reelcinemas.ae"
+        }
     },
 	{
         "location": {
@@ -42,12 +42,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-449 1903 ",
-            "Fax: +971(4)",
-            "Email:enquiries@reelcinemas.ae",
-            "Website: http://www.reelcinemas.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-449 1903 ",
+            "Fax" : " +971(4)",
+            "Email" : "enquiries@reelcinemas.ae",
+            "Website" : "http://www.reelcinemas.ae"
+        }
     },
 	{
         "location": {
@@ -78,12 +78,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-284 0001",
-            "Fax: +971(4)-284 5759",
-            "Email: mccfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-284 0001",
+            "Fax" : " +971(4)-284 5759",
+            "Email" : " mccfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -114,12 +114,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(6)-748 2555",
-            "Fax: +971(6)-748 2266",
-            "Email: accfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-748 2555",
+            "Fax" : " +971(6)-748 2266",
+            "Email" : "accfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -150,12 +150,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-341 4222",
-            "Fax: +971(4)-347 9900",
-            "Email: feedbackmoe@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-341 4222",
+            "Fax" : "+971(4)-347 9900",
+            "Email" : "feedbackmoe@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -186,12 +186,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-294 9000",
-            "Fax: +971(4)-294 8138",
-            "Email: dccfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-294 9000",
+            "Fax" : " +971(4)-294 8138",
+            "Email" : "dccfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -222,12 +222,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-385 4440",
-            "Fax: +971(4)-342 7821",
-            "Email: mmdfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-385 4440",
+            "Fax" : " +971(4)-342 7821",
+            "Email" : "mmdfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -258,12 +258,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(2)-681 8484",
-            "Fax: +971(2)-681 8383",
-            "Email: mmafeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-681 8484",
+            "Fax" : " +971(2)-681 8383",
+            "Email" : "mmafeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -294,12 +294,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(7)",
-            "Fax: +971(7)",
-            "Email: ahmfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(7)",
+            "Fax" : " +971(7)",
+            "Email" : "ahmfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -330,12 +330,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(9)-223 4400",
-            "Fax: +971(9)-228 3754",
-            "Email: fccfeedback@voxcinemas.com",
-            "Website: http://uae.voxcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(9)-223 4400",
+            "Fax" : " +971(9)-228 3754",
+            "Email" : "fccfeedback@voxcinemas.com",
+            "Website" : "http://uae.voxcinemas.com"
+        }
     },
 	{
         "location": {
@@ -358,12 +358,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(6)-556 3300",
-            "Fax: +971(6)-556 3558",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-556 3300",
+            "Fax" : " +971(6)-556 3558",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -386,12 +386,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(6)- 575 1888",
-            "Fax: +971(6)-556 3558",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(6)- 575 1888",
+            "Fax" : " +971(6)-556 3558",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -414,12 +414,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(6)-53 16500",
-            "Fax: +971(6)-531 7002",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-53 16500",
+            "Fax" : " +971(6)-531 7002",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -442,12 +442,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(2)-645 8988",
-            "Fax: +971(2)-",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-645 8988",
+            "Fax" : " +971(2)-",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -470,12 +470,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-",
+            "Fax" : " +971(2)-",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -498,12 +498,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(3)-754 4447",
-            "Fax: +971(3)-755 6602",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(3)-754 4447",
+            "Fax" : " +971(3)-755 6602",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -526,12 +526,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(7)-227 8888",
-            "Fax: +971(7)-277 3888",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(7)-227 8888",
+            "Fax" : "+971(7)-277 3888",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -554,12 +554,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-228 9898",
-            "Fax: +971(4)-228 9030",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-228 9898",
+            "Fax" : "+971(4)-228 9030",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -582,12 +582,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-324 2000",
-            "Fax: +971(4)-324 0278",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-324 2000",
+            "Fax" : "+971(4)-324 0278",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -610,12 +610,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-232 8328",
-            "Fax: +971(4)-232 8329 ",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-232 8328",
+            "Fax" : "+971(4)-232 8329 ",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -638,12 +638,12 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-273 7676",
-            "Fax: +971(4)-209 6471",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-273 7676",
+            "Fax" : "+971(4)-209 6471",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+        }
     },
 	{
         "location": {
@@ -666,11 +666,11 @@
         "hours": [
             "Vary based on movie"
         ],
-        "contact": [
-            "Tel: +971(4)-366 9898",
-            "Fax: +971(4)-366 9899",
-            "Email: customerservice@grandcinemas.com",
-            "Website: http://www.grandcinemas.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-366 9898",
+            "Fax" : "+971(4)-366 9899",
+            "Email" : "customerservice@grandcinemas.com",
+            "Website" : "http://www.grandcinemas.com"
+		}
     }
 ]
