@@ -266,6 +266,9 @@ $('#gohome').on('tap', function ()  {
 });
 
 $('#goback').on('tap', function ()  {
+	if ($("#storeaddress").length) {$('#storeaddress').remove();}
+	if ($("#storephone").length) {$('#storephone').remove();}
+	if ($("#storeemail").length) {$('#storeemail').remove();}
 	$.mobile.changePage("#results");
 });
 
@@ -346,9 +349,6 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 	$.mobile.changePage("#details");
 });
 
-$('.storeweblink').on('click', function ()  {
-	window.open($(this).attr('href'), '_system'); 
-});
 
 $('#options').delegate('.option', 'tap', function ()  {
 	connectionStatus = navigator.onLine ? 'online' : 'offline';

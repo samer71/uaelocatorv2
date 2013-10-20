@@ -18,14 +18,14 @@
             "Sat-Thu: 10 am To 7 pm",
 			"Fridays closed"
         ],
-        "contact": [
-            "Tel: +971(4)-341 1367",
-            "Fax: +971(4)-341 1369",
-            "Email: art@thethirdline.com",
-            "Website: http://www.thethirdline.com",
-			"Facebook: http://www.facebook.com/thethirdline",
-			"Twitter: @TheThirdLine"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-341 1367",
+            "Fax" : "+971(4)-341 1369",
+            "Email" : "art@thethirdline.com",
+            "Website" : "http://www.thethirdline.com",
+			"Facebook" : "http://www.facebook.com/thethirdline",
+			"Twitter" : "@TheThirdLine"
+        }
     },
 	{
         "location": {
@@ -46,15 +46,15 @@
             "Sat to Thur: 8am - 10pm",
 			"Friday: Closed"
         ],
-        "contact": [
-            "Tel: +971(4)-336 3313",
-            "Fax: +971(4)-",
-            "Email: tashkeel@tashkeel.org",
-            "Website: http://tashkeel.org",
-			"Facebook: https://www.facebook.com/tashkeelhub",
-			"Twitter: @tashkeel",
-			"YouTube: http://www.youtube.com/user/TashkeelStudio"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-336 3313",
+            "Fax" : "+971(4)-",
+            "Email" : "tashkeel@tashkeel.org",
+            "Website" : "http://tashkeel.org",
+			"Facebook" : "https://www.facebook.com/tashkeelhub",
+			"Twitter" : "@tashkeel",
+			"YouTube" : "http://www.youtube.com/user/TashkeelStudio"
+        }
     },
 	{
         "location": {
@@ -75,13 +75,13 @@
             "Saturday - Thursday 10am - 6pm",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-346 9906",
-            "Fax: +971(4)-346 9902",
-            "Email: info@lawrieshabibi.com",
-            "Website: http://www.lawrieshabibi.com",
-			"Twitter: @LawrieShabibi"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-346 9906",
+            "Fax" : "+971(4)-346 9902",
+            "Email" : "info@lawrieshabibi.com",
+            "Website" : "http://www.lawrieshabibi.com",
+			"Twitter" : "@LawrieShabibi"
+        }
     },
 	{
         "location": {
@@ -101,12 +101,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(4)-286 2224",
-            "Fax: +971(2)",
-            "Email: ",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-286 2224",
+            "Fax" : "+971(2)",
+            "Email" : " ",
+            "Website" : ""
+        }
     },
 	{
         "location": {
@@ -128,14 +128,14 @@
 			"Saturday 12-5pm",
 			"Fridays and Public Holidays: Closed"
         ],
-        "contact": [
-            "Tel: +971(4)-346 8649",
-            "Fax: +971(4)-346 8462",
-            "Email: info@galleryetemad.com",
-            "Website: http://www.galleryetemad.com",
-			"Facebook: http://www.facebook.com/Etemad.Art.Gallery",
-			"Twitter: @Etemadgallery"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-346 8649",
+            "Fax" : "+971(4)-346 8462",
+            "Email" : "info@galleryetemad.com",
+            "Website" : "http://www.galleryetemad.com",
+			"Facebook" : "http://www.facebook.com/Etemad.Art.Gallery",
+			"Twitter" : "@Etemadgallery"
+        }
     },
 	{
         "location": {
@@ -155,13 +155,13 @@
         "hours": [
             "Sat-Thur: 11:30am – 7pm"
         ],
-        "contact": [
-            "Tel: +971(4)-340 6016",
-            "Fax: +971(4)",
-            "Email: info@carbon12dubai.com",
-            "Website: http://carbon12dubai.com",
-			"Facebook: https://www.facebook.com/Carbon12Dubai"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-340 6016",
+            "Fax" : "",
+            "Email" : "info@carbon12dubai.com",
+            "Website" : "http://carbon12dubai.com",
+			"Facebook" : "https://www.facebook.com/Carbon12Dubai"
+        }
     },
 	{
         "location": {
@@ -181,14 +181,14 @@
         "hours": [
             "Sat-Thur: 10am – 6pm"
         ],
-        "contact": [
-            "Tel: +971(4)-323 6242",
-            "Fax: +971(4)-323 6243",
-            "Email: dubai@ayyamgallery.com",
-            "Website: http://www.ayyamgallery.com",
-			"Facebook: https://www.facebook.com/AyyamGallery",
-			"Twitter: @AyyamGallery"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-323 6242",
+            "Fax" : "+971(4)-323 6243",
+            "Email" : "dubai@ayyamgallery.com",
+            "Website" : "http://www.ayyamgallery.com",
+			"Facebook" : "https://www.facebook.com/AyyamGallery",
+			"Twitter" : "@AyyamGallery"
+        }
     },
 	{
         "location": {
@@ -209,14 +209,14 @@
             "Mon - Thur, Sat: 11am - 7pm",
 			"Friday closed"
         ],
-        "contact": [
-            "Tel: +971(4)-379 0764",
-            "Fax: +971(4)-379 0769",
-            "Email: info@greynoise.org",
-            "Website: http://www.greynoise.org",
-			"Facebook: http://www.facebook.com/greynoise",
-			"Twitter: @GreyNoiseDXB"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-379 0764",
+            "Fax" : "+971(4)-379 0769",
+            "Email" : "info@greynoise.org",
+            "Website" : "http://www.greynoise.org",
+			"Facebook" : "http://www.facebook.com/greynoise",
+			"Twitter" : "@GreyNoiseDXB"
+        }
     },
 	{
         "location": {
@@ -237,12 +237,12 @@
             "Mon - Thur, Sat: NA",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-346 9305",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://www.gagallery.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-346 9305",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://www.gagallery.com"
+        }
     },
 	{
         "location": {
@@ -263,12 +263,12 @@
             "Mon - Thur, Sat: 10am-7pm",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-323 5052",
-            "Fax: +971(4)- 323 6761",
-            "Email: info@ivde.net",
-            "Website: http://ivde.net"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-323 5052",
+            "Fax" : "+971(4)- 323 6761",
+            "Email" : "info@ivde.net",
+            "Website" : "http://ivde.net"
+        }
     },
 	{
         "location": {
@@ -289,13 +289,13 @@
             "Mon - Thur, Sat: 10am-7pm",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-420 2497",
-            "Fax: +971(4)-421 1607",
-            "Email: info@4walls-dubai.com",
-            "Website: http://www.4walls-dubai.com",
-			"Facebook: https://www.facebook.com/4WallsDubai"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-420 2497",
+            "Fax" : "+971(4)-421 1607",
+            "Email" : "info@4walls-dubai.com",
+            "Website" : "http://www.4walls-dubai.com",
+			"Facebook" : "https://www.facebook.com/4WallsDubai"
+        }
     },
 	{
         "location": {
@@ -316,13 +316,13 @@
             "Sat - Thur: 10am-7pm",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-340 8660",
-            "Fax: +971(4)-340 8661",
-            "Email: contact@artsawa.com ",
-            "Website: http://www.artsawa.com/",
-			"Twitter: @artsawa"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-340 8660",
+            "Fax" : "+971(4)-340 8661",
+            "Email" : "contact@artsawa.com ",
+            "Website" : "http://www.artsawa.com/",
+			"Twitter" : "@artsawa"
+        }
     },
 	{
         "location": {
@@ -342,14 +342,14 @@
         "hours": [
             "Mon - Sun: 9am - 6pm"
         ],
-        "contact": [
-            "Tel: +971(4)-326 6467",
-            "Fax: +971(4)",
-            "Email: info@cartoonartgallery.org",
-            "Website: http://www.cartoonartgallery.org",
-			"Facebook: http://www.facebook.com/CartoonArtGallery",
-			"Twitter: @CartoonArtDxb"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-326 6467",
+            "Fax" : "",
+            "Email" : "info@cartoonartgallery.org",
+            "Website" : "http://www.cartoonartgallery.org",
+			"Facebook" : "http://www.facebook.com/CartoonArtGallery",
+			"Twitter" : "@CartoonArtDxb"
+        }
     },
 	{
         "location": {
@@ -369,12 +369,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(4)-394 1084/94",
-            "Fax: +971(4)-394 1074",
-            "Email: mail@mirajislamicartcentre.com",
-            "Website: http://www.mirajislamicartcentre.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-394 1084",
+            "Fax" : "+971(4)-394 1074",
+            "Email" : "mail@mirajislamicartcentre.com",
+            "Website" : "http://www.mirajislamicartcentre.com"
+        }
     },
 	{
         "location": {
@@ -394,12 +394,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(4)-323 0909",
-            "Fax: +971(4)- 323 0908",
-            "Email:",
-            "Website: http://www.operagallery.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-323 0909",
+            "Fax" : "+971(4)- 323 0908",
+            "Email" : "",
+            "Website" : "http://www.operagallery.com"
+        }
     },
 	{
         "location": {
@@ -419,12 +419,12 @@
         "hours": [
             "Saturday - Thursday: 1am - 9pm"
         ],
-        "contact": [
-            "Tel: +971(4)-345 0900",
-            "Fax: +971(4)-345 0912",
-            "Email: info@proartuae.com",
-            "Website: http://www.proartuae.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-345 0900",
+            "Fax" : "+971(4)-345 0912",
+            "Email" : "info@proartuae.com",
+            "Website" : "http://www.proartuae.com"
+        }
     },
 	{
         "location": {
@@ -446,12 +446,12 @@
 			"Saturday - 1pm to 5pm and by appointment",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-380 9600",
-            "Fax: +971(4)-",
-            "Email: spm@salsalipm.com",
-            "Website: http://www.salsalipm.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-380 9600",
+            "Fax" : "+971(4)-",
+            "Email" : "spm@salsalipm.com",
+            "Website" : "http://www.salsalipm.com"
+        }
     },
 	{
         "location": {
@@ -472,14 +472,14 @@
             "Saturday to Thursday - 10am to 6pm",
 			"Friday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-379 0940",
-            "Fax: +971(4)-379 0950",
-            "Email: info@showcasedubai.com",
-            "Website: http://showcaseuae.com",
-			"Facebook: http://www.facebook.com/showcasegallery",
-			"Twitter: @showcasedubai"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-379 0940",
+            "Fax" : "+971(4)-379 0950",
+            "Email" : "info@showcasedubai.com",
+            "Website" : "http://showcaseuae.com",
+			"Facebook" : "http://www.facebook.com/showcasegallery",
+			"Twitter" : "@showcasedubai"
+        }
     },
 	{
         "location": {
@@ -500,12 +500,12 @@
             "Sun to Thur - 10am to 6pm",
 			"Fri-Sat: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-347 9090 ",
-            "Fax: +971(4)-347 9666",
-            "Email: info@courtyardgallerydubai.com",
-            "Website: http://www.courtyardgallerydubai.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-347 9090 ",
+            "Fax" : "+971(4)-347 9666",
+            "Email" : "info@courtyardgallerydubai.com",
+            "Website" : "http://www.courtyardgallerydubai.com"
+        }
     },
 	{
         "location": {
@@ -527,12 +527,12 @@
 			"Friday: 2pm - 8pm",
 			"Sunday: closed"
         ],
-        "contact": [
-            "Tel: +971(4)-341 7303",
-            "Fax: +971(4)-341 7304",
-            "Email: info@thejamjardubai.com",
-            "Website: http://www.thejamjardubai.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-341 7303",
+            "Fax" : "+971(4)-341 7304",
+            "Email" : "info@thejamjardubai.com",
+            "Website" : "http://www.thejamjardubai.com"
+        }
     },
 	{
         "location": {
@@ -553,12 +553,12 @@
             "Everyday, 10am – 12am",
 			"Note: THE PAVILION DOWNTOWN DUBAI is closed for renovations until further notice."
         ],
-        "contact": [
-            "Tel: +971(4)-447 7025",
-            "Fax: +971(4)",
-            "Email: art@pavilion.ae  ",
-            "Website: http://pavilion.ae",
-			"Twitter: @paviliondubai"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-447 7025",
+            "Fax" : "+971(4)",
+            "Email" : "art@pavilion.ae  ",
+            "Website" : "http://pavilion.ae",
+			"Twitter" : "@paviliondubai"
+		}
     }
 ]
