@@ -301,12 +301,12 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefees").html(value.entryFees.join('<br/>'));
 			$("#storehours").html(value.hours.join('<br/>'));
 			if(value.contact.Tel!="") {
-				if ($(".phonelink").length) {$('.phonelink').remove();}
-				$("#storephone").append('<a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/>'+value.contact.Tel+'</a>');
+				if ($("#storephone").length) {$('#storephone').remove();}
+				$("#detailslist").append('<li id="storephone"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone" width="56"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
 			}
 			else {
-				if ($(".phonelink").length) {$('.phonelink').remove();}
-				$("#storephone").append('<a class="phonelink" href=""><img src="img/phone.png" alt="Phone" class="ui-li-icon ui-corner-none"/>NA</a>');
+				if ($("#storephone").length) {$('#storephone').remove();}
+				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/><h3>NA</h3><p>Phone not found</P></a></li>');
 			}
 			
 			if(value.contact.Email!="") {
