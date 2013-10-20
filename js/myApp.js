@@ -319,14 +319,15 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			}
 			if(value.contact.Website!="") {
 				if ($(".weblink").length) {$('.weblink').remove();}
-				$("#storeweb").append('<a class="weblink" href="'+value.contact.Website+'"><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
+				$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
 			}
 			else {
 				if ($(".weblink").length) {$('.weblink').remove();}
 				$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>NA</a>');
 			}
-		}
-	});
+			$("#detailslist").listview('refresh');
+		} // End if found
+	}); // End for each
 	$.mobile.changePage("#details");
 });
 
