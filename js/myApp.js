@@ -301,20 +301,20 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefees").html(value.entryFees.join('<br/>'));
 			$("#storehours").html(value.hours.join('<br/>'));
 			if(value.contact.Tel!="") {
-				$('.phonelink').attr('href')="+value.contact.Tel+";
-				$('.phonelink').html('+value.contact.Tel+')
+				$('.phonelink').attr('href')=value.contact.Tel;
+				$('.phonelink').html(value.contact.Tel)
 				//$("#storephone").html('<a href="tel:'+value.contact.Tel+'">'+value.contact.Tel+'</a>');
 			}
 			else $("#storephone").html('NA');
 			if(value.contact.Email!="") {
-				$('.emaillink').attr('href')="+value.contact.Email+";
-				$('.emaillink').html('+value.contact.Email+')
+				$('.emaillink').attr('href')=value.contact.Email;
+				$('.emaillink').html(value.contact.Email)
 				//$("#storeemail").html('<a href="mailto:'+value.contact.Email+'">'+value.contact.Email+'</a>');
 			}
 			else $(".emaillink").html('NA');
 			if(value.contact.Website!="") {
-				$('.weblink').attr('href')="+value.contact.Website+";
-				$('.weblink').html('+value.contact.Website+')
+				$('.weblink').attr('href')=value.contact.Website;
+				$('.weblink').html(value.contact.Website)
 				//$("#storeweb").html('<a class="storeweblink" href="'+value.contact.Website+'">'+value.contact.Website+'</a>');
 			}
 			else $(".weblink").html('NA');
