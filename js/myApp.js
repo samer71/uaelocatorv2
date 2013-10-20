@@ -300,28 +300,28 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			// Phone, email, website
 			if(value.contact.Tel!="") {
 				if ($("#storephone").length) {$('#storephone').remove();}
-				$("#detailslist").append('<li id="storephone"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone" width="56"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
+				$("#detailslist").append('<li id="storephone"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
 			}
 			else {
 				if ($("#storephone").length) {$('#storephone').remove();}
-				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phone" width="56"/><h3>NA</h3><p>Phone not found</P></li>');
+				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phone"/><h3>NA</h3><p>Phone not found</P></li>');
 			}
 			
 			if(value.contact.Email!="") {
 				if ($("#storeemail").length) {$('#storeemail').remove();}
-				$("#detailslist").append('<li id="storeemail"><a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" width="56"/><h3>'+value.contact.Email+'</h3><p>Click to send a message</P></a></li>');
+				$("#detailslist").append('<li id="storeemail"><a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email"/><h3>'+value.contact.Email+'</h3><p>Click to send a message</P></a></li>');
 			}
 			else {
 				if ($("#storeemail").length) {$('#storeemail').remove();}
-				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email" width="56"/><h3>NA</h3><p>Email address not found</P></li>');
+				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
 			if(value.contact.Website!="") {
 				if ($("#storeweb").length) {$('#storeweb').remove();}
-				$("#detailslist").append('<li id="storeweb"><a class="weblink" href=""><img src="img/web.png" alt="Website" width="56"/><h3>'+value.contact.Website+'</h3></a></li>');
+				$("#detailslist").append('<li id="storeweb"><a class="weblink" href=""><img src="img/web.png" alt="Website"/><h3>'+value.contact.Website+'</h3></a></li>');
 			}
 			else {
 				if ($("#storeweb").length) {$('#storeweb').remove();}
-				$("#detailslist").append('<li id="storeweb"><img src="img/web.png" alt="Phoner" width="56"/><h3>NA</h3><p>Website not found</P></li>');
+				$("#detailslist").append('<li id="storeweb"><img src="img/web.png" alt="Phoner"/><h3>NA</h3><p>Website not found</P></li>');
 			}
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
