@@ -24,12 +24,12 @@
             "Fri: 4:00 p.m. - 10:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-528 5288 ",
-            "Fax: +971(6) 528 6644",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-528 5288 ",
+            "Fax" : "+971(6) 528 6644",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
     {
         "location": {
@@ -53,12 +53,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-566 5466",
-            "Fax: +971(6) 566 2692",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-566 5466",
+            "Fax" : "+971(6) 566 2692",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
     {
         "location": {
@@ -82,12 +82,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 4561",
-            "Fax: +971(6)-568 5683",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 4561",
+            "Fax" : "+971(6)-568 5683",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -109,12 +109,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-568 8222 ",
-            "Fax: +971(6)-568 6229",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-568 8222 ",
+            "Fax" : "+971(6)-568 6229",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -137,12 +137,12 @@
             "Sun to Thur: 8:00 a.m.- 2:00 p.m.",
             "Fri-Sat: 4:00 p.m. - 8:00 p.m."
         ],
-        "contact": [
-            "Tel: +971(6)-569 6577",
-            "Fax: +971(6)-568 6533",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 6577",
+            "Fax" : "+971(6)-568 6533",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -166,12 +166,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 0006",
-            "Fax: +971(6)-568 0505",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 0006",
+            "Fax" : "+971(6)-568 0505",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -195,12 +195,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 5455",
-            "Fax: +971(6)-568 2988",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 5455",
+            "Fax" : "+971(6)-568 2988",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -224,12 +224,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 3078",
-            "Fax: +971(6)-568 3711",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 3078",
+            "Fax" : "+971(6)-568 3711",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -251,12 +251,12 @@
         "hours": [
             "Closed until further notice"
         ],
-        "contact": [
-            "Tel:",
-            "Fax:",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -280,12 +280,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 2002",
-            "Fax: +971(6)-568 2582",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 2002",
+            "Fax" : "+971(6)-568 2582",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -307,12 +307,12 @@
             "Sun to Thur: 8:00 a.m.- 2:00 p.m.",
             "Fri-Sat: 4:00 p.m. - 8:00 p.m."
         ],
-        "contact": [
-            "Tel: +971(6)-569 8777",
-            "Fax: +971(6)-568 8933",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 8777",
+            "Fax" : "+971(6)-568 8933",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -334,12 +334,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 4114",
-            "Fax: +971(6)-568 0754",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 4114",
+            "Fax" : "+971(6)-568 0754",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -363,12 +363,12 @@
             "Fri: 5:00 p.m. - 8:00 p.m.",
             "Sun: 9:00 a.m.- 1:00 p.m."
         ],
-        "contact": [
-            "Tel: +971(6)-569 4442 ",
-            "Fax: +971(6)-568 7689",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 4442 ",
+            "Fax" : "+971(6)-568 7689",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -390,12 +390,12 @@
         "hours": [
             "Closed for renovation until further notice."
         ],
-        "contact": [
-            "Tel:",
-            "Fax:",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -419,12 +419,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 1738",
-            "Fax: +971(6)-568 1738",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 1738",
+            "Fax" : "+971(6)-568 1738",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
         "location": {
@@ -448,12 +448,12 @@
             "Fri: 4:00 p.m. - 8:00 p.m.",
             "Sun: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-569 0222",
-            "Fax: +971(6)-568 0223",
-            "Email:",
-            "Website:"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 0222",
+            "Fax" : "+971(6)-568 0223",
+            "Email" : "info@sharjahmuseums.ae",
+            "Website" : "http://www.sharjahmuseums.ae"
+        }
     },
 	{
   "location": {
@@ -476,12 +476,12 @@
     "Fri: 2:30 p.m. - 8:30 p.m.",
     "Sun: Closed"
   ],
-  "contact": [
-    "Tel: +971(4)",
-    "Fax: +971(4)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(4)",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -502,12 +502,12 @@
     "Sun to Thur: 9:30 a.m.- 1:30 p.m.",
     "Fri and Sat: Closed"
   ],
-  "contact": [
-    "Tel: +971(4)-201 4347",
-    "Fax: +971(4) 217 1467 ",
-    "Email:",
-    "Website: www.dubaipolice.gov.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(4)-201 4347",
+    "Fax" : "+971(4) 217 1467 ",
+    "Email" : "",
+    "Website" : " www.dubaipolice.gov.ae"
+  }
     },
 	{
   "location": {
@@ -527,12 +527,12 @@
   "hours": [
     "TBA"
   ],
-  "contact": [
-    "Tel: +971(2)",
-    "Fax: +971(2)",
-    "Email:",
-    "Website: http://louvreabudhabi.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(2)",
+    "Fax" : "+971(2)",
+    "Email" : "",
+    "Website" : " http://louvreabudhabi.ae"
+  }
     },
 	{
   "location": {
@@ -552,12 +552,12 @@
   "hours": [
     "TBA"
   ],
-  "contact": [
-    "Tel: +971(2)",
-    "Fax: +971(2)",
-    "Email:",
-    "Website: http://www.saadiyatculturaldistrict.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(2)",
+    "Fax" : "+971(2)",
+    "Email" : "",
+    "Website" : " http://www.saadiyatculturaldistrict.ae"
+  }
     },
 	{
   "location": {
@@ -577,12 +577,12 @@
   "hours": [
     "TBA"
   ],
-  "contact": [
-    "Tel: +971(2)-6575 800",
-    "Fax: +971(2)",
-    "Email:",
-    "Website: http://www.zayednationalmuseum.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(2)-6575 800",
+    "Fax" : "+971(2)",
+    "Email" : "",
+    "Website" : " http://www.zayednationalmuseum.ae"
+  }
     },
 	{
   "location": {
@@ -602,12 +602,12 @@
   "hours": [
     "TBA"
   ],
-  "contact": [
-    "Tel: +971(2)",
-    "Fax: +971(2)",
-    "Email:",
-    "Website: http://www.saadiyatculturaldistrict.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(2)",
+    "Fax" : "+971(2)",
+    "Email" : "",
+    "Website" : " http://www.saadiyatculturaldistrict.ae"
+  }
     },
 	{
   "location": {
@@ -627,12 +627,12 @@
   "hours": [
     "Daily: 9:00 am to 8:00 pm"
   ],
-  "contact": [
-    "Tel: +971(2)",
-    "Fax: +971(2)",
-    "Email:",
-    "Website: http://www.saadiyatculturaldistrict.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(2)",
+    "Fax" : "+971(2)",
+    "Email" : "",
+    "Website" : " http://www.saadiyatculturaldistrict.ae"
+  }
     },
 	{
   "location": {
@@ -652,12 +652,12 @@
   "hours": [
   	"Area is open for visit around the clock but that main attractions have different timings"
   ],
-  "contact": [
-    "Tel: +971(4) 353 6666",
-    "Fax: +971(4)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(4) 353 6666",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -680,12 +680,12 @@
 	"Fri: 3:30 pm - 9:30 pm",
 	"Sun: Closed"
   ],
-  "contact": [
-    "Tel: +971(4) 393 7139",
-    "Fax: +971(4)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(4) 393 7139",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -708,12 +708,12 @@
 	"Fri: 8:00 am - 10:30 pm",
 	"Sun: Closed"
   ],
-  "contact": [
-    "Tel: +971(4) 393 7151",
-    "Fax: +971(4)",
-    "Email:",
-    "Website: http://www.dubaitourism.ae"
-  ]
+  "contact": {
+    "Tel" : "+971(4) 393 7151",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : " http://www.dubaitourism.ae"
+  }
     },
 	{
   "location": {
@@ -736,12 +736,12 @@
 	"Fri: 2:30 pm - 8:30 pm",
 	"Sun: Closed"
   ],
-  "contact": [
-    "Tel: +971(4) 394 6343",
-    "Fax: +971(4)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(4) 394 6343",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -764,12 +764,12 @@
 	"Fri: 2:30 pm - 8:30 pm",
 	"Sun: Closed"
   ],
-  "contact": [
-    "Tel: +971(4) 852 1374",
-    "Fax: +971(4)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(4) 852 1374",
+    "Fax" : "+971(4)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -790,12 +790,12 @@
   	"Sun - Thurs: 9:00 am - 1:00 pm and 4:00 pm 7:00 pm",
 	"Fri: 4:00 pm - 7:00 pm"
   ],
-  "contact": [
-    "Tel: +971(6)",
-    "Fax: +971(6)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(6)",
+    "Fax" : "+971(6)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -817,12 +817,12 @@
   	"Sept-May 10am-5pm, Tue closed",
 	"Jun-Aug 8am-noon, 4pm-7pm; Tue closed"
   ],
-  "contact": [
-    "Tel: +971(6)",
-    "Fax: +971(6)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(6)",
+    "Fax" : "+971(6)",
+    "Email" : "",
+    "Website" : ""
+  }
     },
 	{
   "location": {
@@ -844,11 +844,11 @@
   	"Sept-May 10am-5pm, Tue closed",
 	"Jun-Aug 8am-noon, 4pm-7pm; Tue closed"
   ],
-  "contact": [
-    "Tel: +971(6)",
-    "Fax: +971(6)",
-    "Email:",
-    "Website:"
-  ]
+  "contact": {
+    "Tel" : "+971(6)",
+    "Fax" : "+971(6)",
+    "Email" : "",
+    "Website" : ""
+  }
     }
 ]
