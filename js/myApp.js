@@ -302,7 +302,7 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storehours").html(value.hours.join('<br/>'));
 			$("#storephone").html('<a href="tel:'+value.contact.Tel+'">'+value.contact.Tel+'</a>');
 			$("#storeemail").html('<a href="mailto:'+value.contact.Email+'">'+value.contact.Email+'</a>');
-			$("#storeweb").html('<a href="'+value.contact.Website+'" target="_blank">'+value.contact.Website+'</a>');
+			$("#storeweb").html('<a onClick="window.open('+value.contact.Website+');">'+value.contact.Website+'</a>');
 		}
 	});
 	$.mobile.changePage("#details");
