@@ -301,22 +301,22 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#storefees").html(value.entryFees.join('<br/>'));
 			$("#storehours").html(value.hours.join('<br/>'));
 			if(value.contact.Tel!="") {
-			$("#storephone").append('<a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png"/>'+value.contact.Tel+'</a>');
+			$("#storephone").append('<a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phoner" class="ui-li-icon ui-corner-none"/>'+value.contact.Tel+'</a>');
 			}
 			else 
-			$("#storephone").append('<a class="phonelink" href=""><img src="img/phone.png"/>NA</a>');
+			$("#storephone").append('<a class="phonelink" href=""><img src="img/phone.png" alt="Phone" class="ui-li-icon ui-corner-none"/>NA</a>');
 			
 			if(value.contact.Email!="") {
-			$("#storeemail").append('<a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png"/>'+value.contact.Email+'</a>');
+			$("#storeemail").append('<a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>'+value.contact.Email+'</a>');
 			}
 			else 
-			$("#storeemail").append('<a class="emaillink" href=""><img src="img/email.png"/>NA</a>');
+			$("#storeemail").append('<a class="emaillink" href=""><img src="img/email.png" alt="Email" class="ui-li-icon ui-corner-none"/>NA</a>');
 			
 			if(value.contact.Website!="") {
-			$("#storeweb").append('<a class="weblink" href="'+value.contact.Website+'"><img src="img/web.png"/>'+value.contact.Website+'</a>');
+			$("#storeweb").append('<a class="weblink" href="'+value.contact.Website+'"><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>'+value.contact.Website+'</a>');
 			}
 			else 
-			$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png"/>NA</a>');
+			$("#storeweb").append('<a class="weblink" href=""><img src="img/web.png" alt="Website" class="ui-li-icon ui-corner-none"/>NA</a>');
 		}
 	});
 	$.mobile.changePage("#details");
