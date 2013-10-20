@@ -295,11 +295,9 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 			$("#imageholder").append(mapimg);
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
-			$("#storeaddress").html(value.location.displayAddress);
-			$("#storedescription").html(value.description);
-			$("#storefacilities").html(value.facilities);
-			$("#storefees").html(value.entryFees.join('<br/>'));
-			$("#storehours").html(value.hours.join('<br/>'));
+			if ($("#storeaddress").length) {$('#storeaddress').remove();}
+			$("#detailslist").append('<li id="storeaddress">'+value.location.displayAddress+'</li>');
+			// Phone, email, website
 			if(value.contact.Tel!="") {
 				if ($("#storephone").length) {$('#storephone').remove();}
 				$("#detailslist").append('<li id="storephone"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone" width="56"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
@@ -325,6 +323,23 @@ $('#list').delegate('.onestore', 'tap', function ()  {
 				if ($("#storeweb").length) {$('#storeweb').remove();}
 				$("#detailslist").append('<li id="storeweb"><img src="img/web.png" alt="Phoner" width="56"/><h3>NA</h3><p>Website not found</P></li>');
 			}
+			// Description
+			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
+			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
+			$("#detailslist").append('<li id="storedescription">'+value.description+'</li>');
+			// Facilities
+			if ($("#storefacilities").length) {$('#storefacilities').remove(); $('#facdiv').remove();}
+			$("#detailslist").append('<li id="facdiv" data-role="list-divider" data-theme="b">Features and Facilities</li>');
+			$("#detailslist").append('<li id="storefacilities">'+value.facilities+'</li>');
+			// Fees
+			if ($("#storefees").length) {$('#storefees').remove(); $('#feediv').remove();}
+			$("#detailslist").append('<li id="feediv" data-role="list-divider" data-theme="b">Entry Fees</li>');
+			$("#detailslist").append('<li id="storefees">'+value.entryFees.join('<br/>')+'</li>');
+			// Hours
+			if ($("#storehours").length) {$('#storehours').remove(); $('#hrdiv').remove();}
+			$("#detailslist").append('<li id="hrdiv" data-role="list-divider" data-theme="b">Operating Hours</li>');
+			$("#detailslist").append('<li id="storehours">'+value.hours.join('<br/>')+'</li>');
+			
 			$("#detailslist").listview('refresh');
 		} // End if found
 	}); // End for each
