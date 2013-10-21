@@ -387,6 +387,7 @@ $('#options').delegate('.option', 'tap', function ()  {
 	} // End else network
 });
 
+/*
 last_click_time = new Date().getTime();
 document.addEventListener('tap', function (e) {
     click_time = e['timeStamp'];
@@ -397,7 +398,7 @@ document.addEventListener('tap', function (e) {
     }
     last_click_time = click_time;
 }, true);
-/*
+
 function downloadFile(){
 	var remoteFile ="http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf";
 	var localFileName = remoteFile.substring(remoteFile.lastIndexOf('/')+1);
