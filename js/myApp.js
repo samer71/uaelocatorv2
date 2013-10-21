@@ -354,10 +354,11 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 });
 
 $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
-	directionsDisplay = new google.maps.DirectionsRenderer();
+	var directionsService = new google.maps.DirectionsService();
+	var directionsDisplay = new google.maps.DirectionsRenderer();
 	// Calculate directions
 	directionsDisplay.setPanel(document.getElementById('directions'));
-	stll = document.getElementById('stlatlon').value;
+	var stll = document.getElementById('stlatlon').value;
 	var request = {
 		origin: latlon,
 		destination: stll,
