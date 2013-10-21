@@ -282,14 +282,14 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
-	$('#directions').empty();
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
 		{
 			var coords = value.location.latitude+","+value.location.longitude;
 			var mid = middlePoint(lat,lon,value.location.latitude,value.location.longitude);
 			//Convert from radians back to degrees
-			var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
+			//var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
+			var midcoords=new google.maps.LatLng((mid.latitude*180/Math.PI), (mid.longitude*180/Math.PI));
 			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
 			
@@ -303,7 +303,7 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			// Calculate directions
 			var mapOptions = {
 			zoom: 7,
-			center: latlon,
+			center: midcoords,
 			mapTypeControl:false,
 			navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
 			mapTypeId:google.maps.MapTypeId.ROADMAP,
