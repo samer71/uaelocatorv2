@@ -357,16 +357,22 @@ $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
 	// Calculate directions
+	var mapOptions = {
+    zoom: 7,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: latlon
+  };
+  var nmap = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  directionsDisplay.setMap(nmap);
 	directionsDisplay.setPanel(document.getElementById('directions'));
 	var stll = document.getElementById('stlatlon').value;
-	alert("Store: "+stll);
-	alert("My: "+latlon);
 	var request = {
 		origin: latlon,
 		destination: stll,
 		travelMode: google.maps.TravelMode.DRIVING
 	  };
-	 directionsService.route(request, function(response, status) {
+	directionsService.route(request, function(response, status) {
 	if (status == google.maps.DirectionsStatus.OK) {
 		  directionsDisplay.setDirections(response);
 		}
