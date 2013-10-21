@@ -279,7 +279,7 @@ $('#goback').on('tap', function ()  {
 });
 
 
-$('.onestore').on('tap', function ()  {
+$('#list').delegate('.onestore', 'tap', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
