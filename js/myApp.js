@@ -281,6 +281,7 @@ $('#goback').on('tap', function ()  {
 $('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
+	if ($("#directions").length) {$('#directions').remove();}
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
@@ -294,10 +295,7 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
 			
 			// Get directions
-			$('#directions').empty();
 			var directionsService = new google.maps.DirectionsService();
-			// Calculate directions
-			//directionsDisplay.setPanel(document.getElementById('directions'));
 			var request = {
 				origin: latlon,
 				destination: stlatlon,
@@ -308,10 +306,12 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 					var myRoute = response.routes[0].legs[0];
 				   	var dpanel = document.getElementById('directions');
 					for (var i = 0; i < myRoute.steps.length; i++) {
-						dpanel.innerHTML = myRoute.steps[i].instructions + "<br/>";
+						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
 					}
+					$("#directions").listview('refresh');
 				}
-				else $('#directions').html("Unable to retrieve your route. Try agian later!");
+				else 
+				$("#directions").append('<li class="stepinst">Unable to retrieve your route. Try agian later!</li>');
 			  });
 
 			
