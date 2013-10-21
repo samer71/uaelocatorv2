@@ -359,6 +359,8 @@ $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
 	// Calculate directions
 	directionsDisplay.setPanel(document.getElementById('directions'));
 	var stll = document.getElementById('stlatlon').value;
+	alert("Store: "+stll);
+	alert("My: "+latlon);
 	var request = {
 		origin: latlon,
 		destination: stll,
