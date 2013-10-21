@@ -333,7 +333,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			}
 			// Location
 			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions-panel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#dpanel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
@@ -362,7 +362,7 @@ $('.loclink').on('tap', function() {
 			var directionsService = new google.maps.DirectionsService();
 			var request = {
 				origin: latlon,
-				destination: stlatlon,
+				destination: $('#stlatlon').val(),
 				travelMode: google.maps.TravelMode.DRIVING
 			  };
 			directionsService.route(request, function(response, status) {
