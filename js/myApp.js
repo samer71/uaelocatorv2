@@ -279,7 +279,7 @@ $('#goback').on('tap', function ()  {
 });
 
 //$('.onestore').off().on('touchstart', function ()  {
-$('#list').on('.onestore', 'touchstart', function (event)  {
+$('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
