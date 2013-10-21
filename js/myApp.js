@@ -279,10 +279,10 @@ $('#goback').on('tap', function ()  {
 });
 
 //$('.onestore').off().on('touchstart', function ()  {
-//$('.onestore').on('tap', function ()  {
-$('#list').delegate('.onestore', 'touchstart', function (event)  {
+$('.onestore').on('tap', function ()  {
+//$('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
-	event.preventDefault();
+	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
