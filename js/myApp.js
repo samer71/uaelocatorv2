@@ -220,7 +220,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 			$("#storeheader").html("Museums");
 		} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 		{
-			storetype="arts";
+			storetype="art galleries";
 			jsonFile="arts.json";
 			$("#storeheader").html("The Arts");
 		}
@@ -279,7 +279,7 @@ $('#goback').on('tap', function ()  {
 });
 
 
-$('#list').delegate('.onestore', 'vlick', function ()  {
+$('#list').delegate('.onestore', 'vclick', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
