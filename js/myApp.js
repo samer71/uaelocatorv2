@@ -324,7 +324,9 @@ $('#list').delegate('.onestore', 'touchend', function ()  {
 				if ($("#storeemail").length) {$('#storeemail').remove();}
 				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
-			
+			// Location
+			if ($("#storeloc").length) {$('#storeloc').remove();}
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href=""><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.contact.location.latitude+'</h3><h3>Longitude: '+value.contact.location.longitude+'</h3><p>Show me on map</P></a></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
