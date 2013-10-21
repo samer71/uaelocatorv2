@@ -386,6 +386,17 @@ $('#options').delegate('.option', 'tap', function ()  {
 		//$.mobile.showPageLoadingMsg("e", "Locating...");
 	} // End else network
 });
+
+last_click_time = new Date().getTime();
+document.addEventListener('tap', function (e) {
+    click_time = e['timeStamp'];
+    if (click_time && (click_time - last_click_time) < 1000) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        return false;
+    }
+    last_click_time = click_time;
+}, true);
 /*
 function downloadFile(){
 	var remoteFile ="http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf";

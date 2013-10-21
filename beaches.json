@@ -17,9 +17,14 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     },
 	{
         "location": {
@@ -39,9 +44,14 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     },
 	{
         "location": {
@@ -61,9 +71,14 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     },
 	{
         "location": {
@@ -83,9 +98,14 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     },
 	{
         "location": {
@@ -105,9 +125,14 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     },
 	{
         "location": {
@@ -127,8 +152,13 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "NA"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "",
+			"Facebook" : "",
+			"Twitter" : ""
+        }
     }
 ]
