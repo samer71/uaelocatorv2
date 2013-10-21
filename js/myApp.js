@@ -359,16 +359,7 @@ $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
 	// Calculate directions
-	var mapOptions = {
-    zoom: 7,
-    center: latlon,
-	mapTypeControl:false,
-	navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
-	mapTypeId:google.maps.MapTypeId.ROADMAP,
-  };
-  var nmap = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-  	directionsDisplay.setMap(nmap);
+  	directionsDisplay.setMap(map);
 	directionsDisplay.setPanel(document.getElementById('directions'));
 	var stll = document.getElementById('stlatlon').value;
 	var request = {
@@ -380,6 +371,7 @@ $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
 	if (status == google.maps.DirectionsStatus.OK) {
 		  directionsDisplay.setDirections(response);
 		}
+		else $('#directions').html("An unexpected error occured. Try agian later!");
 	  });
 	
 });
