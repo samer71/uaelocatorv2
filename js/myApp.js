@@ -356,10 +356,22 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
 	$('#directions').empty();
 	$('#map-canvas').empty();
+	mc=document.getElementById('map-canvas');
+	mc.style.height='200px';
+	mc.style.width=window.innerWidth;
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
 	// Calculate directions
-  	directionsDisplay.setMap(map);
+	var mapOptions = {
+    zoom: 7,
+    center: latlon,
+	mapTypeControl:false,
+	navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
+	mapTypeId:google.maps.MapTypeId.ROADMAP,
+  };
+  var nmap = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  	directionsDisplay.setMap(nmap);
 	directionsDisplay.setPanel(document.getElementById('directions'));
 	var stll = document.getElementById('stlatlon').value;
 	var request = {
