@@ -279,7 +279,7 @@ $('#goback').on('tap', function ()  {
 });
 
 
-$('#list').delegate('.onestore', 'touchstart', function ()  {
+$('#list').delegate('.onestore', 'touchend', function ()  {
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
@@ -305,7 +305,7 @@ $('#list').delegate('.onestore', 'touchstart', function ()  {
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
 			if ($("#storeaddress").length) {$('#storeaddress').remove();}
-			$("#detailslist").append('<li id="storeaddress">'+value.location.displayAddress+'</li>');
+			$("#detailslist").append('<li id="storeaddress">'+value.location.displayAddress+'<br/>'+value.contact.Website+'</li>');
 			// Phone, email, website
 			if(value.contact.Tel!="") {
 				if ($("#storephone").length) {$('#storephone').remove();}
@@ -324,14 +324,7 @@ $('#list').delegate('.onestore', 'touchstart', function ()  {
 				if ($("#storeemail").length) {$('#storeemail').remove();}
 				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
-			if(value.contact.Website!="") {
-				if ($("#storeweb").length) {$('#storeweb').remove();}
-				$("#detailslist").append('<li id="storeweb"><a class="weblink" href=""><img src="img/web.png" alt="Website"/><h3>'+value.contact.Website+'</h3></a></li>');
-			}
-			else {
-				if ($("#storeweb").length) {$('#storeweb').remove();}
-				$("#detailslist").append('<li id="storeweb"><img src="img/web.png" alt="Phoner"/><h3>NA</h3><p>Website not found</P></li>');
-			}
+			
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
