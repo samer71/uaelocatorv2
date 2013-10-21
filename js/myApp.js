@@ -278,8 +278,9 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-$('.onestore').off().on('touchstart', function ()  {
-//$('#list').delegate('.onestore', 'touchend', function ()  {
+//$('.onestore').off().on('touchstart', function ()  {
+$('#list').on('.onestore', 'touchstart', function (event)  {
+	event.stopPropagation();
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
