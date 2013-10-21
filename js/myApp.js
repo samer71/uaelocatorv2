@@ -278,9 +278,7 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-//$('.onestore').off().on('touchstart', function ()  {
-$('.onestore').on('tap', function ()  {
-//$('#list').delegate('.onestore', 'touchstart', function (event)  {
+$('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
