@@ -278,7 +278,7 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
-$('#list').delegate('.onestore', 'touchstart', function (event)  {
+$('#list').delegate('.onestore', 'tap', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	if ($("#directions").length) {$('#directions').remove();}
@@ -289,11 +289,10 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			var coords = value.location.latitude+","+value.location.longitude;
 			var mid = middlePoint(lat,lon,value.location.latitude,value.location.longitude);
 			//Convert from radians back to degrees
-			//var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
-			var midcoords=new google.maps.LatLng((mid.latitude*180/Math.PI), (mid.longitude*180/Math.PI));
+			var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
+			//var midcoords=new google.maps.LatLng((mid.latitude*180/Math.PI), (mid.longitude*180/Math.PI));
 			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
-			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
-			
+			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);		
 			// Get directions
 			var directionsService = new google.maps.DirectionsService();
 			var request = {
@@ -305,13 +304,15 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			if (status == google.maps.DirectionsStatus.OK) {
 					var myRoute = response.routes[0].legs[0];
 				   	var dpanel = document.getElementById('directions');
+					$("#directions").append('<li class="stepstart">'+response.routes[0].legs[0].start_address+'</li>');
 					for (var i = 0; i < myRoute.steps.length; i++) {
 						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
 					}
+					$("#directions").append('<li class="stepcopy">'+response.routes[0].copyrights+'</li>');
 					$("#directions").listview('refresh');
 				}
 				else 
-				$("#directions").append('<li class="stepinst">Unable to retrieve your route. Try agian later!</li>');
+				$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
 			  });
 
 			
