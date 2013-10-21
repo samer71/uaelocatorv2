@@ -282,6 +282,7 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
+	directionsDisplay = new google.maps.DirectionsRenderer();
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
 		{
@@ -291,6 +292,18 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			var midcoords = (mid.latitude*180/Math.PI)+","+(mid.longitude*180/Math.PI);
 			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
+			// Calculate directions
+			directionsDisplay.setPanel(document.getElementById('directions'));
+			var request = {
+				origin: latlon,
+				destination: stlatlon,
+				travelMode: google.maps.TravelMode.DRIVING
+			  };
+			 directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				  directionsDisplay.setDirections(response);
+				}
+			  });
 			// Calculate zoomlevel based on distance
 			if(parseInt(dist)<3){dzoom=13;}
 			else if (parseInt(dist)<10){dzoom=12;}
@@ -327,7 +340,7 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			}
 			// Location
 			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href=""><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me on map</P></a></li>');
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions-panel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me on map</P></a></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
