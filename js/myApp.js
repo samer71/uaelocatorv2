@@ -282,7 +282,7 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
-	
+	$('#directions').empty();
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
 		{
@@ -293,6 +293,38 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);
 			
+			// Get directions
+			$('#directions').empty();
+			dmh=document.getElementById('dmapholder');
+			dmh.style.height='200px';
+			dmh.style.width=window.innerWidth;
+			var directionsService = new google.maps.DirectionsService();
+			var directionsDisplay = new google.maps.DirectionsRenderer();
+			// Calculate directions
+			var mapOptions = {
+			zoom: 7,
+			center: latlon,
+			mapTypeControl:false,
+			navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
+			mapTypeId:google.maps.MapTypeId.ROADMAP,
+		  };
+		  var dmap = new google.maps.Map(document.getElementById('dmapholder'),
+			  mapOptions);
+			directionsDisplay.setMap(dmap);
+			directionsDisplay.setPanel(document.getElementById('directions'));
+			var request = {
+				origin: latlon,
+				destination: stlatlon,
+				travelMode: google.maps.TravelMode.DRIVING
+			  };
+			directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+				  directionsDisplay.setDirections(response);
+				}
+				else $('#directions').html("Unable to retrieve your route. Try agian later!");
+			  });
+
+			
 			// Calculate zoomlevel based on distance
 			if(parseInt(dist)<3){dzoom=13;}
 			else if (parseInt(dist)<10){dzoom=12;}
@@ -302,9 +334,9 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			else if (parseInt(dist)<100){dzoom=8;}
 			else  {dzoom=7;}
 			// The map image
-			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
-			if ($("#map").length) {$('#map').remove();}
-			$("#imageholder").append(mapimg);
+			//var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
+			//if ($("#map").length) {$('#map').remove();}
+			//$("#imageholder").append(mapimg);
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
 			if ($("#storeaddress").length) {$('#storeaddress').remove();}
@@ -351,25 +383,6 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 		} // End if found
 	}); // End for each
 	$.mobile.changePage("#details");
-});
-
-$('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
-	$('#directions').empty();
-	$('#map-canvas').empty();
-	directionsDisplay.setPanel(document.getElementById('directions'));
-	var stll = document.getElementById('stlatlon').value;
-	var request = {
-		origin: latlon,
-		destination: stll,
-		travelMode: google.maps.TravelMode.DRIVING
-	  };
-	directionsService.route(request, function(response, status) {
-	if (status == google.maps.DirectionsStatus.OK) {
-		  directionsDisplay.setDirections(response);
-		}
-		else $('#directions').html("Unable to retrieve your route. Try agian later!");
-	  });
-	
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
