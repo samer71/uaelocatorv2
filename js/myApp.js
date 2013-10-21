@@ -296,19 +296,8 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			// Get directions
 			$('#directions').empty();
 			var directionsService = new google.maps.DirectionsService();
-			var directionsDisplay = new google.maps.DirectionsRenderer();
 			// Calculate directions
-			var mapOptions = {
-			zoom: 7,
-			center: midcoords,
-			mapTypeControl:false,
-			navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
-			mapTypeId:google.maps.MapTypeId.ROADMAP,
-		  };
-		  var dmap = new google.maps.Map(document.getElementById('dmapholder'),
-			  mapOptions);
-			directionsDisplay.setMap(null);
-			directionsDisplay.setPanel(document.getElementById('directions'));
+			//directionsDisplay.setPanel(document.getElementById('directions'));
 			var request = {
 				origin: latlon,
 				destination: stlatlon,
@@ -316,7 +305,11 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			  };
 			directionsService.route(request, function(response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
-				  directionsDisplay.setDirections(response);
+					var myRoute = response.routes[0].legs[0];
+				   	var dpanel = document.getElementById('directions');
+					for (var i = 0; i < myRoute.steps.length; i++) {
+						dpanel.innerHTML = myRoute.steps[i].instructions + "<br/>";
+					}
 				}
 				else $('#directions').html("Unable to retrieve your route. Try agian later!");
 			  });
