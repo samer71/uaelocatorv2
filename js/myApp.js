@@ -293,30 +293,9 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			//var midcoords=new google.maps.LatLng((mid.latitude*180/Math.PI), (mid.longitude*180/Math.PI));
 			var stlatlon=new google.maps.LatLng(value.location.latitude, value.location.longitude);
 			var dist = (google.maps.geometry.spherical.computeDistanceBetween (stlatlon, latlon)/1000).toFixed(1);		
-			// Get directions
-			var directionsService = new google.maps.DirectionsService();
-			var request = {
-				origin: latlon,
-				destination: stlatlon,
-				travelMode: google.maps.TravelMode.DRIVING
-			  };
-			directionsService.route(request, function(response, status) {
-			if (status == google.maps.DirectionsStatus.OK) {
-					var myRoute = response.routes[0].legs[0];
-					alert(response.routes[0].legs[0].start_address);
-					alert(response.routes[0].copyrights);
-					$("#directions").append('<li class="stepstart">'+response.routes[0].legs[0].start_address+'</li>');
-					for (var i = 0; i < myRoute.steps.length; i++) {
-						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
-					}
-					$("#directions").append('<li class="stepcopy">'+response.routes[0].copyrights+'</li>');
-					$("#directions").listview('refresh');
-				}
-				else 
-				$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
-			  });
 
 			
+			/*
 			// Calculate zoomlevel based on distance
 			if(parseInt(dist)<3){dzoom=13;}
 			else if (parseInt(dist)<10){dzoom=12;}
@@ -326,7 +305,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			else if (parseInt(dist)<100){dzoom=8;}
 			else  {dzoom=7;}
 			// The map image
-			//var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
+			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
+			*/
 			if ($("#map").length) {$('#map').remove();}
 			$("#imageholder").append('<img id="map" width="'+window.innerWidth+'" src="img/content/1.jpg"/>');
 			$("#nameheader").html(value.name);
@@ -353,7 +333,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			}
 			// Location
 			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions-panel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me on map</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions-panel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
@@ -375,6 +355,34 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 		} // End if found
 	}); // End for each
 	$.mobile.changePage("#details");
+});
+
+$('.loclink').on('tap', function() {
+				// Get directions
+			var directionsService = new google.maps.DirectionsService();
+			var request = {
+				origin: latlon,
+				destination: stlatlon,
+				travelMode: google.maps.TravelMode.DRIVING
+			  };
+			directionsService.route(request, function(response, status) {
+			if (status == google.maps.DirectionsStatus.OK) {
+					var myRoute = response.routes[0].legs[0];
+					alert(response.routes[0].legs[0].start_address);
+					alert(response.routes[0].copyrights);
+					$("#directions").append('<li class="stepstart"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
+					for (var i = 0; i < myRoute.steps.length; i++) {
+						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
+					}
+					$("#directions").append('<li class="stepstart"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
+					$("#directions").append('<li class="stepcopy">'+response.routes[0].copyrights+'</li>');
+					
+				}
+				else 
+				$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
+			  });
+			  $("#directions").listview('refresh');
+
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
