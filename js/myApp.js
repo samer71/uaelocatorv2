@@ -295,9 +295,6 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 			
 			// Get directions
 			$('#directions').empty();
-			dmh=document.getElementById('dmapholder');
-			dmh.style.height='200px';
-			dmh.style.width=window.innerWidth;
 			var directionsService = new google.maps.DirectionsService();
 			var directionsDisplay = new google.maps.DirectionsRenderer();
 			// Calculate directions
