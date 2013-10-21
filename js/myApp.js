@@ -354,8 +354,8 @@ $('#list').delegate('.onestore', 'touchstart', function (event)  {
 });
 
 $('#detailslist').delegate('.loclink', 'touchstart', function (event)  {
-	$('directions').html().remove();
-	$('map-canvas').html().remove();
+	if('#directions') $('#directions').html().remove();
+	if('#map-canvas') $('#map-canvas').html().remove();
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
 	// Calculate directions
