@@ -303,7 +303,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			directionsService.route(request, function(response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
 					var myRoute = response.routes[0].legs[0];
-				   	var dpanel = document.getElementById('directions');
+					alert(response.routes[0].legs[0].start_address);
+					alert(response.routes[0].copyrights);
 					$("#directions").append('<li class="stepstart">'+response.routes[0].legs[0].start_address+'</li>');
 					for (var i = 0; i < myRoute.steps.length; i++) {
 						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
