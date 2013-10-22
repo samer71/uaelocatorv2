@@ -337,7 +337,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			}
 			// Location
 			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#dpanel"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href=""><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
@@ -361,7 +361,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	$.mobile.changePage("#details");
 });
 
-$('#detailslist').delegate('#storeloc', 'tap', function (event)  {
+$('#detailslist').delegate('#.loclink', 'tap', function (event)  {
 	if ($("#directions").length) {$('#directions').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
@@ -387,7 +387,7 @@ $('#detailslist').delegate('#storeloc', 'tap', function (event)  {
 		$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
 	  });
 	  $("#directions").listview('refresh');
-
+	  $("#dpanel").panel("open", optionsHash);
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
