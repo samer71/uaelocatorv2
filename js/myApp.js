@@ -387,7 +387,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		$("#directions").append('<li class="onestep">Unable to retrieve your route. Try agian later!</li>');
 	  });
 	  $("#directions").listview('refresh');
-	  $( "#dpanel").trigger( "updatelayout" );
+	  //$( "#dpanel").trigger( "updatelayout" );
 	  setTimeout(function () {$("#dpanel").panel("open");}, 200); // delay above zero
 });
 
