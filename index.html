@@ -69,8 +69,8 @@
 	</div><!-- End Content -->	
 	</div><!-- End Index -->
 
-    <!-- Results Page -->
-    <div data-role="page" id="results">
+<!-- Results Page -->
+<div data-role="page" id="results">
     <div data-role="header" data-theme="b" >
         <h1 id="storeheader"></h1>
         <a id="gohome" href="#index" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
@@ -82,71 +82,72 @@
 			<li><a class="option" id="get50" href="#" data-icon="refresh">50K</a></li>
 			<li><a class="option" id="getall" href="#" data-icon="refresh">All</a></li>
 		</ul>
-	</div><!-- /navbar -->
+		</div><!-- /navbar -->
     </div><!-- /header -->
     
     <div data-role="content" id="mapholder">
-    </div><!-- /content -->
+    </div><!-- mapholder -->
     
     <div data-role="content" id="errorholder" style="display:none;">
-    <h3 style="color:#990000;">Ooops! There was a problem</h3>
-    <span id="errormsg"></span><br/>
-	aeLeisure Requires: Network connection and Location services. 
-    <h3 style="color:#336699;">Fix it and try again.</h3>   
-	</div><!-- /content -->
+        <h3 style="color:#990000;">Ooops! There was a problem</h3>
+        <span id="errormsg"></span><br/>
+        aeLeisure Requires: Network connection and Location services. 
+        <h3 style="color:#336699;">Fix it and try again.</h3>   
+	</div><!-- errorholder -->
     
     <div data-role="content">
         <ul id="list" data-role="listview" data-divider-theme="e" data-inset="false" data-count-theme="e" data-filter="true">
             <li data-role="list-divider" role="heading">Located <span id="totalstores"></span> <span id="storetype"></span> (Within <span id="prox"></span>KM)
             </li>
         </ul>
-    </div><!-- /content -->
+    </div><!-- Content: Results List -->
             
     <div data-role="footer" data-theme="b" >
     <h4>&copy; Samer Aoudi 2013</h4>
     </div><!-- /footer -->
     
-        <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
-        <ul data-role="listview" data-theme="a" data-icon="false">
-            <li data-icon="delete"><a data-rel="close">Close</a></li>
-            <li data-icon="arrow-d"><a href="#">Update</a></li><br/>
-        </ul>
-          <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
-            <div data-role="collapsible" data-collapsed="false">
-              <h3>Categories</h3>
-              <ul data-role="listview" id="panelcategories">
-                <li class="mainnav" id="pmuseumspage"><a href="#results">Museums</a></li>
-                <li class="mainnav" id="partspage"><a href="#results">Arts</a></li>
-                <li class="mainnav" id="ptheaterspage"><a href="#results">Theaters</a></li>
-                <li class="mainnav" id="pcinemaspage"><a href="#results">Cinemas</a></li>
-                <li class="mainnav" id="pparkspage"><a href="#results">Parks</a></li>
-                <li class="mainnav" id="pbeachespage"><a href="#results">Beaches</a></li>
-              </ul>
-            </div><!-- /collapsible -->
-            <div data-role="collapsible">
-              <h3>About</h3>
-              <h3>aeLeisure v1.0</h3>
-              By Samer Aoudi<br/>
-              aeLeisure uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
-              The app requires data package (or WiFi) to get your location. 
-            </div><!-- /collapsible -->
-          </div><!-- /collapsible-set -->
-    </div><!-- /panel -->
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right" data-theme="b">
+    <ul data-role="listview" data-theme="a" data-icon="false">
+        <li data-icon="delete"><a data-rel="close">Close</a></li>
+        <li data-icon="arrow-d"><a href="#">Update</a></li><br/>
+    </ul>
+      <div data-role="collapsible-set" data-inset="false" data-iconpos="right" data-theme="b" data-content-theme="d">
+        <div data-role="collapsible" data-collapsed="false">
+          <h3>Categories</h3>
+          <ul data-role="listview" id="panelcategories">
+            <li class="mainnav" id="pmuseumspage"><a href="#results">Museums</a></li>
+            <li class="mainnav" id="partspage"><a href="#results">Arts</a></li>
+            <li class="mainnav" id="ptheaterspage"><a href="#results">Theaters</a></li>
+            <li class="mainnav" id="pcinemaspage"><a href="#results">Cinemas</a></li>
+            <li class="mainnav" id="pparkspage"><a href="#results">Parks</a></li>
+            <li class="mainnav" id="pbeachespage"><a href="#results">Beaches</a></li>
+          </ul>
+        </div><!-- /collapsible -->
+        
+        <div data-role="collapsible">
+          <h3>About</h3>
+          <h3>aeLeisure v1.0</h3>
+          By Samer Aoudi<br/>
+          aeLeisure uses your geo location to locate the nearest points of interests (PoI). POIs are sorted by proximity to your current location (nearest first).<br/>
+          The app requires data package (or WiFi) to get your location. 
+        </div><!-- /collapsible -->
+      </div><!-- /collapsible-set -->
+	</div><!-- /panel -->
     
-	</div><!-- End Results -->
+</div><!-- End Results -->
     
     <!-- Details Page -->
-    <div data-role="page" id="details">
+<div data-role="page" id="details">
     <div data-role="header" data-theme="b" >
         <h1 id="nameheader"></h1>
-        <a class="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left">Back</a>
+        <a id="goback" data-role="button" href="#results" data-icon="arrow-l" data-iconpos="left">Back</a>
     </div><!-- /header -->
     
     <div data-role="content" id="imageholder" style="padding:0px; margin-bottom:0px;">
     </div><!-- /content -->
         
-    <div data-role="content" id="storedetails" style="padding:0px; margin-top:0px;">
-    	<ul id="detailslist" data-role="listview" data-theme="c">
+    <div data-role="content" id="storedetails" style="margin-top:0px;">
+        <ul id="detailslist" data-role="listview" data-theme="c">
         <li data-role="list-divider" data-theme="b">Address (<span id="storedistance"></span>KM from you)</li>
         </ul>
     </div><!-- /content -->
@@ -158,8 +159,7 @@
         <ul id="directions" data-role="listview" data-theme="c" data-icon="false">
         </ul> 
      </div><!-- /panel -->
-          
-	</div><!-- End Details -->
+</div><!-- End Details -->
          
 	<script src="js/myApp.js"></script>
 </body>
