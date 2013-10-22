@@ -268,7 +268,23 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 $('#gohome').on('tap', function ()  {
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
+	alert("tapped");
 	//$.mobile.changePage("#index");
+});
+$('#testing').on('click', function ()  {
+	alert("clicked");
+});
+$('#testing').on('tap', function ()  {
+	alert("tapped");
+});
+$('#testing').on('touchstart', function ()  {
+	alert("touch started");
+});
+$('#testing').on('touchend', function ()  {
+	alert("touch ended");
+});
+$('#testing').on('vclick', function ()  {
+	alert("vclicked");
 });
 
 $('#goback').on('tap', function ()  {
@@ -374,8 +390,8 @@ $('#detailslist').delegate('#storeloc', 'tap', function (event)  {
 			directionsService.route(request, function(response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
 					var myRoute = response.routes[0].legs[0];
-					alert(response.routes[0].legs[0].start_address);
-					alert(response.routes[0].copyrights);
+					//alert(response.routes[0].legs[0].start_address);
+					//alert(response.routes[0].copyrights);
 					$("#directions").append('<li class="stepstart"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
 					for (var i = 0; i < myRoute.steps.length; i++) {
 						$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
