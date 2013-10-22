@@ -1,9 +1,7 @@
-//Initialize the Usergrid SDK
+//Initialize
 $(document).ready(function() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 });
-
-
 // Global variables
 var map, lat, lon, latlon, mylocation;
 var proxm, proxkm;
@@ -32,6 +30,8 @@ $('#results').on('pagechange', function ()  {
 	$.mobile.hidePageLoadingMsg();
 });
 */
+
+// Load the Google maps API script with zoom level and desired proximity
 function loadScript(zl,pm) {
   var script = document.createElement("script");
   script.type = "text/javascript";
@@ -41,7 +41,7 @@ function loadScript(zl,pm) {
   proxm=parseInt(pm);
   totalstores=0;
 }
-
+// The callback function after loading the script
 function initialize() {
 	//$.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: 'e',html: ""});
 	$.getScript("js/StyledMarker.js");	
@@ -76,7 +76,6 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 		// Append to the list of results
 		$("#list").append('<li id="'+label+'" class="onestore"><a class="dlink" href="#details">'+name+' ('+distance+'KM)</a><span class="ui-li-count ui-btn-corner-all">'+label+'</span></li>');
 	} // End if
-	// Necessary for the listview to render correctly
 	$("#list").listview('refresh');
 	$("#totalstores").html(totalstores);
 		
@@ -151,10 +150,9 @@ function onGetLocationSuccess(position)
 		  title:"My Location!"
 		  });
 	  mylocation = lat+","+lon;
-	  // Extend the map to fit my location
 	  bounds.extend(latlon);
 	  map.fitBounds(bounds);
-	  //$.mobile.loading('hide');
+	  // Now ready to get the stores
 	  getStores(mylocation,proxm,storetype);
   } // End onGetLocationSuccess
   
@@ -213,7 +211,7 @@ $(window).on("orientationchange",function(event){
    ================================================= */
 
 // Main page and Panel: Setup and go to results page
-$('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
+$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	// Check network connection 
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
 	if(connectionStatus=='offline')
