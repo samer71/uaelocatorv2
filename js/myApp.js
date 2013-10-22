@@ -338,7 +338,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			}
 			// Location
 			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href=""><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
 			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
@@ -360,14 +360,26 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 		} // End if found
 	}); // End for each
 	
-	setTimeout(function () {$.mobile.changePage("#details");}, 200); // delay above zero
+	setTimeout(function () {$.mobile.changePage("#details");}, 200); 
 });
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if ($("#directions li.onestep").length) {$('#directions li.onestep').remove();}
+	if ($("#dlist li.onestep").length) {$('#dlist li.onestep').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
+	var directionsDisplay = new google.maps.DirectionsRenderer();
+	var mapOptions={
+	  zoom:10,
+	  center:latlon,
+	  mapTypeControl:false,
+	  navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
+	  mapTypeId:google.maps.MapTypeId.ROADMAP,
+	  };
+	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
+	directionsDisplay.setMap(dmap);
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -375,21 +387,25 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  };
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
+			directionsDisplay.setDirections(response);
+			/*
 			var myRoute = response.routes[0].legs[0];
-			$("#directions").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
+			$("#dlist").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
 			for (var i = 0; i < myRoute.steps.length; i++) {
-				$("#directions").append('<li class="onestep">'+myRoute.steps[i].instructions+'</li>');
+				$("#dlist").append('<li class="onestep">'+myRoute.steps[i].instructions+'</li>');
 			}
-			$("#directions").append('<li class="onestep"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
-			$("#directions").append('<br/><br/><li class="onestep">'+response.routes[0].copyrights+'</li>');
-			
+			$("#dlist").append('<li class="onestep"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
+			$("#dlist").append('<br/><br/><li class="onestep">'+response.routes[0].copyrights+'</li>');
+			*/
 		}
 		else 
-		$("#directions").append('<li class="onestep">Unable to retrieve your route. Try agian later!</li>');
+		//$("#dlist").append('<li class="onestep">Unable to retrieve your route. Try agian later!</li>');
+		$("#directionsPanel").html("Error");
 	  });
-	  $("#directions").listview('refresh');
+	  //$("#dlist").listview('refresh');
 	  //$( "#dpanel").trigger( "updatelayout" );
-	  setTimeout(function () {$("#dpanel").panel("open");}, 200); // delay above zero
+	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
+	  $.mobile.changePage("#directions");
 });
 
 $('#options').delegate('.option', 'tap', function ()  {

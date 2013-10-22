@@ -156,10 +156,30 @@
         <ul data-role="listview" data-theme="a" data-icon="false">
             <li data-icon="delete"><a data-rel="close">Close</a></li>
         </ul> 
-        <ul id="directions" data-role="listview" data-theme="c" data-icon="false">
+        <ul id="directionss" data-role="listview" data-theme="c" data-icon="false">
         </ul> 
      </div><!-- /panel -->
 </div><!-- End Details -->
+
+<!-- Directions Page -->
+<div data-role="page" id="directions">
+    <div data-role="header" data-theme="b" >
+        <h1 id="dirheader"></h1>
+        <a href="#" data-role="button" data-rel="back" data-iconpos="notext" data-icon="del" data-inline="true">Close</a>
+    </div><!-- /header -->
+    
+    <div data-role="content" id="dmapholder">
+    </div><!-- mapholder -->
+    
+    <div data-role="content" id="directionsPanel">
+	</div><!-- directionspanel -->
+    <!-- 
+    <div data-role="content">
+        <ul id="dlist" data-role="listview" data-divider-theme="e" data-inset="false" data-count-theme="e">
+            <li data-role="list-divider" role="heading">Directions</li>
+        </ul>
+    </div> Content: Directions steps -->
+</div><!-- End Directions -->
          
 	<script src="js/myApp.js"></script>
 </body>
