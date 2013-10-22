@@ -390,7 +390,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  $("#directions").listview('refresh');
 	  $( "#dpanel").trigger( "updatelayout" );
-	  $("#dpanel").panel("open");
+	  setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
