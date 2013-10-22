@@ -364,7 +364,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if ($("#directions").length) {$('#directions').remove();}
+	if ($("#directions li.onestep").length) {$('#directions li.onestep').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var request = {
@@ -375,18 +375,16 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 			var myRoute = response.routes[0].legs[0];
-			//alert(response.routes[0].legs[0].start_address);
-			//alert(response.routes[0].copyrights);
-			$("#directions").append('<li class="stepstart"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
+			$("#directions").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
 			for (var i = 0; i < myRoute.steps.length; i++) {
-				$("#directions").append('<li class="stepinst">'+myRoute.steps[i].instructions+'</li>');
+				$("#directions").append('<li class="onestep">'+myRoute.steps[i].instructions+'</li>');
 			}
-			$("#directions").append('<li class="stepstart"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
-			$("#directions").append('<li class="stepcopy">'+response.routes[0].copyrights+'</li>');
+			$("#directions").append('<li class="onestep"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
+			$("#directions").append('<li class="onestep">'+response.routes[0].copyrights+'</li>');
 			
 		}
 		else 
-		$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
+		$("#directions").append('<li class="onestep">Unable to retrieve your route. Try agian later!</li>');
 	  });
 	  $("#directions").listview('refresh');
 	  $( "#dpanel").trigger( "updatelayout" );
