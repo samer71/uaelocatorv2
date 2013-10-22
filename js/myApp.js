@@ -388,7 +388,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  $("#directions").listview('refresh');
 	  $( "#dpanel").trigger( "updatelayout" );
-	  setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
+	  setTimeout(function () {$("#dpanel").panel("open");}, 200); // delay above zero
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
