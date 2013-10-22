@@ -12,12 +12,18 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-
+// PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
 	$.mobile.defaultDialogTransition = 'none';
 	$.mobile.buttonMarkup.hoverDelay = 0;
+	// iOS. BB. Android
+	document.addEventListener("offline", onOffline, false);
 }
+function onOffline() {
+    // Handle the offline event
+}
+
 /*
 $('#results').on('pagebeforechange', function ()  {
 	$.mobile.showPageLoadingMsg("e", "Locating...");
