@@ -365,7 +365,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if ($("#dlist li.onestep").length) {$('#dlist li.onestep').remove();}
+	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -384,6 +384,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	bnd.extend(latlon);
+	bnd.extend($('#stlatlon').val());
 	map.fitBounds(bnd);
 	var request = {
 		origin: latlon,
