@@ -278,7 +278,7 @@ $('#testing').on('tap', function ()  {
 	alert("tapped");
 });
 $('#testing').on('touchstart', function ()  {
-	alert("touch started");
+	$('#testing').trigger('click');
 });
 $('#testing').on('touchend', function ()  {
 	alert("touch ended");
