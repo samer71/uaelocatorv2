@@ -369,6 +369,10 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
+	dmapholder=document.getElementById('dmapholder');
+	dmapholder.style.height='200px';
+	dmapholder.style.width=window.innerWidth;
+	var bnd = new google.maps.LatLngBounds();
 	var mapOptions={
 	  zoom:10,
 	  center:latlon,
@@ -379,7 +383,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-
+	bnd.extend(latlon);
+	map.fitBounds(bnd);
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
