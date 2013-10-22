@@ -3,14 +3,13 @@ $(document).ready(function() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 });
 // Global variables
-var map, dmap, lat, lon, latlon, mylocation;
+var map, lat, lon, latlon, mylocation;
 var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -369,12 +368,12 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//if ($("#directionsPanel").length) {$('#directionsPanel').html('');}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	dmapholder=document.getElementById('dmapholder');
-	//dmapholder.style.display='none';
+	var directionsDisplay = new google.maps.DirectionsRenderer();
+	var dmapholder=document.getElementById('dmapholder');
+	dmapholder.style.display='none';
 	dmapholder.style.height='200px';
 	dmapholder.style.width=window.innerWidth;
-	var bnd = new google.maps.LatLngBounds();
+	//var bnd = new google.maps.LatLngBounds();
 	var mapOptions={
 	  zoom:10,
 	  center:latlon,
@@ -385,9 +384,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	bnd.extend(latlon);
-	bnd.extend($('#stlatlon').val());
-	map.fitBounds(bnd);
+	//bnd.extend(latlon);
+	//bnd.extend($('#stlatlon').val());
+	//map.fitBounds(bnd);
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
