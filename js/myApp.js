@@ -271,13 +271,16 @@ $('#gohome').on('tap', function ()  {
 	alert("tapped");
 	//$.mobile.changePage("#index");
 });
-$('#testing').on('click', function ()  {
+$('#testing').on('click', function (event)  {
 	alert("clicked");
+	alert( event.type );    // The event type, eg. "click"
+  	alert( event.which );   // The button or key that was pressed.
+  	alert( event.target );  // The originating element.
 });
 $('#testing').on('tap', function ()  {
 	alert("tapped");
 });
-$('#testing').on('touchstart', function ()  {
+$('#testing').on('touchstart', function (event)  {
 	$('#testing').trigger('click');
 });
 $('#testing').on('touchend', function ()  {
