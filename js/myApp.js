@@ -280,8 +280,9 @@ $('#testing').on('click', function (event)  {
 $('#testing').on('tap', function ()  {
 	alert("tapped");
 });
-$('#testing').on('touchstart', function (event)  {
-	$('#testing').trigger('click');
+$('#categories').on('touchstart', function (event)  {
+	//$('#testing').trigger('click');
+	alert(this);
 });
 $('#testing').on('touchend', function ()  {
 	alert("touch ended");
