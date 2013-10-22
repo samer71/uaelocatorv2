@@ -3,13 +3,14 @@ $(document).ready(function() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 });
 // Global variables
-var map, lat, lon, latlon, mylocation;
+var map, dmap, lat, lon, latlon, mylocation;
 var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
+var directionsDisplay;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -368,7 +369,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
-	var directionsDisplay = new google.maps.DirectionsRenderer();
+	directionsDisplay = new google.maps.DirectionsRenderer();
 	dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.height='200px';
 	dmapholder.style.width=window.innerWidth;
@@ -408,8 +409,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		//$("#dlist").append('<li class="onestep">Unable to retrieve your route. Try agian later!</li>');
 		$("#directionsPanel").html("Error");
 	  });
-	  //$("#dlist").listview('refresh');
-	  //$( "#dpanel").trigger( "updatelayout" );
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 	  $.mobile.changePage("#directions");
 });
