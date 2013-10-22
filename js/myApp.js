@@ -359,7 +359,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			$("#detailslist").listview('refresh');
 		} // End if found
 	}); // End for each
-	$.mobile.changePage("#details");
+	
+	setTimeout(function () {$.mobile.changePage("#details");}, 200); // delay above zero
 });
 
 // Store location event: shows directions panel
@@ -380,7 +381,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 				$("#directions").append('<li class="onestep">'+myRoute.steps[i].instructions+'</li>');
 			}
 			$("#directions").append('<li class="onestep"><h3>Destination</h3>'+response.routes[0].legs[0].end_address+'</li>');
-			$("#directions").append('<li class="onestep">'+response.routes[0].copyrights+'</li>');
+			$("#directions").append('<br/><br/><li class="onestep">'+response.routes[0].copyrights+'</li>');
 			
 		}
 		else 
