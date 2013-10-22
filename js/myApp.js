@@ -363,8 +363,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 });
 
 // Store location event: shows directions panel
-$('#storeloc').on('tap', function (event)  {
-//$('#detailslist').delegate('.loclink', 'tap', function (event)  {
+//$('#storeloc').on('tap', function (event)  {
+$('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	if ($("#directions").length) {$('#directions').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
