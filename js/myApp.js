@@ -365,7 +365,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if (!isEmpty($('#directionsPanel'))) {$('#directionsPanel').empty();}
+	if (!isEmpty($('#directionsPanel'))) {$('#directionsPanel').html('');}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
