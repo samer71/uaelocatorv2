@@ -361,7 +361,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	$.mobile.changePage("#details");
 });
 
-$('#detailslist').delegate('#.loclink', 'tap', function (event)  {
+$('#detailslist').delegate('#loclink', 'tap', function (event)  {
 	if ($("#directions").length) {$('#directions').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
