@@ -265,30 +265,10 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 	} // End else
 });
 
-$('#gohome').on('tap', function ()  {
+$('#gohome').on('vclick', function ()  {
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
-	alert("tapped");
 	//$.mobile.changePage("#index");
-});
-$('#testing').on('click', function (event)  {
-	alert("clicked");
-	alert( event.type );    // The event type, eg. "click"
-  	alert( event.which );   // The button or key that was pressed.
-  	alert( event.target );  // The originating element.
-});
-$('#testing').on('tap', function ()  {
-	alert("tapped");
-});
-$('#categories').on('touchstart', function (event)  {
-	//$('#testing').trigger('click');
-	alert(this);
-});
-$('#testing').on('touchend', function ()  {
-	alert("touch ended");
-});
-$('#testing').on('vclick', function ()  {
-	alert("vclicked");
 });
 
 $('#goback').on('tap', function ()  {
