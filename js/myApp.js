@@ -357,7 +357,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	$.mobile.changePage("#details");
 });
 
-$('.loclink').on('tap', function() {
+$('#detailslist').delegate('#storeloc', 'tap', function (event)  {
 				// Get directions
 			var directionsService = new google.maps.DirectionsService();
 			var request = {
