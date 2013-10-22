@@ -285,6 +285,7 @@ $('#goback').on('tap', function ()  {
 	$.mobile.changePage("#results");
 });
 
+// Store details event: shows store info
 $('#list').delegate('.onestore', 'tap', function (event)  {
 	//event.stopPropagation();
 	//event.preventDefault();
@@ -361,7 +362,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	$.mobile.changePage("#details");
 });
 
-$('#detailslist').delegate('#storeloc', 'tap', function (event)  {
+// Store location event: shows directions panel
+$('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	if ($("#directions").length) {$('#directions').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
