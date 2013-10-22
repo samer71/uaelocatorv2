@@ -208,10 +208,13 @@ $(window).on("orientationchange",function(event){
   //$("#map").css({"width":window.innerWidth });
 });
 
-// Events Section
-$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
+/* ================================================= 
+   ================ Events Section ================= 
+   ================================================= */
+
+// Main page and Panel: Setup and go to results page
+$('#categories, #panelcategories').delegate('.mainnav', 'click', function ()  {
 	// Check network connection 
-	// navigator.network.connection.type == Connection.NONE
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
 	if(connectionStatus=='offline')
 	{
@@ -226,7 +229,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 			$("#storeheader").html("Museums");
 		} else if(($(this).attr('id')=="artspage") || ($(this).attr('id')=="partspage")) 
 		{
-			storetype="art galleries";
+			storetype="arts";
 			jsonFile="arts.json";
 			$("#storeheader").html("The Arts");
 		}
@@ -257,15 +260,16 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
 		$(".pbtn").removeClass("ui-disabled");
-		$("#right-panel").panel( "close" );
-		$("#storetype").html(storetype);
+		$("#right-panel").panel("close");
+		if(storetype=="arts") {$("#storetype").html("art galleries");}
+		else {$("#storetype").html(storetype); }
 		loadScript(12,10000);
 		//$.mobile.showPageLoadingMsg("e", "Locating...");
 		$.mobile.changePage("#results");
 	} // End else
 });
 
-$('#gohome').on('vclick', function ()  {
+$('#gohome').on('click', function ()  {
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 });
