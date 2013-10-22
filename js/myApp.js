@@ -363,9 +363,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 });
 
 // Store location event: shows directions panel
-//$('#storeloc').on('tap', function (event)  {
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if ($("#directions").length) {$('#directions').remove();}
+	//if ($("#directions").length) {$('#directions').remove();}
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var request = {
@@ -390,7 +389,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		$("#directions").append('<li class="steperror">Unable to retrieve your route. Try agian later!</li>');
 	  });
 	  $("#directions").listview('refresh');
-	  $( "#dpanel" ).trigger( "updatelayout" );
+	  $( "#dpanel").trigger( "updatelayout" );
 	  $("#dpanel").panel("open");
 });
 
