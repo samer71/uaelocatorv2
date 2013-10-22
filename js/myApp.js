@@ -391,7 +391,7 @@ $('#storeloc').on('tap', function (event)  {
 	  });
 	  $("#directions").listview('refresh');
 	  $( "#dpanel" ).trigger( "updatelayout" );
-	  $("#dpanel").panel("open", optionsHash);
+	  $("#dpanel").panel("open");
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
