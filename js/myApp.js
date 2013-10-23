@@ -10,7 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay = new google.maps.DirectionsRenderer();;
+var directionsDisplay = new google.maps.DirectionsRenderer();
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
