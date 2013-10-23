@@ -10,6 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
+var directionsDisplay;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -358,21 +359,12 @@ $('#details').on('pageshow', function ()  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
-	if ($('#directionsPanel').length) {
-		alert('We found it');
-	  } else {
-		alert('Not found');
-	  }
-
+	//if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
 	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
-	var directionsDisplay = new google.maps.DirectionsRenderer();
+	directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
-	var dp = document.getElementById('directionsPanel');
-	dp.style.backgroundColor='#336699';
-	dp.style.height='500px';
 	dmapholder.style.display='none';
 	var mapOptions={
 	  zoom:10,
