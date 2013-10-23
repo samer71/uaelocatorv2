@@ -366,6 +366,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	$('#directionsPanel').empty();
+	$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -373,7 +374,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmapholder.style.display='none';
 	dmapholder.style.height='200px';
 	dmapholder.style.width=window.innerWidth;
-	//var bnd = new google.maps.LatLngBounds();
 	var mapOptions={
 	  zoom:10,
 	  center:latlon,
@@ -384,9 +384,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	//bnd.extend(latlon);
-	//bnd.extend($('#stlatlon').val());
-	//map.fitBounds(bnd);
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -410,6 +407,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		$("#directionsPanel").html("Error");
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
+	  $.mobile.hidePageLoadingMsg();
 	  $.mobile.changePage("#directions");
 });
 
