@@ -10,7 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay = new google.maps.DirectionsRenderer();
+var directionsDisplay;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -41,6 +41,7 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
+  directionsDisplay = new google.maps.DirectionsRenderer();
 }
 // The callback function after loading the script
 function initialize() {
