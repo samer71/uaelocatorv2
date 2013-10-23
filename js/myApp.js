@@ -385,7 +385,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 			directionsDisplay.setDirections(response);
-			alert("set dir ok?");
 			/*
 			var myRoute = response.routes[0].legs[0];
 			$("#dlist").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
@@ -402,7 +401,11 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 	  //$.mobile.hidePageLoadingMsg();
-	  setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
+	  google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
+    		alert("event dir changed");
+			$.mobile.changePage("#directions");
+		});
+	  //setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
 	  //$.mobile.changePage("#directions");
 });
 
