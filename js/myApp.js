@@ -363,7 +363,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
 	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
-	directionsService = new google.maps.DirectionsService();
+	var directionsService = new google.maps.DirectionsService();
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
