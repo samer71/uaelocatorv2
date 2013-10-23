@@ -366,7 +366,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	$('#directionsPanel').empty();
-	$.mobile.showPageLoadingMsg("e", "Calculating directions...");
+	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -407,8 +407,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		$("#directionsPanel").html("Error");
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
-	  $.mobile.hidePageLoadingMsg();
+	  //$.mobile.hidePageLoadingMsg();
 	  $.mobile.changePage("#directions");
+	  alert(latlon);
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
