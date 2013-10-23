@@ -52,7 +52,6 @@ function initialize() {
 	$("#prox").text(proxkm);
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
-	directionsDisplay = new google.maps.DirectionsRenderer();
 }
 
 /* 	Function: renderStore
@@ -347,6 +346,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
+	directionsDisplay = new google.maps.DirectionsRenderer();
 });
 
 $('#details').on('pagebeforeshow', function ()  {
