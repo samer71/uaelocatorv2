@@ -370,7 +370,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	var directionsService = new google.maps.DirectionsService();
 	var directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
-	document.getElementById('directionsPanel').style.backgroundColor='#336699';
+	var dp = document.getElementById('directionsPanel');
+	dp.style.backgroundColor='#336699';
+	dp.style.height='500px';
 	dmapholder.style.display='none';
 	var mapOptions={
 	  zoom:10,
