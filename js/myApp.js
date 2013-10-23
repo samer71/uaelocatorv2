@@ -346,7 +346,6 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
-	directionsDisplay = new google.maps.DirectionsRenderer();
 });
 
 $('#details').on('pagebeforeshow', function ()  {
@@ -364,7 +363,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
-	//directionsDisplay = new google.maps.DirectionsRenderer();
+	directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
 	var mapOptions={
