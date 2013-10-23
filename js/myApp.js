@@ -41,7 +41,6 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
-  directionsDisplay = new google.maps.DirectionsRenderer();
 }
 // The callback function after loading the script
 function initialize() {
@@ -53,6 +52,7 @@ function initialize() {
 	$("#prox").text(proxkm);
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
+	directionsDisplay = new google.maps.DirectionsRenderer();
 }
 
 /* 	Function: renderStore
