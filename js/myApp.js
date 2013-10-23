@@ -10,7 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay;
+var directionsDisplay = new google.maps.DirectionsRenderer();;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
@@ -363,7 +363,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
-	directionsDisplay = new google.maps.DirectionsRenderer();
+	//directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
 	var mapOptions={
