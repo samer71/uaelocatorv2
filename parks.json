@@ -21,12 +21,12 @@
             "Sun to Wed: 8:00 am- 10:00 pm",
             "Thu-Fri-Sat: 8:00 am- 11:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)-288 3624",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-288 3624",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -50,12 +50,12 @@
             "Sun to Wed: 8:00 am- 10:00 pm",
             "Thu-Fri-Sat: 8:00 am- 11:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)-296 6201",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-296 6201",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -77,12 +77,12 @@
             "Sun to Wed: 8:00 am- 10:00 pm",
             "Thu-Fri-Sat: 8:00 am- 11:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -102,12 +102,12 @@
         "hours": [
             "Daily: 8:00 am- 11:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)-398 6888",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-398 6888",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -131,12 +131,12 @@
             "Thu-Fri-Sat: 8:00 am- 11:00 pm",
 			"Mondays are allocated for ladies and children only"
         ],
-        "contact": [
-            "Tel: +971(4)-349 2555",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-349 2555",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -158,12 +158,12 @@
             "Sun to Wed: 8:00 am- 10:00 pm",
             "Thu-Fri-Sat: 8:00 am- 11:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)-336 7633",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-336 7633",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -187,12 +187,12 @@
             "Winter timing: from 10:00 am to 5:30 pm from the beginning of November to the end of February.",
 			"The zoo is closed on Tuesday"
         ],
-        "contact": [
-            "Tel: +971(4)-3496444",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-3496444",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -218,12 +218,12 @@
             "Sun to Thur: 9:00 am- 8:00 pm",
             "Fri: 3:00 pm- 9:00 pm"
         ],
-        "contact": [
-            "Tel: +971(4)-334 0808",
-            "Fax: +971(4)-334 1122",
-            "Email: childcity@dm.gov.ae",
-            "Website: http://www.childrencity.dm.gov.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-334 0808",
+            "Fax" : "+971(4)-334 1122",
+            "Email" : " childcity@dm.gov.ae",
+            "Website" : "http://www.childrencity.dm.gov.ae"
+        }
     },
 	{
         "location": {
@@ -243,12 +243,12 @@
         "hours": [
             "Some areas are accessible 24x7"
         ],
-        "contact": [
-            "Tel: +971(6)-552 1552",
-            "Fax: +971(6)",
-            "Email: info@shjmun.gov.ae",
-            "Website: http://www.almajaz.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-552 1552",
+            "Fax" : "",
+            "Email" : " info@shjmun.gov.ae",
+            "Website" : "http://www.almajaz.ae"
+        }
     },
 	{
         "location": {
@@ -268,12 +268,12 @@
         "hours": [
             "Some areas are accessible 24x7"
         ],
-        "contact": [
-            "Tel: +971(6)-516 2322",
-            "Fax: +971(6)",
-            "Email: info@shjmun.gov.ae",
-            "Website: http://www.sharjahtourism.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-516 2322",
+            "Fax" : "",
+            "Email" : " info@shjmun.gov.ae",
+            "Website" : "http://www.sharjahtourism.ae"
+        }
     },
 	{
         "location": {
@@ -294,12 +294,12 @@
             "Sun-Thu: 2pm to 6pm",
 			"Fri-Sat: 10am to 7pm"
         ],
-        "contact": [
-            "Tel: +971(6)-558 6170",
-            "Fax: +971(6)",
-            "Email: info@shjmun.gov.ae",
-            "Website: http://www.sharjahtourism.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-558 6170",
+            "Fax" : "",
+            "Email" : " info@shjmun.gov.ae",
+            "Website" : "http://www.sharjahtourism.ae"
+        }
     },
 	{
         "location": {
@@ -319,12 +319,12 @@
         "hours": [
             "The park is currently undergoing major renovations."
         ],
-        "contact": [
-            "Tel: +971(6)-569 1202",
-            "Fax: +971(6)",
-            "Email: info@shjmun.gov.ae",
-            "Website: http://www.sharjahtourism.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-569 1202",
+            "Fax" : "",
+            "Email" : " info@shjmun.gov.ae",
+            "Website" : "http://www.sharjahtourism.ae"
+        }
     },
 	{
         "location": {
@@ -350,12 +350,12 @@
 			"Sat: 11am to 5:30pm",
 			"Tuesday: Closed"
         ],
-        "contact": [
-            "Tel: +971(6)-531 1999",
-            "Fax: +971(6)-531 1419",
-            "Email: epaa@epaashj.ae",
-            "Website: http://www.epaashj.com"
-        ]
+        "contact": {
+            "Tel" : "+971(6)-531 1999",
+            "Fax" : "+971(6)-531 1419",
+            "Email" : " epaa@epaashj.ae",
+            "Website" : "http://www.epaashj.com"
+        }
     },
 	{
         "location": {
@@ -376,12 +376,12 @@
             "Sat-Thu: 3pm to 10pm",
 			"Fri: 3pm to 9:30pm"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -401,12 +401,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -426,12 +426,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -451,12 +451,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -476,12 +476,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -501,12 +501,12 @@
         "hours": [
             "NA"
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -526,12 +526,12 @@
         "hours": [
             "Please make sure the park is open before you visit. It was closed early 2013."
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -551,12 +551,12 @@
         "hours": [
             "Please make sure the park is open before you visit. It was closed early 2013."
         ],
-        "contact": [
-            "Tel: +971(2)-",
-            "Fax: +971(2)-",
-            "Email:",
-            "Website: http://visitabudhabi.ae"
-        ]
+        "contact": {
+            "Tel" : "",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://visitabudhabi.ae"
+        }
     },
 	{
         "location": {
@@ -579,13 +579,13 @@
 			"General: 10am to 8pm",
 			"Ladies Night (Usually Fridays)"
         ],
-        "contact": [
-            "Tel: +971(7)-2067 888",
-			"Toll Free:800 WOWRAK (969 725)",
-            "Fax: +971(7)-244 7699",
-            "Email: info@wowrak.org",
-            "Website: http://www.icelandwaterpark.com/"
-        ]
+        "contact": {
+            "Tel" : "+971(7)-2067 888",
+			"Toll Free": "800 WOWRAK (969 725)",
+            "Fax" : "+971(7)-244 7699",
+            "Email" : " info@wowrak.org",
+            "Website" : "http://www.icelandwaterpark.com/"
+        }
     },
 	{
         "location": {
@@ -615,12 +615,12 @@
             "Sun-Thu: 11am to 8pm",
 			"Fri-Sat: 10am to 8pm"
         ],
-        "contact": [
-            "Tel: +971(3)-781 8422",
-            "Fax: +971(3)",
-            "Email: reception@wadiadventure.ae",
-            "Website: http://www.wadiadventure.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(3)-781 8422",
+            "Fax" : "",
+            "Email" : " reception@wadiadventure.ae",
+            "Website" : "http://www.wadiadventure.ae"
+        }
     },
 	{
         "location": {
@@ -646,12 +646,12 @@
 			"September to October 10:00 to 19:00",
 			"Wild Wadi is planning its annual maintenance programme and the entire park will be closed from 12 January until 13 February 2014 inclusively and will re-open to public on 14 February 2014."
         ],
-        "contact": [
-            "Tel: +971(4)-348 4444",
-            "Fax: +971(4)-348 5625",
-            "Email: info@wildwadi.com",
-            "Website: http://www.jumeirah.com/en/hotels-resorts/dubai/wild-wadi"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-348 4444",
+            "Fax" : "+971(4)-348 5625",
+            "Email" : " info@wildwadi.com",
+            "Website" : "http://www.jumeirah.com/en/hotels-resorts/dubai/wild-wadi"
+        }
     },
 	{
         "location": {
@@ -677,11 +677,11 @@
             "Standard Time: 7 days a week: 11am – 8pm",
 			"Speed Week (Oct 10th-20th): 7 days a week: 11am – 10pm"
         ],
-        "contact": [
-            "Tel: +971(2)-496 8000",
-            "Fax: +971(2)",
-            "Email:",
-            "Website: https//www.ferrariworldabudhabi.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-496 8000",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "https//www.ferrariworldabudhabi.com"
+		}
     }
 ]
