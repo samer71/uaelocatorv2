@@ -328,7 +328,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 				$("#detailslist").append('<li class="oneitem"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
 			// Location
-				$("#detailslist").append('<li id="storeloc" class="oneitem"><a id="locationlink" class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc" class="oneitem"><a id="locationlink" class="loclink" href="#"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">About</li>');
 			$("#detailslist").append('<li class="oneitem">'+value.description+'</li>');
@@ -384,10 +384,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  };
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
-			google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
-    			directionsDisplay.setDirections(response);
-			});
-			
+			directionsDisplay.setDirections(response);
 			/*
 			var myRoute = response.routes[0].legs[0];
 			$("#dlist").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
@@ -404,10 +401,10 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 	  //$.mobile.hidePageLoadingMsg();
-	 // google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
-    		//alert("event dir changed");
+	  google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
+    		alert("event dir changed");
 			$.mobile.changePage("#directions");
-		//});
+		});
 	  //setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
 	  //$.mobile.changePage("#directions");
 });
