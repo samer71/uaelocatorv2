@@ -313,7 +313,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			$("#detailslist").append('<li class="oneitem">'+value.location.displayAddress+'<br/>'+value.contact.Website+'</li>');
 			// Phone, email, website
 			if(value.contact.Tel!="") {
-				$("#detailslist").append('<liclass="oneitem"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
+				$("#detailslist").append('<li class="oneitem"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
 			}
 			else {
 				$("#detailslist").append('<li class="oneitem"><img src="img/phone.png" alt="Phone"/><h3>NA</h3><p>Phone not found</P></li>');
@@ -326,7 +326,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 				$("#detailslist").append('<li class="oneitem"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
 			// Location
-				$("#detailslist").append('<li id="storeloc" class="oneitem"><a class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc" class="oneitem"><a id="locationlink" class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
 			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">About</li>');
 			$("#detailslist").append('<li class="oneitem">'+value.description+'</li>');
@@ -348,15 +348,17 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 });
 
 $('#details').on('pagebeforeshow', function ()  {
-	alert("Before show");
+	document.getElementById('locationlink').style.display='none';
 });
 $('#details').on('pageshow', function ()  {
-	alert("Before show");
+	setTimeout(function () {
+		document.getElementById('locationlink').style.display='block';
+	}, 200); 
 });
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	$('#directionsPanel').empty();
+	if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
 	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
@@ -401,7 +403,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  //$.mobile.hidePageLoadingMsg();
 	  setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
 	  //$.mobile.changePage("#directions");
-	  alert($('#stlatlon').val());
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
