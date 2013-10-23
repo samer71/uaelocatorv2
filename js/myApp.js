@@ -401,13 +401,15 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 	  //$.mobile.hidePageLoadingMsg();
-	  google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
-    		alert("event dir changed");
-			$.mobile.changePage("#directions");
-		});
+	  
 	  //setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
 	  //$.mobile.changePage("#directions");
 });
+
+google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {
+    		alert("event dir changed");
+			$.mobile.changePage("#directions");
+		});
 
 $('#options').delegate('.option', 'tap', function ()  {
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
