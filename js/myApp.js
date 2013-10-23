@@ -408,8 +408,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  });
 	  //setTimeout(function () {$("#dpanel").panel("open");}, 100); // delay above zero
 	  //$.mobile.hidePageLoadingMsg();
-	  $.mobile.changePage("#directions");
-	  alert(latlon);
+	  setTimeout(function () {$.mobile.changePage("#directions");}, 200); 
+	  //$.mobile.changePage("#directions");
+	  alert($('#stlatlon').val());
 });
 
 $('#options').delegate('.option', 'tap', function ()  {
