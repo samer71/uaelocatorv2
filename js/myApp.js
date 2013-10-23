@@ -45,7 +45,6 @@ function loadScript(zl,pm) {
 }
 // The callback function after loading the script
 function initialize() {
-	//$.mobile.loading('show',{text: 'Locating...',textVisible: true,theme: 'e',html: ""});
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
@@ -80,7 +79,6 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	} // End if
 	$("#list").listview('refresh');
 	$("#totalstores").html(totalstores);
-		
 } // End renderStores Function
 
 /* 	Function: middlePoint
@@ -88,7 +86,6 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 	Args: lat+lon for the 2 locations
 */
 function middlePoint(lat1,lon1,lat2,lon2){
-
    var dLon = toRad(lon2 - lon1);
    lat1 = toRad(lat1);
    lat2 = toRad(lat2);
@@ -104,7 +101,6 @@ function middlePoint(lat1,lon1,lat2,lon2){
    middlePoint.latitude=lat3;
    middlePoint.longitude=lon3;
    return middlePoint;
-
 }
 function toRad(Value) {
     return Value * Math.PI / 180;
@@ -123,88 +119,85 @@ function updateAll()
 	}
 }
 
-function onGetLocationSuccess(position)
-  {
-	  //$.mobile.hidePageLoadingMsg();
-	  lat=position.coords.latitude;
-	  lon=position.coords.longitude;
-	  //acc=position.coords.accuracy;
-	  latlon=new google.maps.LatLng(lat, lon);
-	  mapholder=document.getElementById('mapholder');
-	  mapholder.style.height='200px';
-	  mapholder.style.width=window.innerWidth;
-	  bounds = new google.maps.LatLngBounds(); // Required for zoom level and center
-	  
-	  var myOptions={
-	  zoom:zoomlevel,
-	  center:latlon,
-	  mapTypeControl:false,
-	  navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
-	  mapTypeId:google.maps.MapTypeId.ROADMAP,
-	  };
-	  
-	  google.maps.visualRefresh = true;
-	  map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
-	  var marker=new google.maps.Marker({
-		  position:latlon,
-		  map:map,
-		  title:"My Location!"
-		  });
-	  mylocation = lat+","+lon;
-	  bounds.extend(latlon);
-	  map.fitBounds(bounds);
-	  // Now ready to get the stores
-	  getStores(mylocation,proxm,storetype);
-  } // End onGetLocationSuccess
+function onGetLocationSuccess(position) {
+	//$.mobile.hidePageLoadingMsg();
+	lat=position.coords.latitude;
+	lon=position.coords.longitude;
+	//acc=position.coords.accuracy;
+	latlon=new google.maps.LatLng(lat, lon);
+	mapholder=document.getElementById('mapholder');
+	mapholder.style.height='200px';
+	mapholder.style.width=window.innerWidth;
+	bounds = new google.maps.LatLngBounds(); // Required for zoom level and center
+	
+	var myOptions={
+	zoom:zoomlevel,
+	center:latlon,
+	mapTypeControl:false,
+	navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
+	mapTypeId:google.maps.MapTypeId.ROADMAP,
+	};
+	
+	google.maps.visualRefresh = true;
+	map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+	var marker=new google.maps.Marker({
+	  position:latlon,
+	  map:map,
+	  title:"My Location!"
+	  });
+	mylocation = lat+","+lon;
+	bounds.extend(latlon);
+	map.fitBounds(bounds);
+	// Now ready to get the stores
+	getStores(mylocation,proxm,storetype);
+} // End onGetLocationSuccess
   
 function getStores(ml,pm,st)
 {
-		function sortByDistance(a,b){
-			var astorelatlon=new google.maps.LatLng(a.location.latitude, a.location.longitude);
-			var bstorelatlon=new google.maps.LatLng(b.location.latitude, b.location.longitude);
-			var adistance = (google.maps.geometry.spherical.computeDistanceBetween (astorelatlon, latlon)/1000).toFixed(1);
-			var bdistance = (google.maps.geometry.spherical.computeDistanceBetween (bstorelatlon, latlon)/1000).toFixed(1);
-			return parseFloat(adistance,2) > parseFloat(bdistance,2) ? 1 : -1;
-   		};
-		// Load the JSON
-		$.getJSON(jsonFile, function(store) {
-			sortedstore = $(store).sort(sortByDistance);
-			$.each(sortedstore,function(index,value){ 
-				renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.entryFees, value.hours, value.contact, value.description, value.facilities);
-			});
-			// Done with store, update message
-			updateAll();
-		});		
+	function sortByDistance(a,b){
+		var astorelatlon=new google.maps.LatLng(a.location.latitude, a.location.longitude);
+		var bstorelatlon=new google.maps.LatLng(b.location.latitude, b.location.longitude);
+		var adistance = (google.maps.geometry.spherical.computeDistanceBetween (astorelatlon, latlon)/1000).toFixed(1);
+		var bdistance = (google.maps.geometry.spherical.computeDistanceBetween (bstorelatlon, latlon)/1000).toFixed(1);
+		return parseFloat(adistance,2) > parseFloat(bdistance,2) ? 1 : -1;
+	};
+	// Load the JSON
+	$.getJSON(jsonFile, function(store) {
+		sortedstore = $(store).sort(sortByDistance);
+		$.each(sortedstore,function(index,value){ 
+			renderStore(pm, index+1,value.name, value.location.latitude, value.location.longitude, value.location.displayAddress, value.entryFees, value.hours, value.contact, value.description, value.facilities);
+		});
+		// Done with store, update message
+		updateAll();
+	});		
 }
 
 function onGetLocationError(error)
-  {
-	  document.getElementById("mapholder").style.display='none';
-	  document.getElementById("errorholder").style.display='block';
-	  $(".pbtn").addClass("ui-disabled");
-	  var x=document.getElementById("errormsg");
-	  switch(error.code) 
-		{
-			case 1:
-			  x.innerHTML="User denied the request for Geolocation."
-			  break;
-			case 2:
-			  x.innerHTML="Location information is unavailable."
-			  break;
-			case 3:
-			  x.innerHTML="The request to get user location timed out."
-			  break;
-			default:
-			  x.innerHTML="An unknown error occurred."
-			  break;
-		} // End switch
-  } // End onGetLocationError
+{
+	document.getElementById("mapholder").style.display='none';
+	document.getElementById("errorholder").style.display='block';
+	$(".pbtn").addClass("ui-disabled");
+	var x=document.getElementById("errormsg");
+	switch(error.code) 
+	{
+		case 1:
+		  x.innerHTML="User denied the request for Geolocation."
+		  break;
+		case 2:
+		  x.innerHTML="Location information is unavailable."
+		  break;
+		case 3:
+		  x.innerHTML="The request to get user location timed out."
+		  break;
+		default:
+		  x.innerHTML="An unknown error occurred."
+		  break;
+	} // End switch
+} // End onGetLocationError
   
 $(window).on("orientationchange",function(event){
   // alert("Orientation is: " + event.orientation);
-  // onDeviceReady();
   //location.reload();
-  //$("#map").css({"width":window.innerWidth });
 });
 
 /* ================================================= 
@@ -280,8 +273,6 @@ $('#goback').on('tap', function ()  {
 
 // Store details event: shows store info
 $('#list').delegate('.onestore', 'tap', function (event)  {
-	//event.stopPropagation();
-	//event.preventDefault();
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
@@ -305,8 +296,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			// The map image
 			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
 			*/
-			if ($("#map").length) {$('#map').remove();}
-			$("#imageholder").append('<img id="map" width="'+window.innerWidth+'" src="img/content/1.jpg"/>');
+			if ($("#mainimg").length) {$('#mainimg').remove();}
+			$("#imageholder").append('<img id="mainimg" width="'+window.innerWidth+'" src="img/content/'+storetype+'/'+linkid+'.jpg"/>');
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
 			// Clear the list items if they exist
@@ -361,7 +352,7 @@ $('#details').on('pageshow', function ()  {
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
-	//$.mobile.showPageLoadingMsg("e", "Calculating directions...");
+	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	var directionsService = new google.maps.DirectionsService();
 	directionsDisplay = new google.maps.DirectionsRenderer();
