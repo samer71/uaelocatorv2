@@ -381,12 +381,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
 	  mapTypeId:google.maps.MapTypeId.ROADMAP,
 	  };
-	  alert("after opt");
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	directionsDisplay.setMap(dmap);
-	alert("after set map");
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	alert("after set panel");
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -394,8 +391,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  };
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
-			alert("ok");
 			directionsDisplay.setDirections(response);
+			alert("set dir ok?");
 			/*
 			var myRoute = response.routes[0].legs[0];
 			$("#dlist").append('<li class="onestep"><h3>Start</h3>'+response.routes[0].legs[0].start_address+'</li>');
