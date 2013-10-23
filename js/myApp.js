@@ -88,7 +88,6 @@ function renderStore(prox,label,name,stlat,stlon,da,ef,h,c,desc,fac) {
 function middlePoint(lat1,lon1,lat2,lon2){
 
    var dLon = toRad(lon2 - lon1);
-
    lat1 = toRad(lat1);
    lat2 = toRad(lat2);
    lon1 = toRad(lon1);
@@ -262,7 +261,6 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		if(storetype=="arts") {$("#storetype").html("art galleries");}
 		else {$("#storetype").html(storetype); }
 		loadScript(12,10000);
-		//$.mobile.showPageLoadingMsg("e", "Locating...");
 		$.mobile.changePage("#results");
 	} // End else
 });
@@ -273,14 +271,7 @@ $('#gohome').on('click', function ()  {
 });
 
 $('#goback').on('tap', function ()  {
-	if ($("#storeaddress").length) {$('#storeaddress').remove();}
-	if ($("#storephone").length) {$('#storephone').remove();}
-	if ($("#storeemail").length) {$('#storeemail').remove();}
-	if ($("#storeweb").length) {$('#storeweb').remove();}
-	if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
-	if ($("#storefacilities").length) {$('#storefacilities').remove(); $('#facdiv').remove();}
-	if ($("#storefees").length) {$('#storefees').remove(); $('#feediv').remove();}
-	if ($("#storehours").length) {$('#storehours').remove(); $('#hrdiv').remove();}
+	if ($("#detailslist li.oneitem").length) {$('#detailslist li.oneitem').remove();}
 	$("#detailslist").listview('refresh');
 	$.mobile.changePage("#results");
 });
@@ -316,51 +307,51 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			$("#imageholder").append('<img id="map" width="'+window.innerWidth+'" src="img/content/1.jpg"/>');
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
-			if ($("#storeaddress").length) {$('#storeaddress').remove();}
-			$("#detailslist").append('<li id="storeaddress">'+value.location.displayAddress+'<br/>'+value.contact.Website+'</li>');
+			// Clear the list items if they exist
+			if ($("#detailslist li.oneitem").length) {$('#detailslist li.oneitem').remove();}
+			
+			$("#detailslist").append('<li class="oneitem">'+value.location.displayAddress+'<br/>'+value.contact.Website+'</li>');
 			// Phone, email, website
 			if(value.contact.Tel!="") {
-				if ($("#storephone").length) {$('#storephone').remove();}
-				$("#detailslist").append('<li id="storephone"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
+				$("#detailslist").append('<liclass="oneitem"><a class="phonelink" href="tel:'+value.contact.Tel+'"><img src="img/phone.png" alt="Phone"/><h3>'+value.contact.Tel+'</h3><p>Click to call</P></a></li>');
 			}
 			else {
-				if ($("#storephone").length) {$('#storephone').remove();}
-				$("#detailslist").append('<li id="storephone"><img src="img/phone.png" alt="Phone"/><h3>NA</h3><p>Phone not found</P></li>');
+				$("#detailslist").append('<li class="oneitem"><img src="img/phone.png" alt="Phone"/><h3>NA</h3><p>Phone not found</P></li>');
 			}
 			
 			if(value.contact.Email!="") {
-				if ($("#storeemail").length) {$('#storeemail').remove();}
-				$("#detailslist").append('<li id="storeemail"><a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email"/><h3>'+value.contact.Email+'</h3><p>Click to send a message</P></a></li>');
+				$("#detailslist").append('<li class="oneitem"><a class="emaillink" href="mailto:'+value.contact.Email+'"><img src="img/email.png" alt="Email"/><h3>'+value.contact.Email+'</h3><p>Click to send a message</P></a></li>');
 			}
 			else {
-				if ($("#storeemail").length) {$('#storeemail').remove();}
-				$("#detailslist").append('<li id="storeemail"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
+				$("#detailslist").append('<li class="oneitem"><img src="img/email.png" alt="Email"/><h3>NA</h3><p>Email address not found</P></li>');
 			}
 			// Location
-			if ($("#storeloc").length) {$('#storeloc').remove();}
-				$("#detailslist").append('<li id="storeloc"><a class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
+				$("#detailslist").append('<li id="storeloc" class="oneitem"><a class="loclink" href="#directions"><img src="img/map.png" alt="Map"/><h3>Latitude: '+value.location.latitude+'<br/>Longitude: '+value.location.longitude+'</h3><p>Show me directions</P></a><input type="hidden" id="stlatlon" value="'+stlatlon+'"/></li>');
 			// Description
-			if ($("#storedescription").length) {$('#storedescription').remove(); $('#aboutdiv').remove();}
-			$("#detailslist").append('<li id="aboutdiv" data-role="list-divider" data-theme="b">About</li>');
-			$("#detailslist").append('<li id="storedescription">'+value.description+'</li>');
+			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">About</li>');
+			$("#detailslist").append('<li class="oneitem">'+value.description+'</li>');
 			// Facilities
-			if ($("#storefacilities").length) {$('#storefacilities').remove(); $('#facdiv').remove();}
-			$("#detailslist").append('<li id="facdiv" data-role="list-divider" data-theme="b">Features and Facilities</li>');
-			$("#detailslist").append('<li id="storefacilities">'+value.facilities+'</li>');
+			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">Features and Facilities</li>');
+			$("#detailslist").append('<li class="oneitem">'+value.facilities+'</li>');
 			// Fees
-			if ($("#storefees").length) {$('#storefees').remove(); $('#feediv').remove();}
-			$("#detailslist").append('<li id="feediv" data-role="list-divider" data-theme="b">Entry Fees</li>');
-			$("#detailslist").append('<li id="storefees">'+value.entryFees.join('<br/>')+'</li>');
+			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">Entry Fees</li>');
+			$("#detailslist").append('<li class="oneitem">'+value.entryFees.join('<br/>')+'</li>');
 			// Hours
-			if ($("#storehours").length) {$('#storehours').remove(); $('#hrdiv').remove();}
-			$("#detailslist").append('<li id="hrdiv" data-role="list-divider" data-theme="b">Operating Hours</li>');
-			$("#detailslist").append('<li id="storehours">'+value.hours.join('<br/>')+'</li>');
+			$("#detailslist").append('<li class="oneitem" data-role="list-divider" data-theme="b">Operating Hours</li>');
+			$("#detailslist").append('<li class="oneitem">'+value.hours.join('<br/>')+'</li>');
 			
 			$("#detailslist").listview('refresh');
 		} // End if found
 	}); // End for each
-	
-	setTimeout(function () {$.mobile.changePage("#details");}, 200); 
+	// Go to details page
+	$.mobile.changePage("#details");
+});
+
+$('#details').on('pagebeforeshow', function ()  {
+	alert("Before show");
+});
+$('#details').on('pageshow', function ()  {
+	alert("Before show");
 });
 
 // Store location event: shows directions panel
