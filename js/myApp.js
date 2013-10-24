@@ -341,12 +341,10 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 });
 
 $('#details').on('pagebeforeshow', function ()  {
-	document.getElementById('locationlink').style.display='none';
+	$(".oneitem").off('tap');
 });
 $('#details').on('pageshow', function ()  {
-	setTimeout(function () {
-		document.getElementById('locationlink').style.display='block';
-	}, 200); 
+	//setTimeout(function () {$(".oneitem").on('tap');}, 200); 
 });
 
 // Store location event: shows directions panel
