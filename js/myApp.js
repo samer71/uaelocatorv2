@@ -10,7 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay;
+//var directionsDisplay;
 var directionsService;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
