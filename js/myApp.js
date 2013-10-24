@@ -400,7 +400,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 
 function showDirections()
 {
-	alert("event dir changed");
+	alert($('#stlatlon').val());
 	$.mobile.changePage("#directions");
 }
 
