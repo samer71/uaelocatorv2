@@ -297,7 +297,7 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 			var mapimg = '<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?scale=2&center='+midcoords+'+&zoom='+dzoom+'&size='+window.innerWidth+'x200&markers=color:yellow%7Clabel:'+linkid+'%7C'+coords+'&markers=color:red%7Clabel:M%7C'+latlon+'&path=color:0x0000ff%7Cweight:5%7C'+coords+'%7C'+latlon+'&sensor=false" height="200"/>'
 			*/
 			if ($("#mainimg").length) {$('#mainimg').remove();}
-			$("#imageholder").append('<img id="mainimg" width="'+window.innerWidth+'" src="img/content/'+storetype+'/'+linkid+'.jpg"/>');
+			$("#imageholder").append('<img id="mainimg" width="'+window.innerWidth+'" src="img/content/'+storetype+'/'+value.storeID+'.jpg"/>');
 			$("#nameheader").html(value.name);
 			$("#storedistance").html(dist);
 			// Clear the list items if they exist
