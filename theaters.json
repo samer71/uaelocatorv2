@@ -17,12 +17,12 @@
         "hours": [
             "Vary based on show"
         ],
-        "contact": [
-            "Tel: +971(4)-366 6546",
-            "Fax: +971(4)",
-            "Email:",
-            "Website: http://www.madinattheatre.com"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-366 6546",
+            "Fax" : "",
+            "Email" : "",
+            "Website" : "http://www.madinattheatre.com"
+        }
     },
 	{
         "location": {
@@ -43,12 +43,12 @@
             "Sat to Thur: 9am - 1pm",
 			"Fri and holidays: 2pm - 1pm"
         ],
-        "contact": [
-            "Tel: +971(4)-341 4777",
-            "Fax: +971(4)-341 4445",
-            "Email:box.office@ductac.org",
-            "Website: http://www.ductac.org"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-341 4777",
+            "Fax" : "+971(4)-341 4445",
+            "Email" : "box.office@ductac.org",
+            "Website" : "http://www.ductac.org"
+        }
     },
 	{
         "location": {
@@ -68,12 +68,12 @@
         "hours": [
             "Vary"
         ],
-        "contact": [
-            "Tel: +971(4)-304 2340",
-            "Fax: +971(4)-342 2349",
-            "Email: Info@artforall.ae",
-            "Website: http://www.artforall.ae"
-        ]
+        "contact": {
+            "Tel" : "+971(4)-304 2340",
+            "Fax" : "+971(4)-342 2349",
+            "Email" : "info@artforall.ae",
+            "Website" : "http://www.artforall.ae"
+        }
     },
 	{
         "location": {
@@ -93,12 +93,12 @@
         "hours": [
             "Mon-Fri 9am – 5pm"
         ],
-        "contact": [
-            "Tel: +971(2)-681 8821",
-            "Fax: +971(2)",
-            "Email: info@abudhabiclassics.com",
-            "Website: http://www.abudhabiclassics.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-681 8821",
+            "Fax" : "",
+            "Email" : " info@abudhabiclassics.com",
+            "Website" : "http://www.abudhabiclassics.com"
+        }
     },
 	{
         "location": {
@@ -118,12 +118,12 @@
         "hours": [
             "Mon-Fri 9am – 5pm"
         ],
-        "contact": [
-            "Tel: +971(2)-681 8821",
-            "Fax: +971(2)",
-            "Email: info@abudhabiclassics.com",
-            "Website: http://www.abudhabiclassics.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-681 8821",
+            "Fax" : "",
+            "Email" : " info@abudhabiclassics.com",
+            "Website" : "http://www.abudhabiclassics.com"
+        }
     },
 {
         "location": {
@@ -143,11 +143,11 @@
         "hours": [
             "Mon-Fri 9am – 5pm"
         ],
-        "contact": [
-            "Tel: +971(2)-681 8821",
-            "Fax: +971(2)",
-            "Email: info@abudhabiclassics.com",
-            "Website: http://www.abudhabiclassics.com"
-        ]
+        "contact": {
+            "Tel" : "+971(2)-681 8821",
+            "Fax" : "",
+            "Email" : " info@abudhabiclassics.com",
+            "Website" : "http://www.abudhabiclassics.com"
+		}
     }
 ]
