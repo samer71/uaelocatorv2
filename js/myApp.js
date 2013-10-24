@@ -10,7 +10,7 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-//var directionsDisplay;
+var directionsDisplay;
 var directionsService;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
@@ -45,6 +45,7 @@ function loadScript(zl,pm) {
 }
 // The callback function after loading the script
 function initialize() {
+	directionsService = new google.maps.DirectionsService();
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
@@ -352,7 +353,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
-	var directionsService = new google.maps.DirectionsService();
+	//var directionsService = new google.maps.DirectionsService();
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
