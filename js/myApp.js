@@ -338,6 +338,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
    		directionsDisplay = null; 
 		directionsService = null;
 	}
+	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
+	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
+	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	directionsService = new google.maps.DirectionsService();
