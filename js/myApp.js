@@ -405,7 +405,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 function showDirections()
 {
 	//alert($('#stlatlon').val());
-	//directionsDisplay.getDirections();
+	directionsDisplay.getDirections();
 	$.mobile.changePage("#directions");
 }
 
