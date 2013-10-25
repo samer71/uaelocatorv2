@@ -33,18 +33,12 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
-  //directionsDisplay=null;
-  //directionsService=null;
+  directionsDisplay=null;
+  directionsService=null;
 }
 // The callback function after loading the script
 function initialize() {
 	//directionsService = new google.maps.DirectionsService();
-	if(directionsDisplay != null) { 
-   		directionsDisplay.setMap(null);
-		directionsDisplay.setPanel(null);
-   		directionsDisplay = null; 
-		directionsService=null;
-	}
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
@@ -337,9 +331,14 @@ $('#details').on('pageshow', function ()  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	
+	if(directionsDisplay != null) { 
+   		directionsDisplay.setMap(null);
+		directionsDisplay.setPanel(null);
+   		directionsDisplay = null; 
+	}
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
+	directionsService = new google.maps.DirectionsService();
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
