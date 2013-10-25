@@ -343,6 +343,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		directionsDisplay.setPanel(null);
    		directionsDisplay = null; 
 	}
+	var oldDirections = [];
+  	var currentDirections = null;
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	directionsDisplay = new google.maps.DirectionsRenderer();
@@ -363,22 +365,26 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		destination: $('#stlatlon').val(),
 		travelMode: google.maps.TravelMode.DRIVING
 	};
-	var r;
 	directionsService.route(request, function(response, status) {
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
-		r = response;
 	}
 	else $("#directionsPanel").html("Error");
 	});
-	google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {showDirections(r);}); 
+	google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
+		if (currentDirections) {
+          oldDirections.push(currentDirections);
+        }
+        currentDirections = directionsDisplay.getDirections();	
+		$.mobile.changePage("#directions");
+	}); 
 });
 
-function showDirections(res)
+function showDirections()
 {
-	directionsDisplay.setDirections(res);
-	directionsDisplay.getDirections();
-	$.mobile.changePage("#directions");
+	
+	//directionsDisplay.getDirections();
+	//$.mobile.changePage("#directions");
 }
 
 $('#options').delegate('.option', 'tap', function ()  {
