@@ -363,14 +363,15 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		destination: $('#stlatlon').val(),
 		travelMode: google.maps.TravelMode.DRIVING
 	};
+	var r;
 	directionsService.route(request, function(response, status) {
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
-		var r = response;
+		r = response;
 	}
 	else $("#directionsPanel").html("Error");
 	});
-	google.maps.event.addListener(directionsDisplay, 'directions_changed', showDirections(r)); 
+	google.maps.event.addListener(directionsDisplay, 'directions_changed', function () {showDirections(r);}); 
 });
 
 function showDirections(res)
