@@ -351,6 +351,11 @@ $('#details').on('pageshow', function ()  {
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//if( !$('#directionsPanel').is(':empty') ) {$('#directionsPanel').empty();}
+	if(directionsDisplay != null) { 
+   		directionsDisplay.setMap(null);
+		directionsDisplay.setPanel(null);
+   		directionsDisplay = null; 
+	}
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	//var directionsService = new google.maps.DirectionsService();
