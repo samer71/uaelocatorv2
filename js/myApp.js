@@ -335,6 +335,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
    		directionsDisplay.setMap(null);
 		directionsDisplay.setPanel(null);
    		directionsDisplay = null; 
+		directionsService = null;
 	}
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
