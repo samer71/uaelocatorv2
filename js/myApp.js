@@ -342,9 +342,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
    		directionsDisplay.setMap(null);
 		directionsDisplay.setPanel(null);
    		directionsDisplay = null; 
+		directionsService = null;
 	}
-	var oldDirections = [];
-  	var currentDirections = null;
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	directionsDisplay = new google.maps.DirectionsRenderer();
@@ -372,20 +371,11 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	else $("#directionsPanel").html("Error");
 	});
 	google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
-		if (currentDirections) {
-          oldDirections.push(currentDirections);
-        }
-        currentDirections = directionsDisplay.getDirections();	
+        var currentDirections = directionsDisplay.getDirections();	
 		$.mobile.changePage("#directions");
 	}); 
 });
 
-function showDirections()
-{
-	
-	//directionsDisplay.getDirections();
-	//$.mobile.changePage("#directions");
-}
 
 $('#options').delegate('.option', 'tap', function ()  {
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
