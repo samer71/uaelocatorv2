@@ -24,15 +24,6 @@ function onOffline() {
     // Handle the offline event
 }
 
-/*
-$('#results').on('pagebeforechange', function ()  {
-	$.mobile.showPageLoadingMsg("e", "Locating...");
-});
-$('#results').on('pagechange', function ()  {
-	$.mobile.hidePageLoadingMsg();
-});
-*/
-
 // Load the Google maps API script with zoom level and desired proximity
 function loadScript(zl,pm) {
   var script = document.createElement("script");
@@ -42,6 +33,8 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
+  directionsDisplay=null;
+  directionsService=null;
 }
 // The callback function after loading the script
 function initialize() {
@@ -342,7 +335,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
    		directionsDisplay.setMap(null);
 		directionsDisplay.setPanel(null);
    		directionsDisplay = null; 
-		directionsService = null;
 	}
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
