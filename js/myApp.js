@@ -35,6 +35,7 @@ function loadScript(zl,pm) {
   totalstores=0;
   directionsDisplay=null;
   directionsService=null;
+  directionsDisplay.setPanel(null);
 }
 // The callback function after loading the script
 function initialize() {
@@ -340,7 +341,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// Get directions
 	directionsService = new google.maps.DirectionsService();
-	directionsDisplay = new google.maps.DirectionsRenderer();
+	
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
 	var mapOptions={
@@ -351,6 +352,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  mapTypeId:google.maps.MapTypeId.ROADMAP,
 	};
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
+	directionsDisplay = new google.maps.DirectionsRenderer();
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	var request = {
