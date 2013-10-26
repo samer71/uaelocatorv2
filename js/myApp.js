@@ -357,7 +357,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	//  an object to render the returned results
 	directionsDisplay = new google.maps.DirectionsRenderer();
-	directionsDisplay.setMap(dmap);
+	//directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	var request = {
 		origin: latlon,
