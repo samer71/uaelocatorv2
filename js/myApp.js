@@ -342,7 +342,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
 	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
-	// Get directions
+	// communicate with the Google Maps API which receives direction requests and returns computed results
 	directionsService = new google.maps.DirectionsService();
 	
 	var dmapholder=document.getElementById('dmapholder');
@@ -355,6 +355,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	  mapTypeId:google.maps.MapTypeId.ROADMAP,
 	};
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
+	//  an object to render the returned results
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
@@ -363,11 +364,28 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		destination: $('#stlatlon').val(),
 		travelMode: google.maps.TravelMode.DRIVING
 	};
+	// initiate a request to the Directions service
 	directionsService.route(request, function(response, status) {
+		// the callback method to execute upon receipt of the response
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
 	}
-	else $("#directionsPanel").html("Error");
+	else if (status == google.maps.DirectionsStatus.NOT_FOUND) {
+		$("#directionsPanel").html("Route Not Found!");
+	}
+	else if (status == google.maps.DirectionsStatus.ZERO_RESULTS) {
+		$("#directionsPanel").html("Zero Results Found!");
+	}
+	else if (status == google.maps.DirectionsStatus.INVALID_REQUEST) {
+		$("#directionsPanel").html("Invalid Request!");
+	}
+	else if (status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
+		$("#directionsPanel").html("Over Query Limits!");
+	}
+	else if (status == google.maps.DirectionsStatus.REQUEST_DENIED) {
+		$("#directionsPanel").html("Request Denied!");
+	}
+	else $("#directionsPanel").html("Unknown Error");
 	});
 	google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
         var currentDirections = directionsDisplay.getDirections();	
