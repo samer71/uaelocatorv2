@@ -3,7 +3,7 @@ $(document).ready(function() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 });
 // Global variables
-var map, lat, lon, latlon, mylocation;
+var map, dmap, lat, lon, latlon, mylocation;
 var proxm, proxkm;
 var totalstores, storetype, storemarker;
 var zoomlevel, dzoom, bounds, distance;
