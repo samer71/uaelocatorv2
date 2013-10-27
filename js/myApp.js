@@ -339,7 +339,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		directionsService = null;
 	}
 	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
-	$("#directions").append('<div data-role="content" id="directionsPanel" style="background-color:#336699;height:200px">kkkkk</div>');
+	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
 	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
@@ -358,8 +358,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	//  an object to render the returned results
 	directionsDisplay = new google.maps.DirectionsRenderer();
-	directionsDisplay.setMap(dmap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+	
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -368,6 +367,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	// initiate a request to the Directions service
 	directionsService.route(request, function(response, status) {
 		// the callback method to execute upon receipt of the response
+	directionsDisplay.setMap(dmap);
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
 	}
