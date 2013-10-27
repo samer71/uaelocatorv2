@@ -339,7 +339,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 		directionsService = null;
 	}
 	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
-	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
+	$("#directions").append('<div data-role="content" id="directionsPanel" style="background-color:#336699"></div>');
 	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
