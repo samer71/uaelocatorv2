@@ -358,7 +358,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	//  an object to render the returned results
 	directionsDisplay = new google.maps.DirectionsRenderer();
-	
+	// move set here
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -367,7 +367,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	// initiate a request to the Directions service
 	directionsService.route(request, function(response, status) {
 		// the callback method to execute upon receipt of the response
-	directionsDisplay.setMap(dmap);
+	//directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
