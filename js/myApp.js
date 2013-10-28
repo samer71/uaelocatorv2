@@ -321,6 +321,12 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
+	if(directionsDisplay != null) { 
+   		directionsDisplay.setMap(null);
+		directionsDisplay.setPanel(null);
+   		directionsDisplay = null; 
+		directionsService = null;
+	}
 	// communicate with the Google Maps API which receives direction requests and returns computed results
 	directionsService = new google.maps.DirectionsService();
 	//  an object to render the returned results
@@ -336,12 +342,7 @@ $('#details').on('pageshow', function ()  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	if(directionsDisplay != null) { 
-   		directionsDisplay.setMap(null);
-		directionsDisplay.setPanel(null);
-   		directionsDisplay = null; 
-		directionsService = null;
-	}
+	
 	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
 	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
 	
@@ -370,7 +371,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	};
 	// initiate a request to the Directions service
 	directionsService.route(request, function(response, status) {
-		// the callback method to execute upon receipt of the response
+	// the callback method to execute upon receipt of the response
 	//directionsDisplay.setMap(dmap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	if (status == google.maps.DirectionsStatus.OK) {
