@@ -321,6 +321,10 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
+	// communicate with the Google Maps API which receives direction requests and returns computed results
+	directionsService = new google.maps.DirectionsService();
+	//  an object to render the returned results
+	directionsDisplay = new google.maps.DirectionsRenderer();
 });
 
 $('#details').on('pagebeforeshow', function ()  {
@@ -343,7 +347,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
-	directionsService = new google.maps.DirectionsService();
+	//directionsService = new google.maps.DirectionsService();
 	
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
@@ -357,7 +361,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	};
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	//  an object to render the returned results
-	directionsDisplay = new google.maps.DirectionsRenderer();
+	//directionsDisplay = new google.maps.DirectionsRenderer();
 	// move set here
 	var request = {
 		origin: latlon,
