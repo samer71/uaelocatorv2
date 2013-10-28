@@ -346,8 +346,8 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	directionsService = new google.maps.DirectionsService();
 	
 	var dmapholder=document.getElementById('dmapholder');
-	//dmapholder.style.display='none';
-	dmapholder.style.height='200px';
+	dmapholder.style.display='none';
+	//dmapholder.style.height='200px';
 	var mapOptions={
 	  zoom:10,
 	  center:latlon,
