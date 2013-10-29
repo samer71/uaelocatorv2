@@ -172,8 +172,10 @@ function getStores(ml,pm,st)
 
 function onGetLocationError(error)
 {
-	document.getElementById("mapholder").style.display='none';
-	document.getElementById("errorholder").style.display='block';
+	$("#errorholder").show();
+	$("#mapholder").hide();
+	//document.getElementById("mapholder").style.display='none';
+	//document.getElementById("errorholder").style.display='block';
 	$(".pbtn").addClass("ui-disabled");
 	var x=document.getElementById("errormsg");
 	switch(error.code) 
@@ -247,8 +249,10 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 			jsonFile="beaches.json";
 			$("#storeheader").html("Beaches");
 		}
-		document.getElementById("errorholder").style.display='none';
-		document.getElementById("mapholder").style.display='block';
+		$("#errorholder").hide();
+		$("#mapholder").show();
+		//document.getElementById("errorholder").style.display='none';
+		//document.getElementById("mapholder").style.display='block';
 		$(".pbtn").removeClass("ui-disabled");
 		$("#right-panel").panel("close");
 		if(storetype=="arts") {$("#storetype").html("art galleries");}
@@ -414,8 +418,10 @@ $('#options').delegate('.option', 'tap', function ()  {
 		{
 			loadScript(9,500000);
 		}
-		document.getElementById("errorholder").style.display='none';
-		document.getElementById("mapholder").style.display='block';
+		$("#errorholder").hide();
+		$("#mapholder").show();
+		//document.getElementById("errorholder").style.display='none';
+		//document.getElementById("mapholder").style.display='block';
 		$(".pbtn").removeClass("ui-disabled");
 		//$.mobile.showPageLoadingMsg("e", "Locating...");
 	} // End else network
