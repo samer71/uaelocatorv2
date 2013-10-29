@@ -152,7 +152,7 @@ function onGetLocationSuccess(position) {
 	bounds.extend(latlon);
 	map.fitBounds(bounds);
 	// Now ready to get the stores
-	//getStores(mylocation,proxm,storetype);
+	getStores(mylocation,proxm,storetype);
 } // End onGetLocationSuccess
   
 function getStores(ml,pm,st)
@@ -259,7 +259,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		if(storetype=="arts") {$("#storetype").html("art galleries");}
 		else {$("#storetype").html(storetype); }
 		//loadScript(12,10000);
-		getStores(mylocation,proxm,storetype);
+		initialize();
 		$.mobile.changePage("#results");
 	} // End else
 });
