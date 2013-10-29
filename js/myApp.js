@@ -19,7 +19,7 @@ function onDeviceReady() {
 	// Load the Google maps API
 	var script = document.createElement("script");
 	script.type = "text/javascript";
-	script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&callback=initialize&async=2";
+	script.src ="http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&async=2";
 	document.head.appendChild(script);
 	zoomlevel=10;
   	proxm=10000;
