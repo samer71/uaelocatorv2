@@ -336,8 +336,8 @@ $('#details').on('pageshow', function ()  {
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	// Append directions panel
-	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
-	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
+	//if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
+	//$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
 	directionsService = new google.maps.DirectionsService();
