@@ -18,10 +18,14 @@ function onDeviceReady() {
 	$.mobile.buttonMarkup.hoverDelay = 0;
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
+	document.addEventListener("online", onOnline, false);
+
 }
 function onOffline() {
-    // Handle the offline event
 	onGetLocationError(4);
+}
+function onOnline() {
+    $.mobile.changePage("#index");
 }
 
 // Load the Google maps API script with zoom level and desired proximity
