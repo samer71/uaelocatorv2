@@ -16,13 +16,7 @@ function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
 	$.mobile.defaultDialogTransition = 'none';
 	$.mobile.buttonMarkup.hoverDelay = 0;
-	// Load the Google maps API
-	var script = document.createElement("script");
-	script.type = "text/javascript";
-	script.src ="http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&async=2";
-	document.head.appendChild(script);
-	zoomlevel=10;
-  	proxm=10000;
+	first=true;
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 }
@@ -33,12 +27,10 @@ function onOffline() {
 
 // Load the Google maps API script with zoom level and desired proximity
 function loadScript(zl,pm) {
-	/*
   var script = document.createElement("script");
   script.type = "text/javascript";
   script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&callback=initialize&async=2";
   document.head.appendChild(script);
-  */
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
@@ -258,8 +250,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		$("#right-panel").panel("close");
 		if(storetype=="arts") {$("#storetype").html("art galleries");}
 		else {$("#storetype").html(storetype); }
-		//loadScript(12,10000);
-		initialize();
+		loadScript(12,10000);
 		$.mobile.changePage("#results");
 	} // End else
 });
@@ -420,31 +411,19 @@ $('#options').delegate('.option', 'tap', function ()  {
 	{
 		if($(this).attr('id')=="reload")
 		{
-			proxm=10000;
-			zoomlevel=12;
-			initialize();
-			//loadScript(12,10000);
+			loadScript(12,10000);
 			//location.reload();
 		} else if($(this).attr('id')=="get20") 
 		{
-			proxm=20000;
-			zoomlevel=11;
-			initialize();
-			//loadScript(11,20000);
+			loadScript(11,20000);
 		}
 		else if($(this).attr('id')=="get50") 
 		{
-			proxm=50000;
-			zoomlevel=10;
-			initialize();
-			//loadScript(10,50000);
+			loadScript(10,50000);
 		}
 		else if($(this).attr('id')=="getall") 
 		{
-			proxm=500000;
-			zoomlevel=9;
-			initialize();
-			//loadScript(9,500000);
+			loadScript(9,500000);
 		}
 		document.getElementById("errorholder").style.display='none';
 		document.getElementById("mapholder").style.display='block';
