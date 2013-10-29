@@ -16,7 +16,6 @@ function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
 	$.mobile.defaultDialogTransition = 'none';
 	$.mobile.buttonMarkup.hoverDelay = 0;
-	first=true;
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 }
@@ -321,16 +320,6 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
-	if(directionsDisplay != null) { 
-   		directionsDisplay.setMap(null);
-		directionsDisplay.setPanel(null);
-   		directionsDisplay = null; 
-		directionsService = null;
-	}
-	// communicate with the Google Maps API which receives direction requests and returns computed results
-	directionsService = new google.maps.DirectionsService();
-	//  an object to render the returned results
-	directionsDisplay = new google.maps.DirectionsRenderer();
 });
 
 $('#details').on('pagebeforeshow', function ()  {
@@ -342,17 +331,14 @@ $('#details').on('pageshow', function ()  {
 
 // Store location event: shows directions panel
 $('#detailslist').delegate('.loclink', 'tap', function (event)  {
-	
+	// Append directions panel
 	if ($("#directionsPanel").length) {$('#directionsPanel').remove();}
 	$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
-	
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
-	//directionsService = new google.maps.DirectionsService();
-	
+	directionsService = new google.maps.DirectionsService();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
-	//dmapholder.style.height='200px';
 	var mapOptions={
 	  zoom:10,
 	  center:latlon,
@@ -362,8 +348,9 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	};
 	dmap = new google.maps.Map(document.getElementById("dmapholder"), mapOptions);
 	//  an object to render the returned results
-	//directionsDisplay = new google.maps.DirectionsRenderer();
-	// move set here
+	directionsDisplay = new google.maps.DirectionsRenderer();
+	//directionsDisplay.setMap(dmap);
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	var request = {
 		origin: latlon,
 		destination: $('#stlatlon').val(),
@@ -372,8 +359,6 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	// initiate a request to the Directions service
 	directionsService.route(request, function(response, status) {
 	// the callback method to execute upon receipt of the response
-	//directionsDisplay.setMap(dmap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	if (status == google.maps.DirectionsStatus.OK) {
 		directionsDisplay.setDirections(response);
 	}
