@@ -10,26 +10,35 @@ var zoomlevel, dzoom, bounds, distance;
 var jsonFile;
 var sortedstore;
 var linkid;
-var directionsDisplay;
-var directionsService;
+var directionsDisplay, directionsService;
 // PhoneGap is loaded and it is now safe to make calls 
 function onDeviceReady() {
 	$.mobile.defaultPageTransition   = 'none';
 	$.mobile.defaultDialogTransition = 'none';
 	$.mobile.buttonMarkup.hoverDelay = 0;
+	// Load the Google maps API
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&callback=initialize&async=2";
+	document.head.appendChild(script);
+	zoomlevel=10;
+  	proxm=10000;
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 }
 function onOffline() {
     // Handle the offline event
+	onGetLocationError(4);
 }
 
 // Load the Google maps API script with zoom level and desired proximity
 function loadScript(zl,pm) {
+	/*
   var script = document.createElement("script");
   script.type = "text/javascript";
   script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&v=3&libraries=geometry&callback=initialize&async=2";
   document.head.appendChild(script);
+  */
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
@@ -39,12 +48,11 @@ function loadScript(zl,pm) {
 }
 // The callback function after loading the script
 function initialize() {
-	//directionsService = new google.maps.DirectionsService();
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
-	proxkm = proxm /1000;
-	$("#prox").text(proxkm);
+	//proxkm = proxm /1000;
+	$("#prox").text(proxm/1000); // Proximity in KM
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 }
