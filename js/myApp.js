@@ -51,8 +51,8 @@ function initialize() {
 	$.getScript("js/StyledMarker.js");	
 	var geoOptions = {'enableHighAccuracy': true, 'timeout': 10000, 'maximumAge':60000};
 	navigator.geolocation.getCurrentPosition(onGetLocationSuccess, onGetLocationError, geoOptions);
-	//proxkm = proxm /1000;
-	$("#prox").text(proxm/1000); // Proximity in KM
+	proxkm = proxm /1000;
+	$("#prox").text(proxkm); // Proximity in KM
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 }
