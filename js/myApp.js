@@ -19,7 +19,7 @@ function onDeviceReady() {
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
-
+	directionsService = new google.maps.DirectionsService();
 }
 function onOffline() {
 	onGetLocationError(4);
@@ -37,7 +37,6 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
-  
 }
 // The callback function after loading the script
 function initialize() {
@@ -349,7 +348,7 @@ $('#detailslist').delegate('.loclink', 'tap', function (event)  {
 	//$("#directions").append('<div data-role="content" id="directionsPanel"></div>');
 	$.mobile.showPageLoadingMsg("e", "Calculating route...");
 	// communicate with the Google Maps API which receives direction requests and returns computed results
-	directionsService = new google.maps.DirectionsService();
+	//directionsService = new google.maps.DirectionsService();
 	var dmapholder=document.getElementById('dmapholder');
 	dmapholder.style.display='none';
 	var mapOptions={
