@@ -205,7 +205,7 @@ $(window).on("orientationchange",function(event){
    ================================================= */
 
 // Main page and Panel: Setup and go to results page
-$('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
+$('#categories, #panelcategories').delegate('.mainnav', 'tap', function (e)  {
 	// Check network connection 
 	connectionStatus = navigator.onLine ? 'online' : 'offline';
 	if(connectionStatus=='offline')
@@ -260,6 +260,8 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function ()  {
 		loadScript(12,10000);
 		$.mobile.changePage("#results");
 	} // End else
+	e.stopPropagation();
+    e.preventDefault();
 });
 
 $('#gohome').on('click', function ()  {
