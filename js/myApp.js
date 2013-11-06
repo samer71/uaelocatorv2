@@ -37,9 +37,7 @@ function loadScript(zl,pm) {
   zoomlevel=parseInt(zl);
   proxm=parseInt(pm);
   totalstores=0;
-  directionsDisplay=null;
-  directionsService=null;
-  directionsDisplay.setPanel(null);
+  
 }
 // The callback function after loading the script
 function initialize() {
