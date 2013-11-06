@@ -264,7 +264,7 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function (e)  {
     e.preventDefault();
 });
 
-$('#gohome').on('click', function ()  {
+$('#gohome').on('click', function (e)  {
 	if ($("#list li.onestore").length) {$('#list li.onestore').remove();}
 	if ($("#list li.nostore").length) {$('#list li.nostore').remove();}
 });
@@ -273,10 +273,13 @@ $('#goback').on('tap', function ()  {
 	if ($("#detailslist li.oneitem").length) {$('#detailslist li.oneitem').remove();}
 	$("#detailslist").listview('refresh');
 	$.mobile.changePage("#results");
+	e.stopPropagation();
+    e.preventDefault();
+
 });
 
 // Store details event: shows store info
-$('#list').delegate('.onestore', 'tap', function (event)  {
+$('#list').delegate('.onestore', 'tap', function (e)  {
 	linkid = parseInt($(this).attr('id'));
 	$.each(sortedstore,function(index,value){ 
 		if(linkid==(index+1))
@@ -330,6 +333,8 @@ $('#list').delegate('.onestore', 'tap', function (event)  {
 	}); // End for each
 	// Go to details page
 	$.mobile.changePage("#details");
+	e.stopPropagation();
+    e.preventDefault();
 });
 
 $('#details').on('pagebeforeshow', function ()  {
