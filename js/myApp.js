@@ -260,8 +260,8 @@ $('#categories, #panelcategories').delegate('.mainnav', 'tap', function (e)  {
 		loadScript(12,10000);
 		$.mobile.changePage("#results");
 	} // End else
-	e.stopPropagation();
-    e.preventDefault();
+	//e.stopPropagation();
+    //e.preventDefault();
 });
 
 $('#gohome').on('click', function (e)  {
